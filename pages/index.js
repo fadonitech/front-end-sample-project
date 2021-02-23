@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/HomePage/Header';
+import Credibility from '../components/HomePage/Credibility';
 import Navbar from '../components/Navbar/Navbar';
 
 const Home = () => {
@@ -10,7 +11,8 @@ const Home = () => {
       </Head>
       <body>
         <Navbar />
-        <Header/>
+        <Header />
+        <Credibility />
       </body>
     </div>
   )

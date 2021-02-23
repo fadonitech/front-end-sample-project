@@ -1,0 +1,17 @@
+.credibility {
+  height: 15rem;
+  width: 100vw;
+  background-color: $color-grey;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    color: $color-grey-darkest;
+    margin: 0 5rem;
+  }
+}

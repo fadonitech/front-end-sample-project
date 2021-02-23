@@ -1,11 +1,21 @@
 .adam {
   font-family: 'Adam', sans-serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  src: local('../fonts/Adam-Medium.ttf');
+}
+
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   text-align: center;
-  src: local('../fonts/Adam-Bold.ttf');
+  src: local('../fonts/OpenSans-Regular.ttf');
 }
 
 .blue-span {
