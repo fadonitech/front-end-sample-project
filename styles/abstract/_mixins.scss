@@ -1,0 +1,117 @@
+// Main Industries
+@mixin industries($color, $url) {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  background-image: url($url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  font-family: Nunito;
+  font-size: 3rem;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $color-white;
+
+  transition: all 0.2s ease-out;
+
+  @include respond(tab-port) {
+    height: 20rem;
+  }
+
+  div {
+    height: 100%;
+    width: 100%;
+    padding: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba($color, 0.7);
+    transition: all 0.25s ease-out;
+    z-index: 2;
+  }
+
+  &:hover {
+    div {
+      background-color: rgba($color, 0.9);
+
+      @include respond(tab-land) {
+        background-color: rgba($color, 0.7);
+      }
+    }
+  }
+}
+
+@mixin medium-blue-text {
+  font-family: Nunito;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.57px;
+  text-align: justify;
+  color: $color-blue;
+}
+
+// MEDIA QUERY MANAGER
+
+// 0 - 500px: SMALL PHONE
+// 500 - 800px: LARGE PHONE
+// 800 - 1000px: TABLET PORTRAIT
+// 1000 - 1200px: TABLET LANDSCAPE
+// [1200 - 1800] is where our normal style apply
+// 1800 - +: BIG DESKTOP
+
+// $breakpoint argument choices:
+// - phone
+// - tab-port
+// - tab-land
+// - big-desktop
+
+// Order: Base + Typography > general layout + grid > page layout > components
+
+@mixin respond($breakpoint) {
+  //Mobile
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 25em) { @content }; // 400px
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 31.25em) { @content }; // 500px
+  }
+  // Tablet
+  @if $breakpoint == tab-port-small {
+    @media only screen and (max-width: 50em) { @content }; // 800px -
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 62.5em) { @content }; // 1000px
+  }
+  @if $breakpoint == tab-land-small {
+    @media only screen and (max-width: 68.75em) { @content }; // 1100px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) { @content }; // 1200px
+  }
+  //Desktop
+  @if $breakpoint == medium-desktop {
+    @media only screen and (min-width: 87.5em) { @content }; // 1400px
+  }
+  @if $breakpoint == medium-big-gap-desktop {
+    @media only screen and (min-width: 100em) { @content }; // 1600px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) { @content }; // 1800px
+  }
+  @if $breakpoint == huge-desktop {
+    @media only screen and (min-width: 187.5em) { @content }; // 3000px
+  }
+}
