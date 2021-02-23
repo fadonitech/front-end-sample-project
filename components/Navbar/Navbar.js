@@ -1,9 +1,30 @@
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Navbar = () => {
+  const [scroll, setScroll] = useState({
+    scrollY: 0,
+    isGoingDown: true
+  });
+
+  const scrollHandler = e => {
+    const newScrollY = window.scrollY;
+    const scrollDirection = newScrollY > scroll.scrollY;
+
+    setScroll({
+      scrollY: newScrollY,
+      isGoingDown: scrollDirection
+    });
+  }
+
+  useEffect(() => {
+    const scrollEvent = document.addEventListener("scroll", scrollHandler);
+    return document.removeEventListener("scroll", scrollEvent);
+  }, []);
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${scroll.scrollY && 'navbar--bg-black'}`}>
       <Link href="/">
         <div className="navbar--logo">
           <Image
