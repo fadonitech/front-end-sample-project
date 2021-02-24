@@ -6,6 +6,7 @@ import SubscriptionPlan from '../components/HomePage/SubscriptionPlan';
 import Benefits from '../components/HomePage/Benefits';
 import Plans from '../components/HomePage/Plans/Plans';
 import Guarantee from '../components/HomePage/Guarantee';
+import Footer from '../components/Footer/Footer';
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
 
       </Head>
       <body>
-        {/* <Navbar /> */}
+        <Navbar />
         <Header />
         <Credibility />
         <SubscriptionPlan />
@@ -22,6 +23,7 @@ const Home = () => {
         <Plans />
         <Guarantee />
       </body>
+      <Footer />
     </div>
   )
 }

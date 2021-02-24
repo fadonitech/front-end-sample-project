@@ -8,7 +8,6 @@ const Header = () => (
         src="/logo-white.png"
         height={148}
         width={130}
-        layout="responsive"
       />
       <h1 className="adam blue-span">
         WE <span>BUILD</span> AND <span>FIX</span> ALL KINDS OF SOFTWARE

@@ -1,0 +1,15 @@
+.footer {
+  height: 20rem;
+  width: 100vw;
+  background-color: $color-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+
+  h1 {
+    margin-top: 3rem;
+    color: $color-white;
+  }
+}
