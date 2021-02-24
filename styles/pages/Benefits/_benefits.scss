@@ -2,5 +2,69 @@
   height: 100vh;
   width: 100vw;
   background-color: $color-grey;
-  
+  padding-top: 7rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  h1 {
+    font-size: 3.7rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  #three,
+  #programming-img {
+    height: auto;
+    position: absolute;
+  }
+
+  #programming-img {
+    left: 2rem;
+    bottom: -1rem;
+    width: 45rem;
+  }
+
+  #three {
+    bottom: 17rem;
+    right: 6rem;
+    width: 35rem;
+  }
+
+  &__container {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+
+
+    &--card {
+      width: 80%;
+      background-color: $color-white;
+      border-radius: 1rem;
+      padding: 3rem;
+      box-shadow: 2px 3px 10px rgba(#000000, 16%);
+      
+      h3 {
+        font-size: 2.3rem;
+        font-weight: 600;
+        color: $color-grey-black;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+    }
+  }
 }
