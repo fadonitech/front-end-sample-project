@@ -18,6 +18,10 @@
   src: local('../fonts/OpenSans-Regular.ttf');
 }
 
+.italic {
+  font-style: italic;
+}
+
 .blue-span {
   span {
     color: $color-blue;

@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import Navbar from '../components/Navbar/Navbar';
 import Header from '../components/HomePage/Header';
 import Credibility from '../components/HomePage/Credibility';
-import Navbar from '../components/Navbar/Navbar';
+import SubscriptionPlan from '../components/HomePage/SubscriptionPlan';
+import Benefits from '../components/HomePage/Benefits';
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
         <Navbar />
         <Header />
         <Credibility />
+        <SubscriptionPlan />
+        <Benefits />
       </body>
     </div>
   )
