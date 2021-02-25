@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 
 const CardBtn = () => (
-  <Link href="/contact">
+  <ScrollLink to="contactus">
     <button id="card-btn">
       BOOK A MEETING
     </button>
-  </Link>
+  </ScrollLink>
 );
 
 export default CardBtn;

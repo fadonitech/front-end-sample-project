@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 
 const FormBtn = () => (
   <button className="cta-btn" type="submit">
@@ -7,11 +7,11 @@ const FormBtn = () => (
 )
 
 const NormalBtn = () => (
-  <Link href="/contact">
+  <ScrollLink to="contactus">
     <button className="cta-btn">
       BOOK A MEETING
     </button>
-  </Link>
+  </ScrollLink>
 )
 
 const CtaBtn = ({

@@ -6,7 +6,7 @@ const Plans = () => {
   const [value, setValue] = useState(1);
 
   return (
-    <div className="plans">
+    <div className="plans" id="pricing">
       <h1 className="title adam">
         MONTHLY PARTNERSHIP PRICE
       </h1>

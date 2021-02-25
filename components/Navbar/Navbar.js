@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`navbar ${scroll.scrollY > 0 || pathname !== '/'  ? 'navbar--bg-black' : ''}`}>
+    <div className={`navbar ${scroll.scrollY > 0 || pathname !== '/' ? 'navbar--bg-black' : ''}`}>
       <Link href="/">
         <div className="navbar--logo">
           <img
@@ -41,16 +42,30 @@ const Navbar = () => {
 
       <div className="navbar--links adam">
         <ul>
-          <li>How It Works</li>
-          <li>Benefits</li>
-          <li>Price</li>
-          <li>Blog</li>
+          <li>
+            <ScrollLink to="howitworks">
+              How It Works
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="benefits">
+              Benefits
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="pricing">
+              Price
+            </ScrollLink>
+          </li>
+          {/* <li>
+            Blog
+          </li> */}
         </ul>
-        <Link href="contact">
+        <ScrollLink to="contactus">
           <button className="navbar--cta">
             BOOK A MEETING
           </button>
-        </Link>
+        </ScrollLink>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import CtaBtn from '../Buttons/CtaBtn';
 
 const Benefits = () => (
-  <div className="benefits" >
+  <div id="benefits" className="benefits" >
     <h1 className="adam">
       DON'T GET STUCK WITH A BAD TEAM
     </h1>
