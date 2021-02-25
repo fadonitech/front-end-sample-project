@@ -6,13 +6,14 @@ import SubscriptionPlan from '../components/HomePage/SubscriptionPlan';
 import Benefits from '../components/HomePage/Benefits';
 import Plans from '../components/HomePage/Plans/Plans';
 import Guarantee from '../components/HomePage/Guarantee';
+import ContactUs from '../components/ContactUs/ContactUs';
 import Footer from '../components/Footer/Footer';
 
 const Home = () => {
   return (
     <div>
       <Head>
-
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body>
         <Navbar />
@@ -22,6 +23,7 @@ const Home = () => {
         <Benefits />
         <Plans />
         <Guarantee />
+        <ContactUs />
       </body>
       <Footer />
     </div>

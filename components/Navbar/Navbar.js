@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Navbar = () => {
+  const { pathname } = useRouter();
   const [scroll, setScroll] = useState({
     scrollY: 0,
     isGoingDown: true
@@ -24,7 +26,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`navbar ${scroll.scrollY && 'navbar--bg-black'}`}>
+    <div className={`navbar ${scroll.scrollY > 0 || pathname !== '/'  ? 'navbar--bg-black' : ''}`}>
       <Link href="/">
         <div className="navbar--logo">
           <Image
@@ -45,7 +47,7 @@ const Navbar = () => {
           <li>Price</li>
           <li>Blog</li>
         </ul>
-        <Link href="/contact">
+        <Link href="contact">
           <button className="navbar--cta">
             BOOK A MEETING
           </button>
