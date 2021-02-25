@@ -3,7 +3,7 @@ import CtaBtn from '../Buttons/CtaBtn';
 const SubscriptionPlan = () => (
   <div className="subs-plan">
     <div className="subs-plan__content">
-      <h1 className="title adam">SUBSCRIPTION PLAN</h1>
+      <h1 className="title adam">PARTNERSHIP PLAN</h1>
       <h3 className="subtitle open-sans">Let us take care of development and management for you!</h3>
 
       <div className="subs-plan__content--container">

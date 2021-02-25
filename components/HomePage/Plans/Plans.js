@@ -8,7 +8,7 @@ const Plans = () => {
   return (
     <div className="plans">
       <h1 className="title adam">
-        MONTHLY SUBSCRIPTION PRICE
+        MONTHLY PARTNERSHIP PRICE
       </h1>
       <h3 className="subtitle adam">
         How many developers do you need?

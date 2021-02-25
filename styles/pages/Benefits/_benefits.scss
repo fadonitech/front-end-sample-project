@@ -48,14 +48,14 @@
 
 
     &--card {
-      width: 80%;
+      width: 60%;
       background-color: $color-white;
       border-radius: 1rem;
-      padding: 3rem;
+      padding: 2rem;
       box-shadow: 2px 3px 10px rgba(#000000, 16%);
       
       h3 {
-        font-size: 2.3rem;
+        font-size: 1.8rem;
         font-weight: 600;
         color: $color-grey-black;
       }
@@ -65,7 +65,7 @@
       }
 
       &:last-child {
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
       }
     }
   }

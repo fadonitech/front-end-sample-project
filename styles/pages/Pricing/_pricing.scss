@@ -1,5 +1,5 @@
 .plans {
-  height: auto;
+  height: min-content;
   width: 100vw;
   padding: 7rem 0;
 
@@ -33,7 +33,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
 
     .card {
       width: 30rem;
@@ -46,8 +46,10 @@
       grid-template-rows: 30rem 15rem;
       overflow: hidden;
 
+      transform: scale(0.9);
+
       &:not(:nth-child(2)) {
-        transform: scale(0.9);
+        transform: scale(0.8);
       }
 
       &:nth-child(2) {
@@ -55,7 +57,7 @@
       }
 
       &:not(:last-child) {
-        margin-right: 5rem;
+        margin-right: 3rem;
       }
 
       &-2 {
