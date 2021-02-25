@@ -1,19 +1,21 @@
 .subs-plan {
-  height: 82vh;
+  height: min-content;
   width: 100vw;
   background-color: $color-white;
   overflow: hidden;
+  position: relative;
 
   &__content {
     height: 100%;
     width: 100%;
+    z-index: 10;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     position: relative;
-    padding-top: 7rem;
+    padding: 7rem 0;
     z-index: 50;
 
     .title {
@@ -90,16 +92,25 @@
   }
 
   &--bg {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow: hidden;
 
-    div[class^="ball"] {
-      z-index: 1;
-      position: absolute;
-      height: 22rem;
-      width: 45rem;
-      border-radius: 50rem;
+    &-1 {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+
+      div[class^="ball"] {
+        z-index: 1;
+        position: absolute;
+        height: 22rem;
+        width: 45rem;
+        border-radius: 50rem;
+      }
     }
 
     .ball {
@@ -109,7 +120,7 @@
         background-color: $color-blue;
       }
       &-2 {
-        bottom: 10rem;
+        bottom: 0rem;
         left: -25rem;
         background-color: $color-grey;
       }
@@ -124,7 +135,7 @@
         background-color: $color-grey;
       }
       &-5 {
-        bottom: 2rem;
+        bottom: -4rem;
         right: 4rem;
         background-color: $color-blue;
       }
@@ -134,12 +145,12 @@
         background-color: $color-blue;
       }
       &-7 {
-        top: 31rem;
+        top: 35rem;
         right: -20rem;
         background-color: $color-grey;
       }
       &-8 {
-        top: 18rem;
+        top: 20rem;
         right: 10rem;
         background-color: $color-grey;
       }

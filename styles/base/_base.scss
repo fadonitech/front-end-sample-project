@@ -36,12 +36,8 @@ html {
     font-size: 77%; // 12px
   }
 
-  @include respond(full-hd) {
-    font-size: 82%; // 12px
-  }
-
   @include respond(huge-desktop) {
-    font-size: 165%; // 12px
+    font-size: 165%; // 
   }
 }
 
