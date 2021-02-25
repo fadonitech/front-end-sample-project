@@ -26,20 +26,20 @@ const Plans = () => {
         <PriceCard
           value={value}
           title="HALF A MONTH"
-          subtitle="SUBSCRIPTION"
+          subtitle="PARTNERSHIP"
           subscription="halfMonth"
         />
         <PriceCard
           value={value}
-          title="HALF A MONTH"
-          subtitle="SUBSCRIPTION"
+          title="MONTHLY"
+          subtitle="PARTNERSHIP"
           subscription="monthly"
           development={true}
         />
         <PriceCard
           value={value}
-          title="HALF A MONTH"
-          subtitle="SUBSCRIPTION"
+          title="YEARLY"
+          subtitle="PARTNERSHIP"
           subscription="yearly"
           development={true}
         />
