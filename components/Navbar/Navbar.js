@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Navbar = () => {
   const { pathname } = useRouter();
@@ -29,7 +28,7 @@ const Navbar = () => {
     <div className={`navbar ${scroll.scrollY > 0 || pathname !== '/'  ? 'navbar--bg-black' : ''}`}>
       <Link href="/">
         <div className="navbar--logo">
-          <Image
+          <img
             src="/logo-white.png"
             height={45.6}
             width={40}

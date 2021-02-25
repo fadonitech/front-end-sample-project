@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import CtaBtn from '../Buttons/CtaBtn';
 
 const Header = () => (
   <div className="header-homepage">
     <div className="header-homepage__content">
-      <Image
+      <img
         src="/logo-white.png"
         height={148}
         width={130}

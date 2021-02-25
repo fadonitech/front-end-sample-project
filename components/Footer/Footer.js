@@ -1,8 +1,6 @@
-import Image from 'next/image';
-
 const Footer = () => (
   <footer className="footer">
-    <Image
+    <img
       src="/logo-white.png"
       height={91.2}
       width={80}

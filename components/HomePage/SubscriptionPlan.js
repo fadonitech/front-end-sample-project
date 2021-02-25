@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import CtaBtn from '../Buttons/CtaBtn';
 
 const SubscriptionPlan = () => (
