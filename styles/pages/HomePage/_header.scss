@@ -22,6 +22,13 @@
     justify-content: center;
     align-items: center;
 
+    @include respond(huge-desktop) {
+      img {
+        height: auto;
+        width: 12rem;
+      }
+    }
+
     h1 {
       margin: 8rem 0 9rem 0;
       font-size: 3.7rem;

@@ -16,6 +16,13 @@
     background-color: rgba($color-black, .95);
   }
 
+  @include respond(huge-desktop) {
+    img {
+      height: auto;
+      width: 3rem;
+    }
+  }
+
   &--logo {
     display: flex;
     flex-direction: row;

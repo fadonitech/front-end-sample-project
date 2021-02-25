@@ -8,6 +8,13 @@
   align-items: center;
   padding: 3rem 0;
 
+  @include respond(huge-desktop) {
+    img {
+      height: auto;
+      width: 6rem;
+    }
+  }
+
   h1 {
     margin-top: 3rem;
     color: $color-white;

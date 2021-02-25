@@ -40,6 +40,9 @@
     @media only screen and (max-width: 75em) { @content }; // 1200px
   }
   //Desktop
+  @if $breakpoint == normal-desktop {
+    @media only screen and (max-width: 81.25em) { @content }; // 1300px
+  }
   @if $breakpoint == medium-desktop {
     @media only screen and (min-width: 87.5em) { @content }; // 1400px
   }
@@ -48,6 +51,9 @@
   }
   @if $breakpoint == big-desktop {
     @media only screen and (min-width: 112.5em) { @content }; // 1800px
+  }
+  @if $breakpoint == full-hd {
+    @media only screen and (min-width: 118.75em) { @content }; // 1900px
   }
   @if $breakpoint == huge-desktop {
     @media only screen and (min-width: 187.5em) { @content }; // 3000px
