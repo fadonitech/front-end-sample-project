@@ -13,14 +13,12 @@
   padding: 1rem 3rem;
 
   &--bg-black {
-    background-color: rgba($color-black, .95);
+    background-color: rgba($color-black, 0.95);
   }
 
-  @include respond(huge-desktop) {
-    img {
-      height: auto;
-      width: 3rem;
-    }
+  img {
+    height: auto;
+    width: 3rem;
   }
 
   &--logo {
@@ -75,6 +73,6 @@
     line-height: normal;
     text-align: center;
     margin-left: 2rem;
-    padding-top: .2rem;
+    padding-top: 0.2rem;
   }
 }

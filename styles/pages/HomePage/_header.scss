@@ -21,12 +21,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    @include respond(huge-desktop) {
-      img {
-        height: auto;
-        width: 12rem;
-      }
+    
+    img {
+      height: auto;
+      width: 12rem;
     }
 
     h1 {

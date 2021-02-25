@@ -8,11 +8,9 @@
   align-items: center;
   padding: 3rem 0;
 
-  @include respond(huge-desktop) {
-    img {
-      height: auto;
-      width: 6rem;
-    }
+  img {
+    height: auto;
+    width: 6rem;
   }
 
   h1 {
