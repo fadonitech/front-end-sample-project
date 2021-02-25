@@ -39,7 +39,6 @@ const Home = () => {
     setBlock(window.innerWidth < 1100);
 
     const resizeEvent = window.addEventListener('resize', () => {
-      console.log("works")
       setBlock(window.innerWidth < 1100);
     });
 

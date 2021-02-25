@@ -14,9 +14,8 @@ const ContactUs = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     setMessageSent(true);
-
     if (name && email && message) {
-      await axios.post(`${process.env.REACT_APP_API_URL}`, {
+      await axios.post(`https://a3euwetft5.execute-api.us-east-1.amazonaws.com/test1/`, {
         name,
         email,
         message
