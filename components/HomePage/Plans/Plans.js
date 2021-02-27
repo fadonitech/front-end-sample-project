@@ -31,16 +31,16 @@ const Plans = () => {
         />
         <PriceCard
           value={value}
-          title="MONTHLY"
+          title="YEARLY"
           subtitle="PARTNERSHIP"
-          subscription="monthly"
+          subscription="yearly"
           development={true}
         />
         <PriceCard
           value={value}
-          title="YEARLY"
+          title="MONTHLY"
           subtitle="PARTNERSHIP"
-          subscription="yearly"
+          subscription="monthly"
           development={true}
         />
       </div>
