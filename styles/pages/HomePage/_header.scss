@@ -25,12 +25,26 @@
     img {
       height: auto;
       width: 12rem;
+
+      @include respond(large-phone) {
+        width: 15rem;
+      }
     }
 
     h1 {
       margin: 8rem 0 9rem 0;
       font-size: 3.7rem;
+      line-height: 5rem;
       color: $color-white;
+
+      @include respond(large-phone) {
+        font-size: 4rem;
+        width: 55vw;
+      }
+
+      @include respond(medium-phone) {
+        width: 70vw;
+      }
     }
   }
 }

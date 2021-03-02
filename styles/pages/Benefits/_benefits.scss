@@ -44,6 +44,10 @@
       left: -1rem;
       width: 30rem;
     }
+
+    @include respond(large-phone) {
+      display: none;
+    }
   }
 
   #three {
@@ -63,6 +67,10 @@
     @include respond(tab-port-small) {
       right: 2rem;
       width: 20rem;
+    }
+
+    @include respond(large-phone) {
+      display: none;
     }
   }
 
@@ -86,6 +94,10 @@
         font-size: 1.8rem;
         font-weight: 600;
         color: $color-grey-black;
+
+        @include respond(medium-phone) {
+          font-size: 2rem;
+        }
       }
 
       &:not(:last-child) {

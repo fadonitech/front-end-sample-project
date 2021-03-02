@@ -38,6 +38,10 @@
       row-gap: 4rem;
     }
 
+    @include respond(medium-phone) {
+      width: 100vw;
+    }
+
     justify-content: center;
     align-items: center;
     margin-top: 7rem;
