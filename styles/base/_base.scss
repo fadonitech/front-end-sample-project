@@ -47,6 +47,10 @@ html {
   @include respond(tab-port-to-small) {
     font-size: 52%; //
   }
+
+  @include respond(tab-port-small) {
+    font-size: 50%; //
+  }
 }
 
 body {

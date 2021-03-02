@@ -39,6 +39,11 @@
       left: 0;
       width: 35rem;
     }
+
+    @include respond(tab-port-small) {
+      left: -1rem;
+      width: 30rem;
+    }
   }
 
   #three {
@@ -53,6 +58,11 @@
     @include respond(tab-port) {
       right: 1rem;
       width: 30rem;
+    }
+
+    @include respond(tab-port-small) {
+      right: 2rem;
+      width: 20rem;
     }
   }
 
