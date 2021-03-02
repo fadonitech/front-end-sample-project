@@ -29,12 +29,31 @@
     left: 2rem;
     bottom: -1rem;
     width: 45rem;
+
+    @include respond(tab-land-small) {
+      width: 40rem;
+      left: 1rem;
+    }
+
+    @include respond(tab-port) {
+      left: 0;
+      width: 35rem;
+    }
   }
 
   #three {
     bottom: 17rem;
     right: 6rem;
     width: 35rem;
+
+    @include respond(tab-land-small) {
+      right: 3rem;
+    }
+
+    @include respond(tab-port) {
+      right: 1rem;
+      width: 30rem;
+    }
   }
 
   &__container {
@@ -46,14 +65,13 @@
     align-items: center;
     margin-top: 6rem;
 
-
     &--card {
       width: 60%;
       background-color: $color-white;
       border-radius: 1rem;
       padding: 2rem;
       box-shadow: 2px 3px 10px rgba(#000000, 16%);
-      
+
       h3 {
         font-size: 1.8rem;
         font-weight: 600;

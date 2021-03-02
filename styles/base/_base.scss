@@ -12,32 +12,40 @@ html {
   scroll-behavior: smooth;
   overflow-y: scroll;
 
-  @include respond(tab-land-small) {
-    font-size: 50%; // <-- problem
-  }
-
-  @include respond(tab-land) {
-    font-size: 54%; // <-- problem
-  }
-  // funciona
-  @include respond(normal-desktop) {
-    font-size: 56.25%; // 9px
-  }
-
-  @include respond(medium-desktop) {
-    font-size: 65.75%; // 
-  }
-
-  @include respond(medium-big-gap-desktop) {
-    font-size: 68.75%; // 11px
+  @include respond(huge-desktop) {
+    font-size: 165%; // 
   }
 
   @include respond(big-desktop) {
     font-size: 77%; // 12px
   }
 
-  @include respond(huge-desktop) {
-    font-size: 165%; // 
+  @include respond(medium-big-gap-desktop) {
+    font-size: 68.75%; // 11px
+  }
+
+  @include respond(medium-desktop) {
+    font-size: 65.75%; // 
+  }
+
+  @include respond(normal-desktop) {
+    font-size: 56.25%; // 9px
+  }
+
+  @include respond(tab-land) {
+    font-size: 60%; // <-- problem
+  }
+
+  @include respond(tab-land-small) {
+    font-size: 57.5%; // <-- problem
+  }
+
+  @include respond(tab-port) {
+    font-size: 54%; //
+  }
+
+  @include respond(tab-port-to-small) {
+    font-size: 52%; //
   }
 }
 

@@ -13,5 +13,13 @@
     font-weight: 600;
     color: $color-grey-darkest;
     margin: 0 5rem;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(tab-port-to-small) {
+      margin: 0 3rem;
+    }
   }
 }

@@ -36,10 +36,10 @@ const Home = () => {
   const [block, setBlock] = useState(false);
 
   useEffect(() => {
-    setBlock(window.innerWidth < 1100);
+    setBlock(window.innerWidth < 800);
 
     const resizeEvent = window.addEventListener('resize', () => {
-      setBlock(window.innerWidth < 1100);
+      setBlock(window.innerWidth < 800);
     });
 
     return window.removeEventListener('resize', resizeEvent);

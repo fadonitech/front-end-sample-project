@@ -28,7 +28,10 @@
   }
   // Tablet
   @if $breakpoint == tab-port-small {
-    @media only screen and (max-width: 50em) { @content }; // 800px -
+    @media only screen and (max-width: 50em) { @content }; // 800px
+  }
+  @if $breakpoint == tab-port-to-small {
+    @media only screen and (max-width: 56.25em) { @content }; // 900px
   }
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 62.5em) { @content }; // 1000px
