@@ -8,10 +8,14 @@
   align-items: center;
 
   background-color: $color-grey;
-  
+
   h1 {
     color: $color-grey-darkest;
     font-size: 3rem;
     font-weight: 700;
+
+    @include respond(average-phone) {
+      margin: 0 6rem;
+    }
   }
 }
