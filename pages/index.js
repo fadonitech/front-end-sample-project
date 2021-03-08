@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head'
 
 import Navbar from '../components/Navbar/Navbar';
@@ -10,14 +9,6 @@ import Plans from '../components/HomePage/Plans/Plans';
 import Guarantee from '../components/HomePage/Guarantee';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Footer from '../components/Footer/Footer';
-
-const Warning = () => (
-  <div id="warning">
-    <h1 className="adam">
-      Sorry! We are working on the mobile version yet!
-    </h1>
-  </div>
-)
 
 const HomePage = () => (
   <>
@@ -32,32 +23,17 @@ const HomePage = () => (
   </>
 )
 
-const Home = () => {
-  // const [block, setBlock] = useState(false);
-
-  // useEffect(() => {
-  //   setBlock(window.innerWidth < 1100);
-
-  //   const resizeEvent = window.addEventListener('resize', () => {
-  //     setBlock(window.innerWidth < 1100);
-  //   });
-
-  //   return window.removeEventListener('resize', resizeEvent);
-  // }, []);
-
-  return (
-    <div>
-      <Head>
-        <title>FadoniTech</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        {/* {block ? <Warning /> : <HomePage />} */}
-        <HomePage />
-      </main>
-      <Footer />
-    </div>
-  )
-}
+const Home = () => (
+  <div>
+    <Head>
+      <title>FadoniTech</title>
+      <link rel="shortcut icon" href="/favicon.ico" />
+    </Head>
+    <main>
+      <HomePage />
+    </main>
+    <Footer />
+  </div>
+)
 
 export default Home;

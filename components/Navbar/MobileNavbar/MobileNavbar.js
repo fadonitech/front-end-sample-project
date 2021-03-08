@@ -9,7 +9,6 @@ const MobileNavbar = () => {
   const onClick = () => {
     setBtnActive(!btnActive);
   }
-  console.log(btnActive)
 
   return (
     <div className="navbar-mobile">
