@@ -10,7 +10,7 @@ const MobileNavbar = () => {
   }
 
   return (
-    <div className="navbar-mobile">
+    <>
       <div className={`navbar-mobile__bg-${btnActive ? "show" : "hide"}`} />
 
       <button
@@ -61,7 +61,7 @@ const MobileNavbar = () => {
           </button>
         </ScrollLink>
       </div>
-    </div>
+    </>
   )
 }
 
