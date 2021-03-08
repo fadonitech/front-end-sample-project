@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';

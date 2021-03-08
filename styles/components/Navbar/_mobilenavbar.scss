@@ -9,6 +9,10 @@
     right: 0;
     margin: 2rem;
     z-index: 1000;
+
+    @include respond(average-phone) {
+      transform: scale(0.9);
+    }
   }
 
   &__bg {
