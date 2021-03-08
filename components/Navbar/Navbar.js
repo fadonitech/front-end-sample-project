@@ -1,73 +1,22 @@
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import Link from 'next/link';
+import WebNavbar from './WebNavbar/WebNavbar';
+import MobileNavbar from './MobileNavbar/MobileNavbar';
 
 const Navbar = () => {
-  const { pathname } = useRouter();
-  const [scroll, setScroll] = useState({
-    scrollY: 0,
-    isGoingDown: true
-  });
+  const [isPhone, setIsPhone] = useState(false);
 
-  const scrollHandler = e => {
-    const newScrollY = window.scrollY;
-    const scrollDirection = newScrollY > scroll.scrollY;
-
-    setScroll({
-      scrollY: newScrollY,
-      isGoingDown: scrollDirection
-    });
+  const validateScreen = () => {
+    setIsPhone(window.innerWidth <= 600);
   }
 
   useEffect(() => {
-    const scrollEvent = document.addEventListener("scroll", scrollHandler);
-    return document.removeEventListener("scroll", scrollEvent);
+    setIsPhone(window.innerWidth <= 600);
+    const resizeEvent = window.addEventListener('resize', validateScreen);
+    return window.removeEventListener('resize', resizeEvent)
   }, []);
 
   return (
-    <div className={`navbar ${scroll.scrollY > 0 || pathname !== '/' ? 'navbar--bg-black' : ''}`}>
-      <Link href="/">
-        <div className="navbar--logo">
-          <img
-            src="/logo-white.png"
-            height={45.6}
-            width={40}
-          />
-          <h3 className="adam">
-            FadoniTech
-          </h3>
-        </div>
-      </Link>
-
-      <div className="navbar--links adam">
-        <ul>
-          <li>
-            <ScrollLink to="howitworks">
-              How It Works
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink to="benefits">
-              Benefits
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink to="pricing">
-              Price
-            </ScrollLink>
-          </li>
-          {/* <li>
-            Blog
-          </li> */}
-        </ul>
-        <ScrollLink to="contactus">
-          <button className="navbar--cta">
-            BOOK A MEETING
-          </button>
-        </ScrollLink>
-      </div>
-    </div>
+    !isPhone ? <WebNavbar /> : <MobileNavbar />
   )
 }
 

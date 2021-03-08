@@ -33,17 +33,17 @@ const HomePage = () => (
 )
 
 const Home = () => {
-  const [block, setBlock] = useState(false);
+  // const [block, setBlock] = useState(false);
 
-  useEffect(() => {
-    setBlock(window.innerWidth < 800);
+  // useEffect(() => {
+  //   setBlock(window.innerWidth < 1100);
 
-    const resizeEvent = window.addEventListener('resize', () => {
-      setBlock(window.innerWidth < 800);
-    });
+  //   const resizeEvent = window.addEventListener('resize', () => {
+  //     setBlock(window.innerWidth < 1100);
+  //   });
 
-    return window.removeEventListener('resize', resizeEvent);
-  }, []);
+  //   return window.removeEventListener('resize', resizeEvent);
+  // }, []);
 
   return (
     <div>
@@ -52,7 +52,8 @@ const Home = () => {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <main>
-        {block ? <Warning /> : <HomePage />}
+        {/* {block ? <Warning /> : <HomePage />} */}
+        <HomePage />
       </main>
       <Footer />
     </div>
