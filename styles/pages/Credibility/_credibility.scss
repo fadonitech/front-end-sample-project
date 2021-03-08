@@ -8,6 +8,12 @@
   justify-content: center;
   align-items: center;
 
+  @include respond(average-phone) {
+    flex-direction: column;
+    padding: 3rem 0;
+    height: auto;
+  }
+
   h1 {
     font-size: 3.4rem;
     font-weight: 600;
@@ -30,6 +36,10 @@
     @include respond(medium-phone) {
       font-size: 2.5rem;
       margin: 0 2rem;
+    }
+    @include respond(average-phone) {
+      font-size: 3rem;
+      margin: 2rem 0;
     }
   }
 }

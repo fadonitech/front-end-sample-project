@@ -16,6 +16,10 @@
     &:not(:last-child) {
       margin-bottom: 1.5rem;
     }
+
+    @include respond(average-phone) {
+      margin: 0 8rem 1.5rem 8rem;
+    }
   }
 
   #three,

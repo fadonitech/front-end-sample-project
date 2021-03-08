@@ -9,6 +9,10 @@
   .title {
     font-size: 3.7rem;
     font-weight: 600;
+
+    @include respond(average-phone) {
+      margin: 0 8rem;
+    }
   }
 
   &__container {

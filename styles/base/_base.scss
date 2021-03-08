@@ -57,6 +57,12 @@ html {
   @include respond(medium-phone) {
     font-size: 43%; // 
   }
+  @include respond(average-phone) {
+    font-size: 40%; // 
+  }
+  @include respond(small-phone) {
+    font-size: 37%; // 
+  }
 }
 
 body {

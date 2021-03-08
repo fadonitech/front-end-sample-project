@@ -6,11 +6,19 @@
   .title {
     font-size: 3.7rem;
     font-weight: 600;
+
+    @include respond(average-phone) {
+      margin: 0 5rem;
+    }
   }
 
   .subtitle {
     font-size: 2.2rem;
     padding-top: 4rem;
+
+    @include respond(average-phone) {
+      font-size: 2.5rem;
+    }
   }
 
   &__dev-container {
