@@ -12,20 +12,24 @@ html {
   scroll-behavior: smooth;
   overflow-y: scroll;
 
-  @include respond(huge-desktop) {
-    font-size: 165%; // 
-  }
-
-  @include respond(big-desktop) {
-    font-size: 77%; // 12px
+  @include respond(medium-desktop) {
+    font-size: 65.75%; // 
   }
 
   @include respond(medium-big-gap-desktop) {
-    font-size: 68.75%; // 11px
+    font-size: 68.75% !important; // 11px
   }
 
-  @include respond(medium-desktop) {
-    font-size: 65.75%; // 
+  @include respond(big-desktop) {
+    font-size: 77% !important; // 12px
+  }
+
+  @include respond(full-hd) {
+    font-size: 75% !important; // 12px
+  }
+
+  @include respond(huge-desktop) {
+    font-size: 165% !important; // 
   }
 
   @include respond(normal-desktop) {

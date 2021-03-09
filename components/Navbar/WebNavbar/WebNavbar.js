@@ -46,23 +46,23 @@ const WebNavbar = () => {
           <li>
             <ScrollLink to="howitworks">
               How It Works
-        </ScrollLink>
+            </ScrollLink>
           </li>
           <li>
             <ScrollLink to="benefits">
               Benefits
-        </ScrollLink>
+            </ScrollLink>
           </li>
           <li>
             <ScrollLink to="pricing">
               Price
-        </ScrollLink>
+            </ScrollLink>
           </li>
-          {/* <li>
-        <ScrollLink to="blog">
-          Blog
-        </ScrollLink>
-      </li> */}
+          <li>
+            <ScrollLink to="blog-section">
+              Blog
+            </ScrollLink>
+          </li>
         </ul>
         <ScrollLink to="contactus">
           <button className="navbar--cta">

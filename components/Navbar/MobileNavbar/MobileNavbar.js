@@ -29,7 +29,7 @@ const MobileNavbar = () => {
         <Link href="/">
           <img src="/logo-white.png" />
         </Link>
-        
+
         <ul>
           <li>
             <ScrollLink to="howitworks" onClick={onClick}>
@@ -46,13 +46,11 @@ const MobileNavbar = () => {
               Price
             </ScrollLink>
           </li>
-          {/* 
           <li>
-            <ScrollLink to="blog">
+            <ScrollLink to="blog-section">
               Blog
             </ScrollLink>
-          </li> 
-          */}
+          </li>
         </ul>
 
         <ScrollLink to="contactus" onClick={onClick}>
