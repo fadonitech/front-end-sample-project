@@ -13,59 +13,59 @@ html {
   -webkit-text-size-adjust:none;
 
   @include respond(medium-desktop) {
-    font-size: 65.75%; // 10.52px
+    font-size: 10.52px;
   }
 
   @include respond(medium-big-gap-desktop) {
-    font-size: 68.75% !important; // 11px
+    font-size: 11px !important;
   }
 
   @include respond(big-desktop) {
-    font-size: 77% !important; // 12.32px
+    font-size: 12.32px !important;
   }
 
   @include respond(full-hd) {
-    font-size: 75% !important; // 12px
+    font-size: 12px !important;
   }
 
   @include respond(huge-desktop) {
-    font-size: 165% !important; // 26.4px
+    font-size: 26.4px !important;
   }
 
   @include respond(normal-desktop) {
-    font-size: 56.25%; // 9px
+    font-size: 9px;
   }
 
   @include respond(tab-land) {
-    font-size: 60%; // 9.6px
+    font-size: 9.6px;
   }
 
   @include respond(tab-land-small) {
-    font-size: 57.5%; // 9.2px
+    font-size: 9.2px;
   }
 
   @include respond(tab-port) {
-    font-size: 54%; // 8.64px
+    font-size: 8.64px;
   }
 
   @include respond(tab-port-to-small) {
-    font-size: 52%; // 8.32px
+    font-size: 8.32px;
   }
 
   @include respond(tab-port-small) {
-    font-size: 50%; // 8px
+    font-size: 8px;
   }
   @include respond(large-phone) {
-    font-size: 46%; // 7.36px
+    font-size: 7.36px;
   }
   @include respond(medium-phone) {
-    font-size: 43%; // 6.88px
+    font-size: 6.88px;
   }
   @include respond(average-phone) {
-    font-size: 40%; // 6.4px
+    font-size: 6.4px;
   }
   @include respond(small-phone) {
-    font-size: 37%; // 5.92px
+    font-size: 5.92px;
   }
 }
 
