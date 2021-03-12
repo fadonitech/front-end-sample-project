@@ -19,7 +19,7 @@ const HomePage = () => (
     <SubscriptionPlan />
     <Benefits />
     <Plans />
-    {/* <Blog /> */}
+    <Blog />
     <Guarantee />
     <ContactUs />
   </>

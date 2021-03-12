@@ -1,4 +1,6 @@
 .subs-plan {
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   width: 100vw;
   background-color: $color-white;
@@ -10,8 +12,17 @@
     width: 100%;
     z-index: 10;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     position: relative;
@@ -37,17 +48,35 @@
     }
 
     &--container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
       margin-bottom: 4.5rem;
 
       @include respond(tab-port-to-small) {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: (1fr) [2];
         grid-template-columns: repeat(2, 1fr);
+        -ms-grid-rows: auto;
         grid-template-rows: auto;
+
+        &--container > *:nth-child(1) {
+          -ms-grid-row: 1;
+          -ms-grid-column: 1;
+        }
+        &--container > *:nth-child(2) {
+          -ms-grid-row: 1;
+          -ms-grid-column: 2;
+        }
       }
 
       @include respond(small-phone) {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
       }
     }
@@ -59,20 +88,38 @@
       height: 30rem;
       width: 23rem;
       background-color: $color-white;
+      -webkit-box-shadow: 2px 3px 10px rgba(#000000, 16%);
       box-shadow: 2px 3px 10px rgba(#000000, 16%);
       border-radius: 2rem;
 
+      display: -webkit-box;
+
+      display: -ms-flexbox;
+
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start;
       padding: 3rem;
       overflow: hidden;
+
+      -webkit-transform: scale(0.9);
+
+      -ms-transform: scale(0.9);
 
       transform: scale(0.9);
 
       @include respond(small-phone) {
         margin-top: 3rem;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
         transform: scale(1);
       }
 

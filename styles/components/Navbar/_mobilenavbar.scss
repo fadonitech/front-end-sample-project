@@ -1,9 +1,4 @@
 .navbar-mobile {
-  // position: fixed;
-  // height: 100vh;
-  // width: 100vw;
-  // z-index: -2;
-
   &--hamburger {
     position: fixed;
     right: 0;
@@ -11,7 +6,9 @@
     z-index: 1000;
 
     @include respond(average-phone) {
-      transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+              transform: scale(0.9);
     }
   }
 
@@ -23,6 +20,8 @@
       position: fixed;
       z-index: 996;
       border-radius: 50%;
+      -webkit-transition: all 200ms ease-out;
+      -o-transition: all 200ms ease-out;
       transition: all 200ms ease-out;
       right: 2rem;
       top: 1rem;
@@ -40,11 +39,15 @@
     }
 
     &-show {
-      transform: scale(30);
+      -webkit-transform: scale(30);
+          -ms-transform: scale(30);
+              transform: scale(30);
     }
 
     &-hide {
-      transform: scale(1);
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1);
     }
   }
 
@@ -61,7 +64,9 @@
         margin-top: 5rem;
         color: $color-blue;
         background-color: $color-white;
-        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+                transform: scale(1.5);
       }
 
       img {
@@ -72,12 +77,19 @@
 
       ul {
         list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         li {
           font-size: 3rem;
           margin: 2rem 0;
+          -webkit-transition: all 100ms ease-out;
+          -o-transition: all 100ms ease-out;
           transition: all 100ms ease-out;
           cursor: pointer;
           color: $color-white;
@@ -86,12 +98,23 @@
     }
 
     &-show {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
 
       opacity: 1;
+      -webkit-transition: all 200ms 150ms ease-out;
+      -o-transition: all 200ms 150ms ease-out;
       transition: all 200ms 150ms ease-out;
     }
 
