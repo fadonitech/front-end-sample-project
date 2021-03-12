@@ -29,6 +29,10 @@ const Home = () => (
   <div>
     <Head>
       <title>FadoniTech</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+      <meta name="robots" content="index, follow" />
+      <meta name="description" content="A fast, reliable and flexible subscription-based Software Development service for Businesses!" />
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
     <main>
