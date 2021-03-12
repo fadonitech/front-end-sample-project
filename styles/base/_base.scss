@@ -10,9 +10,10 @@ html {
   font-size: 62.5%; // 10px
   scroll-behavior: smooth;
   overflow-y: scroll;
+  -webkit-text-size-adjust:none;
 
   @include respond(medium-desktop) {
-    font-size: 65.75%; // 
+    font-size: 65.75%; // 10.52px
   }
 
   @include respond(medium-big-gap-desktop) {
@@ -20,7 +21,7 @@ html {
   }
 
   @include respond(big-desktop) {
-    font-size: 77% !important; // 12px
+    font-size: 77% !important; // 12.32px
   }
 
   @include respond(full-hd) {
@@ -28,7 +29,7 @@ html {
   }
 
   @include respond(huge-desktop) {
-    font-size: 165% !important; // 
+    font-size: 165% !important; // 26.4px
   }
 
   @include respond(normal-desktop) {
@@ -36,35 +37,35 @@ html {
   }
 
   @include respond(tab-land) {
-    font-size: 60%; // <-- problem
+    font-size: 60%; // 9.6px
   }
 
   @include respond(tab-land-small) {
-    font-size: 57.5%; // <-- problem
+    font-size: 57.5%; // 9.2px
   }
 
   @include respond(tab-port) {
-    font-size: 54%; // 
+    font-size: 54%; // 8.64px
   }
 
   @include respond(tab-port-to-small) {
-    font-size: 52%; // 
+    font-size: 52%; // 8.32px
   }
 
   @include respond(tab-port-small) {
-    font-size: 50%; // 
+    font-size: 50%; // 8px
   }
   @include respond(large-phone) {
-    font-size: 46%; // 
+    font-size: 46%; // 7.36px
   }
   @include respond(medium-phone) {
-    font-size: 43%; // 
+    font-size: 43%; // 6.88px
   }
   @include respond(average-phone) {
-    font-size: 40%; // 
+    font-size: 40%; // 6.4px
   }
   @include respond(small-phone) {
-    font-size: 37%; // 
+    font-size: 37%; // 5.92px
   }
 }
 
@@ -74,6 +75,7 @@ html {
 
 body {
   box-sizing: border-box;
+  -webkit-text-size-adjust: none;
 }
 
 a,
