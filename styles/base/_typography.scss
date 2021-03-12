@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Adam';
+  src: 
+    url('../fonts/woff/Adam-Medium.woff') format('woff'),
+    url('../fonts/tff/Adam-Medium.ttf') format('truetype'),
+    url('../fonts/eot/Adam-Medium.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: 
+    url('../fonts/woff/OpenSans-Regular.woff') format('woff'),
+    url('../fonts/tff/OpenSans-Regular.ttf') format('truetype'),
+    url('../fonts/eot/OpenSans-Regular.eot') format('embedded-opentype');
+}
+
 .adam {
   font-family: 'Adam', sans-serif;
   font-weight: 300;
@@ -5,7 +21,6 @@
   font-style: normal;
   line-height: normal;
   text-align: center;
-  src: local('../fonts/Adam-Medium.ttf');
 }
 
 .open-sans {
@@ -15,7 +30,6 @@
   font-style: normal;
   line-height: normal;
   text-align: center;
-  src: local('../fonts/OpenSans-Regular.ttf');
 }
 
 .bold {
