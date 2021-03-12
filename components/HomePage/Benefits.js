@@ -9,8 +9,8 @@ const Benefits = () => (
       SAVE RESOURCES
     </h1>
 
-    <img id="programming-img" src='/programing.svg' alt='next' />
-    <img id="three" src='/three.svg' alt='next' />
+    <img alt="Software Development" id="programming-img" src='/programing.svg' alt='next' />
+    <img alt="Team Leasing" id="three" src='/three.svg' alt='next' />
 
     <div className="benefits__container">
       <div className="benefits__container--card">

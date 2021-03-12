@@ -10,22 +10,22 @@ const SubscriptionPlan = () => (
         <div className="subs-plan__content--card-1">
           <h3 className="open-sans italic">STEP 1</h3>
           <h2 className="open-sans">Book A Meeting</h2>
-          <img src='/step-1.svg' alt='software development' />
+          <img alt="Software Development" src='/step-1.svg' alt='software development' />
         </div>
         <div className="subs-plan__content--card-2">
           <h3 className="open-sans italic">STEP 2</h3>
           <h2 className="open-sans">Give Access To Our Team</h2>
-          <img src='/step-2.svg' alt='next' />
+          <img alt="Tech Partnership" src='/step-2.svg' alt='next' />
         </div>
         <div className="subs-plan__content--card-3">
           <h3 className="open-sans italic">STEP 3</h3>
           <h2 className="open-sans">Send Weekly Tasks</h2>
-          <img src='/step-3.svg' alt='next' />
+          <img alt="Team leasing" src='/step-3.svg' alt='next' />
         </div>
         <div className="subs-plan__content--card-4">
           <h3 className="open-sans italic">STEP 4</h3>
           <h2 className="open-sans">Enjoy Scaling Your Business</h2>
-          <img src='/step-4.svg' alt='next' />
+          <img alt="FadoniTech" src='/step-4.svg' alt='next' />
         </div>
       </div>
 

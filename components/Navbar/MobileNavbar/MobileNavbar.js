@@ -27,7 +27,7 @@ const MobileNavbar = () => {
 
       <div className={`navbar-mobile__links-${btnActive ? "show" : "hide"} adam`}>
         <Link href="/">
-          <img src="/logo-white.png" />
+          <img src="/logo-white.png" alt="Tech Partnership" />
         </Link>
 
         <ul>

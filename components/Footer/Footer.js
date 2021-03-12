@@ -4,6 +4,7 @@ const Footer = () => (
       src="/logo-white.png"
       height={91.2}
       width={80}
+      alt="Software Development"
     />
     <h1 className="adam">
       FadoniTech © 2020

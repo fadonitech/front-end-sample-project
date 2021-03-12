@@ -34,6 +34,7 @@ const WebNavbar = () => {
             src="/logo-white.png"
             height={45.6}
             width={40}
+            alt="Software Development"
           />
 
           <h3 className="adam">
