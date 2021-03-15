@@ -1,18 +1,26 @@
+// ABSTRACT
 @import "./abstract/mixins";
+@import "./abstract/variables";
+
+// ASSETS
 @import "./assets/hamburgers.scss";
 
+//BASE
 @import "./base/base";
-@import "./abstract/variables";
 @import "./base/typography";
 
-@import "./pages/HomePage/header";
-@import "./pages/Credibility/credibility";
-@import "./pages/SubscriptionPlan/subscriptionPlan";
-@import "./pages/Benefits/benefits";
-@import "./pages/Pricing/pricing";
-@import "./pages/Gurantee/guarantee";
-@import "./pages/Blog/blog";
 
+//HOMEPAGE
+@import "./pages/HomePage/header";
+@import "./pages/HomePage/credibility";
+@import "./pages/HomePage/subscriptionPlan";
+@import "./pages/HomePage/benefits";
+@import "./pages/HomePage/pricing";
+@import "./pages/HomePage/guarantee";
+@import "./pages/HomePage/blog";
+
+
+//COMPONENTS
 @import "./components/Buttons/ctaBtn";
 @import "./components/Buttons/standardBtn";
 @import "./components/Navbar/navbar";
