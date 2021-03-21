@@ -1,0 +1,60 @@
+import { useRouter } from 'next/router';
+import BlogNavbar from '../../components/Blog/BlogNavbar/BlogNavbar';
+
+const Article = ({ id, title, date, imgSrc, content }) => {
+  const router = useRouter();
+  const article = router.query;
+
+  return (
+    <div>
+      <BlogNavbar />
+      <div className="blogArticlePage">
+        <div className="blogArticlePage__content">
+          <div className="blogArticlePage__headline">
+            <h1 className="open-sans">
+              {title}
+            </h1>
+            <h2 className="open-sans">
+              {date}
+            </h2>
+          </div>
+          <div className="blogArticlePage__text">
+            <img src={imgSrc} alt="Software Development" />
+            <div dangerouslySetInnerHTML={{__html: content}}></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export async function getStaticProps({ params }) {
+  const req = await fetch(`http://localhost:3000/data/${params.article}.json`);
+  const data = await req.json();
+
+  return {
+    props: {
+      ...data
+    }
+  }
+}
+
+export async function getStaticPaths() {
+  const req = await fetch("http://localhost:3000/data/articles.json");
+  const { articles } = await req.json();
+
+  const paths = articles.map(article => ({
+    params: {
+      article: article.id.toString()
+    }
+  })
+  )
+
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+
+export default Article;

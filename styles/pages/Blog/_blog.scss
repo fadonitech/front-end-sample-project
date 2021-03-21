@@ -1,0 +1,22 @@
+@import './blogNavbar';
+@import './blogHeader';
+@import './blogContent';
+@import './blogArticle';
+
+.blog-page {
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  background-color: $color-grey;
+
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+}
+
+#blog-title {
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 5rem;
+}

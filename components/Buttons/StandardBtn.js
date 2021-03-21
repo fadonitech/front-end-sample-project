@@ -1,7 +1,10 @@
 import Link from 'next/link';
 
-const StandardBtn = ({ title }) => (
-  <Link href="/blog">
+const StandardBtn = ({ title, url }) => (
+  <Link
+    href={url}
+    scroll={false}
+  >
     <button id="standard-btn">
       {title}
     </button>

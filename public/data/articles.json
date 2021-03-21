@@ -1,0 +1,66 @@
+{
+  "articles": [
+    {
+      "id": "article-1",
+      "title": "PWA: Advantages & Disadvantages",
+      "date": "March 16, 2021",
+      "imgSrc": "/article-example.png",
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+    },
+    {
+      "id": "article-2",
+      "title": "PWA: Advantages & Disadvantages",
+      "date": "March 17, 2021",
+      "imgSrc": "/article-example.png",
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+    },
+    {
+      "id": "article-3",
+      "title": "PWA: Advantages & Disadvantages",
+      "date": "March 18, 2021",
+      "imgSrc": "/article-example.png",
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+
+    },
+    {
+      "id": "article-4",
+      "title": "PWA: Advantages & Disadvantages",
+      "date": "March 19, 2021",
+      "imgSrc": "/article-example.png",
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+
+    },
+    {
+      "id": "article-5",
+      "title": "PWA: Advantages & Disadvantages",
+      "date": "March 20, 2021",
+      "imgSrc": "/article-example.png",
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+
+    },
+    {
+      "id": "article-6",
+      "title": "PWA: Advantages & Disadvantages",
+      "date": "March 21, 2021",
+      "imgSrc": "/article-example.png",
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+
+    },
+    {
+      "id": "article-7",
+      "title": "PWA: Advantages & Disadvantages",
+      "date": "March 22, 2021",
+      "imgSrc": "/article-example.png",
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+
+    },
+    {
+      "id": "article-8",
+      "title": "PWA: Advantages & Disadvantages",
+      "date": "March 23, 2021",
+      "imgSrc": "/article-example.png",
+      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { createContext } from 'react';
 import Head from 'next/head'
 
 import Navbar from '../components/Navbar/Navbar';
@@ -11,6 +12,8 @@ import Guarantee from '../components/HomePage/Guarantee';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Footer from '../components/Footer/Footer';
 
+export const ArticlesContext = createContext({});
+
 const HomePage = () => (
   <>
     <Navbar />
@@ -19,13 +22,13 @@ const HomePage = () => (
     <SubscriptionPlan />
     <Benefits />
     <Plans />
-    {/* <Blog /> */}
+    <Blog />
     <Guarantee />
     <ContactUs />
   </>
 )
 
-const Home = () => (
+const Home = ({ articles }) => (
   <div>
     <Head>
       <title>FadoniTech</title>
@@ -36,10 +39,23 @@ const Home = () => (
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
     <main>
-      <HomePage />
+      <ArticlesContext.Provider value={articles}>
+        <HomePage />
+      </ArticlesContext.Provider>
     </main>
     <Footer />
   </div>
 )
+
+export async function getStaticProps() {
+  const req = await fetch("http://localhost:3000/data/articles.json");
+  const data = await req.json();
+
+  return {
+    props: {
+      ...data
+    }
+  }
+}
 
 export default Home;
