@@ -8,11 +8,30 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
+  overflow: hidden;
+
+  @include respond(tab-land) {
+    width: 80vw;
+  }
+
+  @include respond(tab-port-to-small) {
+    width: 90vw;
+  }
+
+  @include respond(tab-port-small) {
+    grid-column-gap: 2rem;
+  }
+
+  @include respond(large-phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 
   img {
+    height: auto;
     width: 100%;
     cursor: pointer;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   div {
@@ -20,6 +39,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @include respond(large-phone) {
+      margin-top: 3rem;
+    }
 
     h1,
     h3 {
@@ -38,12 +61,29 @@
       font-size: 4.3rem;
       font-weight: 700;
       color: $color-black;
+
+      @include respond(tab-port-small) {
+        font-size: 4rem;
+      }
+
+      @include respond(large-phone) {
+        width: 100%;
+        font-size: 4.5rem;
+      }
     }
 
     h3 {
       font-size: 2.3rem;
       font-weight: 600;
       color: $color-grey-darkest;
+
+      @include respond(tab-port-small) {
+        font-size: 2rem;
+      }
+
+      @include respond(large-phone) {
+        font-size: 3rem;
+      }
     }
 
     p {
@@ -52,6 +92,16 @@
       font-weight: 300;
       color: $color-black;
       overflow: hidden;
+
+      @include respond(tab-port-small) {
+        font-size: 1.5rem;
+      }
+
+      @include respond(large-phone) {
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: justify;
+      }
     }
   }
 }

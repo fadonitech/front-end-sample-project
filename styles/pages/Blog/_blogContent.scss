@@ -11,6 +11,22 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
+
+  @include respond(tab-land) {
+    width: 80vw;
+  }
+
+  @include respond(tab-port-to-small) {
+    width: 90vw;
+  }
+
+  @include respond(tab-port-small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(average-phone) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .blogArticle {
@@ -19,12 +35,21 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  
+  @include respond(average-phone) {
+    flex-direction: row;
+  }
 
   img {
     width: 100%;
     height: auto;
     cursor: pointer;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
+
+    @include respond(average-phone) {
+      width: 50%;
+      margin-right: 2rem;
+    }
   }
 
   div {
@@ -35,8 +60,16 @@
     align-items: flex-start;
     margin-top: 1rem;
 
+    @include respond(large-phone) {
+      margin-top: 2rem;
+    }
+
+    @include respond(average-phone) {
+      margin-top: 0;
+    }
+
     h3 {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
     h1,
@@ -50,12 +83,30 @@
       font-size: 2rem;
       font-weight: 700;
       color: $color-black;
+
+      @include respond(large-phone) {
+        width: 100%;
+        font-size: 3rem;
+      }
+
+      @include respond(average-phone) {
+        font-size: 3.2rem;
+      }
     }
 
     h3 {
       font-size: 1.5rem;
       font-weight: 600;
       color: $color-grey-darkest;
+
+      @include respond(large-phone) {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      @include respond(average-phone) {
+        margin-bottom: 2rem;
+      }
     }
   }
 }

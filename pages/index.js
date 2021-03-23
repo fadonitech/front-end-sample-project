@@ -21,9 +21,9 @@ const HomePage = () => (
     <Credibility />
     <SubscriptionPlan />
     <Benefits />
+    <Guarantee />
     <Plans />
     <Blog />
-    <Guarantee />
     <ContactUs />
   </>
 )

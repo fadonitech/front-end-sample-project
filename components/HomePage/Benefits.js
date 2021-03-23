@@ -14,7 +14,7 @@ const Benefits = () => (
 
     <div className="benefits__container">
       <div className="benefits__container--card">
-        <h3 className="open-sans">Start Paying After A Week</h3>
+        <h3 className="open-sans">Start Paying After 2 Weeks</h3>
       </div>
       <div className="benefits__container--card">
         <h3 className="open-sans">Cancel Anytime, Anywhere!</h3>

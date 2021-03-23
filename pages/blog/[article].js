@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import BlogNavbar from '../../components/Blog/BlogNavbar/BlogNavbar';
+import Footer from '../../components/Footer/Footer';
 
 const Article = ({ id, title, date, imgSrc, content }) => {
   const router = useRouter();
@@ -20,10 +21,11 @@ const Article = ({ id, title, date, imgSrc, content }) => {
           </div>
           <div className="blogArticlePage__text">
             <img src={imgSrc} alt="Software Development" />
-            <div dangerouslySetInnerHTML={{__html: content}}></div>
+            <div dangerouslySetInnerHTML={{ __html: content }}></div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

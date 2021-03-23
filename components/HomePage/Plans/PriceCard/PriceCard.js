@@ -4,36 +4,69 @@ import CardBtn from './CardBtn/CardBtn';
 
 const price = {
   1: {
-    halfMonth: "$1.900,00",
-    monthly: "$3.000,00",
-    yearly: "$2.750,00"
+    halfMonth: "$700,00",
+    monthly: "$1.000,00",
+    yearly: "$950,00"
   },
   2: {
-    halfMonth: "$3.800,00",
-    monthly: "$6.000,00",
-    yearly: "$5.750,00"
+    halfMonth: "$1.400,00",
+    monthly: "$2.000,00",
+    yearly: "$1.900,00"
   },
   3: {
-    halfMonth: "$5.700,00",
-    monthly: "$9.000,00",
-    yearly: "$8.500,00"
+    halfMonth: "$2.100,00",
+    monthly: "$3.000,00",
+    yearly: "$2.850,00"
   },
   4: {
-    halfMonth: "$7.600,00",
-    monthly: "$12.000,00",
-    yearly: "$11.200,00"
+    halfMonth: "$2.800,00",
+    monthly: "$4.000,00",
+    yearly: "$3.800,00"
   },
   5: {
-    halfMonth: "$9.500,00",
-    monthly: "$15.000,00",
-    yearly: "$14.200,00"
+    halfMonth: "$3.500,00",
+    monthly: "$5.000,00",
+    yearly: "$4.750,00"
   },
   6: {
-    halfMonth: "$11.400,00",
-    monthly: "$18.000,00",
-    yearly: "$17.200,00"
+    halfMonth: "$4.200,00",
+    monthly: "$6.000,00",
+    yearly: "$5.700,00"
   }
 }
+
+// const price = {
+//   1: {
+//     halfMonth: "$1.900,00",
+//     monthly: "$3.000,00",
+//     yearly: "$2.750,00"
+//   },
+//   2: {
+//     halfMonth: "$3.800,00",
+//     monthly: "$6.000,00",
+//     yearly: "$5.750,00"
+//   },
+//   3: {
+//     halfMonth: "$5.700,00",
+//     monthly: "$9.000,00",
+//     yearly: "$8.500,00"
+//   },
+//   4: {
+//     halfMonth: "$7.600,00",
+//     monthly: "$12.000,00",
+//     yearly: "$11.200,00"
+//   },
+//   5: {
+//     halfMonth: "$9.500,00",
+//     monthly: "$15.000,00",
+//     yearly: "$14.200,00"
+//   },
+//   6: {
+//     halfMonth: "$11.400,00",
+//     monthly: "$18.000,00",
+//     yearly: "$17.200,00"
+//   }
+// }
 
 const PriceCard = ({
   value,
