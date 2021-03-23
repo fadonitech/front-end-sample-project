@@ -94,6 +94,17 @@
           transition: all 100ms ease-out;
           cursor: pointer;
           color: $color-white;
+
+          a {
+            font-size: 3rem;
+            margin: 2rem 0;
+            text-decoration: none;
+            -webkit-transition: all 100ms ease-out;
+            -o-transition: all 100ms ease-out;
+            transition: all 100ms ease-out;
+            cursor: pointer;
+            color: $color-white;
+          }
         }
       }
     }

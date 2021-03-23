@@ -47,7 +47,7 @@ const MobileNavbar = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="blog-section">
+            <ScrollLink to="blog-section" onClick={onClick}>
               Blog
             </ScrollLink>
           </li>
