@@ -1,66 +1,25 @@
 {
   "articles": [
     {
-      "id": "article-1",
-      "title": "PWA: Advantages & Disadvantages",
-      "date": "March 16, 2021",
-      "imgSrc": "/article-example.png",
-      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
+      "id": "what-technologies-should-you-be-using",
+      "title": "What technologies we use?",
+      "date": "March 26, 2021",
+      "imgSrc": "/image/article-26-03-2021.jpeg",
+      "summary": "Doesn't matter if you are in health tech, fintech, e-commerce, or blockchain. There'll be a time you will need to define what technology"
     },
     {
-      "id": "article-2",
-      "title": "PWA: Advantages & Disadvantages",
-      "date": "March 17, 2021",
-      "imgSrc": "/article-example.png",
-      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
-    },
-    {
-      "id": "article-3",
-      "title": "PWA: Advantages & Disadvantages",
-      "date": "March 18, 2021",
-      "imgSrc": "/article-example.png",
-      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
-
-    },
-    {
-      "id": "article-4",
-      "title": "PWA: Advantages & Disadvantages",
-      "date": "March 19, 2021",
-      "imgSrc": "/article-example.png",
-      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
-
-    },
-    {
-      "id": "article-5",
-      "title": "PWA: Advantages & Disadvantages",
+      "id": "how-to-stand-your-business-out-in-2021",
+      "title": "How to stand your business out in 2021?",
       "date": "March 20, 2021",
-      "imgSrc": "/article-example.png",
-      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
-
+      "imgSrc": "/image/article-20-03-2021.jpeg",
+      "summary": "In 2020 the world shifted from a mix of physical and online to entirely digital. However, most of us have realized the internet has become extremely noisy"
     },
     {
-      "id": "article-6",
-      "title": "PWA: Advantages & Disadvantages",
-      "date": "March 21, 2021",
-      "imgSrc": "/article-example.png",
-      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
-
-    },
-    {
-      "id": "article-7",
-      "title": "PWA: Advantages & Disadvantages",
-      "date": "March 22, 2021",
-      "imgSrc": "/article-example.png",
-      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
-
-    },
-    {
-      "id": "article-8",
-      "title": "PWA: Advantages & Disadvantages",
-      "date": "March 23, 2021",
-      "imgSrc": "/article-example.png",
-      "summary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor"
-
+      "id": "what-is-front-end-and-back-end",
+      "title": "What's Front and Back?",
+      "date": "March 16, 2021",
+      "imgSrc": "/image/article-front-vs-back.jpeg",
+      "summary": "Since software development is a vast topic, we always use weird code names that segment software in specific fields"
     }
   ]
 }
