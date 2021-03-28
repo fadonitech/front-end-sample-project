@@ -31,7 +31,8 @@ const Article = ({ id, title, date, imgSrc, content }) => {
 }
 
 export async function getStaticProps({ params }) {
-  const req = await fetch(`http://localhost:3000/data/${params.article}.json`);
+  // const req = await fetch(`http://localhost:3000/data/${params.article}.json`);
+  const req = await fetch(`https://development.d3b0ch60bihnpd.amplifyapp.com/data/${params.article}.json`);
   const data = await req.json();
 
   return {
@@ -42,7 +43,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const req = await fetch("http://localhost:3000/data/articles.json");
+  // const req = await fetch("http://localhost:3000/data/articles.json");
+  const req = await fetch("https://development.d3b0ch60bihnpd.amplifyapp.com/data/articles.json");
   const { articles } = await req.json();
 
   const paths = articles.map(article => ({
