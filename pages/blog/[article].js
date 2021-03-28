@@ -1,10 +1,14 @@
 import { useRouter } from 'next/router';
+
+import data from '../../data/data';
+
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
 const Article = ({ id, title, date, imgSrc, content }) => {
-  const router = useRouter();
-  const article = router.query;
+  // const router = useRouter();
+  // const article = router.query;
+  // const { id, title, date, imgSrc, content } = data;
 
   return (
     <div>
@@ -32,24 +36,25 @@ const Article = ({ id, title, date, imgSrc, content }) => {
 
 export async function getStaticProps({ params }) {
   // const req = await fetch(`http://localhost:3000/data/${params.article}.json`);
-  const req = await fetch(`https://development.d3b0ch60bihnpd.amplifyapp.com/data/${params.article}.json`);
-  const data = await req.json();
+  // const data = await req.json();
+
+  const selectedArticle = data.articles.filter(article => article.id === params.article)
 
   return {
     props: {
-      ...data
+      ...selectedArticle[0]
     }
   }
 }
 
 export async function getStaticPaths() {
   // const req = await fetch("http://localhost:3000/data/articles.json");
-  const req = await fetch("https://development.d3b0ch60bihnpd.amplifyapp.com/data/articles.json");
-  const { articles } = await req.json();
+  // const { articles } = await req.json();
+  const { articles } = data;
 
   const paths = articles.map(article => ({
     params: {
-      article: article.id.toString()
+      article: article.id //.toString()
     }
   })
   )

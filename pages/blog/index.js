@@ -1,6 +1,8 @@
 import { createContext } from 'react';
 import Head from 'next/head'
 
+import data from '../../data/data';
+
 import Navbar from '../../components/Navbar/Navbar';
 import BlogNavbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import BlogContent from '../../components/Blog/Blog';
@@ -27,7 +29,7 @@ const Home = ({ articles }) => {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <main>
-        <ArticlesContext.Provider value={articles}>
+        <ArticlesContext.Provider value={data.articles}>
           <Blog />
         </ArticlesContext.Provider>
       </main>
@@ -36,16 +38,15 @@ const Home = ({ articles }) => {
   )
 }
 
-export async function getStaticProps() {
-  // const req = await fetch("http://localhost:3000/data/articles.json");
-  const req = await fetch("https://development.d3b0ch60bihnpd.amplifyapp.com/articles.json");
-  const data = await req.json();
+// export async function getStaticProps() {
+//   const req = await fetch("http://localhost:3000/data/articles.json");
+//   const data = await req.json();
 
-  return {
-    props: {
-      ...data
-    }
-  }
-}
+//   return {
+//     props: {
+//       ...data
+//     }
+//   }
+// }
 
 export default Home;
