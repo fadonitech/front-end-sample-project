@@ -1,8 +1,8 @@
 import { useState } from "react";
-import SliderInput from '../Plans/SliderInput/SliderInput';
+import SliderInput from './SliderInput/SliderInput';
 import PriceCard from './PriceCard/PriceCard';
 
-const Plans = () => {
+const Price = () => {
   const [value, setValue] = useState(1);
 
   return (
@@ -48,4 +48,4 @@ const Plans = () => {
   )
 }
 
-export default Plans;
+export default Price;

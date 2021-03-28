@@ -11,14 +11,14 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 1rem 3rem;
 
   &--bg-black {
@@ -36,11 +36,11 @@
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     cursor: pointer;
 
     h3 {
@@ -57,11 +57,11 @@
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 
     ul {
       list-style: none;
@@ -70,8 +70,8 @@
       display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
 
       li {
         font-size: 1.5rem;
@@ -80,6 +80,21 @@
         -o-transition: all 100ms ease-out;
         transition: all 100ms ease-out;
         cursor: pointer;
+
+        a {
+          font-size: 1.5rem;
+          color: $color-white;
+          text-decoration: none;
+          margin: 0 1rem;
+          -webkit-transition: all 100ms ease-out;
+          -o-transition: all 100ms ease-out;
+          transition: all 100ms ease-out;
+          cursor: pointer;
+
+          &:hover {
+            font-weight: 600;
+          }
+        }
       }
 
       li:hover {

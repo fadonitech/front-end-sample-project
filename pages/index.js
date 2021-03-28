@@ -6,7 +6,7 @@ import Header from '../components/HomePage/Header';
 import Credibility from '../components/HomePage/Credibility';
 import SubscriptionPlan from '../components/HomePage/SubscriptionPlan';
 import Benefits from '../components/HomePage/Benefits';
-import Plans from '../components/HomePage/Plans/Plans';
+import Price from '../components/Price/Price';
 import Blog from '../components/HomePage/Blog';
 import Guarantee from '../components/HomePage/Guarantee';
 import ContactUs from '../components/ContactUs/ContactUs';
@@ -22,7 +22,7 @@ const HomePage = () => (
     <SubscriptionPlan />
     <Benefits />
     <Guarantee />
-    <Plans />
+    <Price />
     <Blog />
     <ContactUs />
   </>

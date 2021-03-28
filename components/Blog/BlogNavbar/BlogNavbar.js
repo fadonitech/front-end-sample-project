@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Navbar from '../../Navbar/WebNavbar/WebNavbar';
 import { useState, useEffect } from 'react';
 
 
@@ -23,6 +24,11 @@ const BlogWebNavbar = () => (
         <li>
           <Link href="/about-us">
             About Us
+          </Link>
+        </li>
+        <li>
+          <Link href="/service">
+            Service
           </Link>
         </li>
         <li>
@@ -72,26 +78,29 @@ const BlogMobilebNavbar = () => {
         <Link href="/">
           <img src="/logo-white.png" alt="Tech Partnership" />
         </Link>
-
         <ul>
           <li>
-            <Link href="/aboutus" onClick={onClick}>
+            <Link href="/about-us" onClick={onClick}>
               About Us
-            </Link>
+          </Link>
+          </li>
+          <li>
+            <Link href="/service" onClick={onClick}>
+              Service
+          </Link>
           </li>
           <li>
             <Link href="/price" onClick={onClick}>
               Price
-            </Link>
+          </Link>
           </li>
-          <li onClick={onClick}>
+          <li>
             <Link href="/blog" onClick={onClick}>
               Blog
-            </Link>
+          </Link>
           </li>
         </ul>
-
-        <Link href="/contactus" onClick={onClick}>
+        <Link href="contactus" onClick={onClick}>
           <button className="navbar--cta">
             BOOK A MEETING
           </button>

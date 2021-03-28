@@ -1,11 +1,15 @@
+import Link from 'next/link';
+
 const Footer = () => (
   <footer className="footer">
-    <img
-      src="/logo-white.png"
-      height={91.2}
-      width={80}
-      alt="Software Development"
-    />
+    <Link href="/">
+      <img
+        src="/logo-white.png"
+        height={91.2}
+        width={80}
+        alt="Software Development"
+      />
+    </Link>
     <h1 className="adam">
       FadoniTech © 2020
     </h1>

@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 import Head from 'next/head'
 
+import Navbar from '../../components/Navbar/Navbar';
 import BlogNavbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import BlogContent from '../../components/Blog/Blog';
 import Footer from '../../components/Footer/Footer';
@@ -9,7 +10,7 @@ export const ArticlesContext = createContext({});
 
 const Blog = () => (
   <>
-    <BlogNavbar />
+    <Navbar />
     <BlogContent />
   </>
 )

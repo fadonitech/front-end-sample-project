@@ -29,35 +29,33 @@ const MobileNavbar = () => {
         <Link href="/">
           <img src="/logo-white.png" alt="Tech Partnership" />
         </Link>
-
         <ul>
           <li>
-            <ScrollLink to="howitworks" onClick={onClick}>
-              How It Works
-            </ScrollLink>
+            <Link href="/about-us" onClick={onClick}>
+              About Us
+          </Link>
           </li>
           <li>
-            <ScrollLink to="benefits" onClick={onClick}>
-              Benefits
-            </ScrollLink>
+            <Link href="/service" onClick={onClick}>
+              Service
+          </Link>
           </li>
           <li>
-            <ScrollLink to="pricing" onClick={onClick}>
+            <Link href="/price" onClick={onClick}>
               Price
-            </ScrollLink>
+          </Link>
           </li>
           <li>
-            <ScrollLink to="blog-section" onClick={onClick}>
+            <Link href="/blog" onClick={onClick}>
               Blog
-            </ScrollLink>
+          </Link>
           </li>
         </ul>
-
-        <ScrollLink to="contactus" onClick={onClick}>
+        <Link href="contactus" onClick={onClick}>
           <button className="navbar--cta">
             BOOK A MEETING
           </button>
-        </ScrollLink>
+        </Link>
       </div>
     </>
   )

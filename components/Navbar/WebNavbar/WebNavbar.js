@@ -45,31 +45,31 @@ const WebNavbar = () => {
       <div className="navbar--links adam">
         <ul>
           <li>
-            <ScrollLink to="howitworks">
-              How It Works
-            </ScrollLink>
+            <Link href="/about-us">
+              About Us
+            </Link>
           </li>
           <li>
-            <ScrollLink to="benefits">
-              Benefits
-            </ScrollLink>
+            <Link href="/service">
+              Service
+            </Link>
           </li>
           <li>
-            <ScrollLink to="pricing">
+            <Link href="/price">
               Price
-            </ScrollLink>
+            </Link>
           </li>
           <li>
-            <ScrollLink to="blog-section">
+            <Link href="/blog">
               Blog
-            </ScrollLink>
+            </Link>
           </li>
         </ul>
-        <ScrollLink to="contactus">
+        <Link href="/contactus">
           <button className="navbar--cta">
             BOOK A MEETING
           </button>
-        </ScrollLink>
+        </Link>
       </div>
     </div>
   )

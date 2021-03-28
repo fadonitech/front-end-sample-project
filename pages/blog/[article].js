@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import BlogNavbar from '../../components/Blog/BlogNavbar/BlogNavbar';
+import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
 const Article = ({ id, title, date, imgSrc, content }) => {
@@ -8,7 +8,7 @@ const Article = ({ id, title, date, imgSrc, content }) => {
 
   return (
     <div>
-      <BlogNavbar />
+      <Navbar />
       <div className="blogArticlePage">
         <div className="blogArticlePage__content">
           <div className="blogArticlePage__headline">
