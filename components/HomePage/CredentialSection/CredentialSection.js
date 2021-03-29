@@ -1,4 +1,4 @@
-const Credibility = () => (
+const CredentialSection = () => (
   <div className="credibility open-sans">
     <h1>+100 Projects Done</h1>
     <h1>5/5 Star Reviews</h1>
@@ -6,4 +6,4 @@ const Credibility = () => (
   </div>
 )
 
-export default Credibility;
+export default CredentialSection;

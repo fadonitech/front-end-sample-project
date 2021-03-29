@@ -1,6 +1,6 @@
-import CtaBtn from '../Buttons/CtaBtn';
+import CtaBtn from '../../Buttons/CtaBtn';
 
-const Header = () => (
+const HeaderSection = () => (
   <div className="header-homepage">
     <div className="header-homepage__content">
       <img
@@ -17,4 +17,4 @@ const Header = () => (
   </div>
 )
 
-export default Header;
+export default HeaderSection;

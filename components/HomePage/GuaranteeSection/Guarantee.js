@@ -1,4 +1,4 @@
-const Guarantee = () => (
+const GuaranteeSection = () => (
   <div className="guarantee">
     <h1 className="open-sans">
       WE OFFER 100% REFUND IF
@@ -9,4 +9,4 @@ const Guarantee = () => (
   </div>
 )
 
-export default Guarantee;
+export default GuaranteeSection;
