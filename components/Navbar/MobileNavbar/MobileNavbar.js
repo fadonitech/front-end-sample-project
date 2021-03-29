@@ -12,6 +12,11 @@ const MobileNavbar = () => {
   return (
     <>
       <div className={`navbar-mobile__bg-${btnActive ? "show" : "hide"}`} />
+      <img
+        className={`navbar-mobile__img-${btnActive ? "hide" : "show"}`}
+        src="/logo-white.png"
+        alt="Software Development"
+      />
 
       <button
         className={`
