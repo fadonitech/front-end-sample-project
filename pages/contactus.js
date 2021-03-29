@@ -11,7 +11,7 @@ const Home = () => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="" />
+        <meta name="description" content="Contact us, and start taking advantage of our subscription-based software solutions!!!" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body>
