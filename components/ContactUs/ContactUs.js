@@ -1,11 +1,16 @@
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import axios from 'axios';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+
 import CtaBtn from "../Buttons/CtaBtn";
 
 const ContactUs = () => {
+  const { pathname } = useRouter();
+
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
@@ -47,7 +52,7 @@ const ContactUs = () => {
   }
 
   return (
-    <div id="contactus">
+    <div id={pathname === '/' ? 'contactus' : 'contactus-page'}>
       <h1 className="adam title">BEGIN YOUR FREE WEEK NOW!</h1>
       <div id="contactus__container">
         <div id="contactus__container--form">

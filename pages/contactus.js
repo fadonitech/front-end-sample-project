@@ -7,7 +7,12 @@ const Home = () => {
   return (
     <div>
       <Head>
-
+        <title>FadoniTech | Contact Us</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body>
         <Navbar />

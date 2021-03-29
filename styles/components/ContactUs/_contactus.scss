@@ -251,3 +251,29 @@
   }
 }
 
+#contactus-page {
+  height: 100vh;
+  width: 100vw;
+  padding: 7rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(tab-port-to-small) {
+    padding-top: 15rem;
+  }
+
+  @include respond(average-phone) {
+    height: 90vh;
+  }
+
+  .title {
+    font-size: 3.7rem;
+    font-weight: 600;
+
+    @include respond(average-phone) {
+      margin: 0 8rem;
+    }
+  }
+}

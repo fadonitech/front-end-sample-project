@@ -5,5 +5,9 @@
 
   &__content {
     padding: 5rem 0 0 0;
+
+    @include respond(medium-phone) {
+      padding: 15rem 0 0 0;
+    }
   }
 }
