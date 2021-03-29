@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import data from '../../data/data';
@@ -5,31 +6,40 @@ import data from '../../data/data';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
-const Article = ({ id, title, date, imgSrc, content }) => {
+const Article = ({ title, metaDescription,date, imgSrc, content }) => {
   // const router = useRouter();
   // const article = router.query;
-  // const { id, title, date, imgSrc, content } = data;
 
   return (
     <div>
-      <Navbar />
-      <div className="blogArticlePage">
-        <div className="blogArticlePage__content">
-          <div className="blogArticlePage__headline">
-            <h1 className="open-sans">
-              {title}
-            </h1>
-            <h2 className="open-sans">
-              {date}
-            </h2>
-          </div>
-          <div className="blogArticlePage__text">
-            <img src={imgSrc} alt="Software Development" />
-            <div dangerouslySetInnerHTML={{ __html: content }}></div>
+      <Head>
+        <title>FadoniTech | {title}</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content={metaDescription} />
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
+      <main>
+        <Navbar />
+        <div className="blogArticlePage">
+          <div className="blogArticlePage__content">
+            <div className="blogArticlePage__headline">
+              <h1 className="open-sans">
+                {title}
+              </h1>
+              <h2 className="open-sans">
+                {date}
+              </h2>
+            </div>
+            <div className="blogArticlePage__text">
+              <img src={imgSrc} alt="Software Development" />
+              <div dangerouslySetInnerHTML={{ __html: content }}></div>
+            </div>
           </div>
         </div>
-      </div>
-      <Footer />
+        <Footer />
+      </main>
     </div>
   )
 }

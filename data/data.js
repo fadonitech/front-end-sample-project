@@ -3,6 +3,7 @@ export default {
     {
       id: "what-technologies-should-you-be-using",
       title: "What technologies we use?",
+      metaDescription: "Which tech should you pick for that project? Learn more here in our detailed tech blog",
       date: "March 26, 2021",
       imgSrc: "/image/article-26-03-2021.jpeg",
       summary: "Doesn't matter if you are in health tech, fintech, e-commerce, or blockchain. There'll be a time you will need to define what technology",
@@ -11,6 +12,7 @@ export default {
     {
       id: "how-to-stand-your-business-out-in-2021",
       title: "How to stand your business out in 2021?",
+      metaDescription: "How can we attract more clients in 2021 in this digital world? Learn more in our blog!",
       date: "March 20, 2021",
       imgSrc: "/image/article-20-03-2021.jpeg",
       summary: "In 2020 the world shifted from a mix of physical and online to entirely digital. However, most of us have realized the internet has become extremely noisy",
@@ -19,6 +21,7 @@ export default {
     {
       id: "what-is-front-end-and-back-end",
       title: "What's Front and Back?",
+      metaDescription: "Front and back can be quite tricky to get your head around, learn more about it here!!",
       date: "March 16, 2021",
       imgSrc: "/image/article-front-vs-back.jpeg",
       summary: "Since software development is a vast topic, we always use weird code names that segment software in specific fields",

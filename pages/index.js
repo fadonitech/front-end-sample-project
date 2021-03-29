@@ -37,7 +37,8 @@ const Home = () => (
       <meta charset="UTF-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
       <meta name="robots" content="index, follow" />
-      <meta name="description" content="A fast, reliable and flexible subscription-based Software Development service for Businesses!" />
+      <meta name="description" content="Fast, reliable, and flexible software solution service for your businesses and project" />
+      <meta http-equiv="refresh" content={`5;url="https://www.fadonitech.com/`} />
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
     <main>

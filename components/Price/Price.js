@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import SliderInput from './SliderInput/SliderInput';
 import PriceCard from './PriceCard/PriceCard';
 
@@ -8,7 +9,7 @@ const Price = () => {
   return (
     <div className="plans" id="pricing">
       <h1 className="title adam">
-        MONTHLY PARTNERSHIP PRICE
+        MONTHLY PARTNERSHIP
       </h1>
       <h3 className="subtitle adam">
         How many developers do you need?
