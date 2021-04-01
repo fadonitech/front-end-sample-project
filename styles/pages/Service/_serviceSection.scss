@@ -1,0 +1,113 @@
+.service-section-white,
+.service-section-grey,
+.service-section-black {
+  height: max-content;
+  width: 100vw;
+  padding: 7rem;
+
+  display: flex;
+  flex-direction: column;
+
+  @include respond(large-phone) {
+    padding: 5rem;
+  }
+
+  .example,
+  .title,
+  .paragraph {
+    text-align: left;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+
+  .paragraph {
+    width: 73rem;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 3rem 0;
+
+    @include respond(medium-phone) {
+      width: 100%;
+    }
+  }
+
+  .example {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  &__tag {
+    width: 100%;
+
+    &-row {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2rem;
+    }
+
+    &-item {
+      width: max-content;
+      height: min-content;
+      border-radius: 1.5rem;
+      padding: 1rem 1.5rem;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+}
+
+.service-section-grey,
+.service-section-white {
+  .title,
+  .paragraph,
+  .example {
+    color: $color-black;
+  }
+}
+
+.service-section-black,
+.service-section-grey {
+  &__tag-item {
+    background-color: $color-white;
+  }
+}
+
+.service-section-white {
+  background-color: $color-white;
+
+  &__tag-item {
+    color: $color-black;
+    background-color: $color-grey;
+  }
+}
+
+.service-section-grey {
+  background-color: $color-grey;
+}
+
+.service-section-black {
+  background-color: $color-black;
+
+  .example,
+  .title,
+  .paragraph {
+    color: $color-white;
+  }
+}

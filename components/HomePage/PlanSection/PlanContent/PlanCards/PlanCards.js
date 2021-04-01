@@ -21,7 +21,7 @@ const PlanCards = () => {
   ]
 
   const renderCards = cards.map((card, index) => (
-    <PlanCard card={card} index={index} />
+    <PlanCard key={index} card={card} index={index} />
   ))
 
   return (

@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import UnderConstruction from '../../components/UnderConstruction/UnderConstruction';
+import Navbar from '../../components/Navbar/Navbar';
+import Service from '../../components/Service/Service';
+import Footer from '../../components/Footer/Footer';
 
-const Service = () => (
+const ServicePage = () => (
   <div>
     <Head>
       <title>FadoniTech | Service</title>
@@ -11,9 +13,11 @@ const Service = () => (
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
     <main>
-      <UnderConstruction />
+      <Navbar />
+      <Service />
+      <Footer />
     </main>
   </div>
 )
 
-export default Service
+export default ServicePage;
