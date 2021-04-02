@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Navbar from '../../components/Navbar/Navbar';
-import Service from '../../components/Service/Service';
+import Services from '../../components/Services/Services';
 import Footer from '../../components/Footer/Footer';
 
 const ServicePage = () => (
@@ -14,7 +14,7 @@ const ServicePage = () => (
     </Head>
     <main>
       <Navbar />
-      <Service />
+      <Services />
       <Footer />
     </main>
   </div>
