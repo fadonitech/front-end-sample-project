@@ -5,6 +5,7 @@ import data from '../data/data';
 import HomePage from '../components/HomePage/Homepage';
 import Footer from '../components/Footer/Footer';
 
+export const SubsPlanSelected = createContext({});
 export const ArticlesContext = createContext({});
 
 const Home = () => (
@@ -19,9 +20,11 @@ const Home = () => (
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
     <main>
-      <ArticlesContext.Provider value={data.articles}>
-        <HomePage />
-      </ArticlesContext.Provider>
+      <SubsPlanSelected.Provider value={{}}>
+        <ArticlesContext.Provider value={data.articles}>
+          <HomePage />
+        </ArticlesContext.Provider>
+      </SubsPlanSelected.Provider>
     </main>
     <Footer />
   </div>
