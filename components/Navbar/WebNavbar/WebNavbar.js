@@ -50,8 +50,8 @@ const WebNavbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/service">
-              Service
+            <Link href="/services">
+              Services
             </Link>
           </li>
           <li>
