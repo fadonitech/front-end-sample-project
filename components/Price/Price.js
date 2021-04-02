@@ -26,7 +26,7 @@ const Price = () => {
       <div className="plans__price-container">
         <PriceCard
           value={value}
-          title="HALF A MONTH"
+          title="2 WEEKS"
           subtitle="PARTNERSHIP"
           subscription="halfMonth"
         />

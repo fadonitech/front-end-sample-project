@@ -35,6 +35,57 @@ const price = {
   }
 }
 
+const PriceCard = ({
+  value,
+  title,
+  subtitle,
+  support = true,
+  management = true,
+  development = false,
+  subscription
+}) => {
+  const benefits = [
+    "Software Support",
+    "Team Management",
+    "Software Development"
+  ]
+
+  const render = benefits.map((benefit, index) => (
+    <li key={`${benefit}-${index}`}>
+      <FontAwesomeIcon icon={faCheckCircle} />
+      <h4 className="open-sans">{benefit}</h4>
+    </li>
+  ));
+
+  return (
+    <div className="card">
+      {subscription === 'yearly' && (
+        <div className="card--recommended">
+          <h3 className="open-sans">RECOMMENDED</h3>
+        </div>
+      )}
+      <div className="card-1">
+        <h2 className="open-sans title">{title}</h2>
+        <h2 className="open-sans title">{subtitle}</h2>
+        <ul>
+          {support && render[0]}
+          {development && render[2]}
+          {management && render[1]}
+        </ul>
+      </div>
+      <div className="card-2">
+        <h2 className="open-sans">
+          {price[value][subscription]}
+          <span className="adam">/month</span>
+        </h2>
+        <CardBtn />
+      </div>
+    </div>
+  )
+}
+
+export default PriceCard;
+
 // const price = {
 //   1: {
 //     halfMonth: "$1.900,00",
@@ -67,50 +118,3 @@ const price = {
 //     yearly: "$17.200,00"
 //   }
 // }
-
-const PriceCard = ({
-  value,
-  title,
-  subtitle,
-  support = true,
-  management = true,
-  development = false,
-  subscription
-}) => {
-  const benefits = [
-    "Software Support",
-    "Team Management",
-    "Software Development"
-  ]
-
-  const render = benefits.map((benefit, index) => (
-    <li key={`${benefit}-${index}`}>
-      <FontAwesomeIcon icon={faCheckCircle} />
-      <h4 className="open-sans">{benefit}</h4>
-    </li>
-  ));
-
-  return (
-    <div className="card">
-      <div>
-        <h2 className="open-sans title">{title}</h2>
-        <h2 className="open-sans title">{subtitle}</h2>
-
-        <ul>
-          {support && render[0]}
-          {development && render[2]}
-          {management && render[1]}
-        </ul>
-      </div>
-      <div className="card-2">
-        <h2 className="open-sans">
-          {price[value][subscription]}
-          <span className="adam">/month</span>
-        </h2>
-        <CardBtn />
-      </div>
-    </div>
-  )
-}
-
-export default PriceCard;

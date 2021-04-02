@@ -85,6 +85,7 @@
       -ms-grid-rows: 30rem 15rem;
       grid-template-rows: 30rem 15rem;
       overflow: hidden;
+      grid-column-gap: 0;
 
       -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
@@ -122,7 +123,44 @@
       }
 
       &:nth-child(2) {
-        border: 0.3rem solid $color-blue;
+        // border: 0.3rem solid $color-blue;
+        -ms-grid-rows: 3rem 27rem 15rem;
+        grid-template-rows: 3rem 27rem 15rem;
+
+        .card-1 {
+          height: 100%;
+          overflow: hidden;
+          border-right: 0.3rem solid $color-blue;
+          border-left: 0.3rem solid $color-blue;
+        }
+
+        .card-2 {
+          height: 100%;
+          overflow: hidden;
+          border-bottom: 0.3rem solid $color-blue;
+          border-right: 0.3rem solid $color-blue;
+          border-left: 0.3rem solid $color-blue;
+          border-bottom-left-radius: 1.5rem;
+          border-bottom-right-radius: 1.5rem;
+        }
+
+        .title {
+          &:first-child {
+            margin-top: 2rem;
+          }
+        }
+
+        .card--recommended {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          h3 {
+            font-size: 1.5rem;
+            color: $color-white;
+            font-weight: 600;
+          }
+        }
       }
 
       &:not(:last-child) {
@@ -230,6 +268,11 @@
             margin-bottom: 1rem;
           }
         }
+      }
+
+      &--recommended {
+        width: 100%;
+        background-color: $color-blue;
       }
     }
 
