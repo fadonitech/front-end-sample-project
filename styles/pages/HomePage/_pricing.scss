@@ -123,9 +123,9 @@
       }
 
       &:nth-child(2) {
-        // border: 0.3rem solid $color-blue;
-        -ms-grid-rows: 3rem 27rem 15rem;
-        grid-template-rows: 3rem 27rem 15rem;
+        height: 53rem;
+        -ms-grid-rows: 3rem 30rem 5rem 15rem;
+        grid-template-rows: 3rem 30rem 5rem 15rem;
 
         .card-1 {
           height: 100%;
@@ -146,7 +146,22 @@
 
         .title {
           &:first-child {
-            margin-top: 2rem;
+            margin-top: 4rem;
+          }
+        }
+
+        .card--save {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $color-green;
+          border-right: 0.3rem solid $color-blue;
+          border-left: 0.3rem solid $color-blue;
+
+          h3 {
+            font-size: 2rem;
+            color: $color-white;
+            font-weight: 600;
           }
         }
 

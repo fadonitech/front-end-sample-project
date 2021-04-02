@@ -4,34 +4,34 @@ import CardBtn from './CardBtn/CardBtn';
 
 const price = {
   1: {
-    halfMonth: "$700,00",
-    monthly: "$1.000,00",
-    yearly: "$950,00"
+    halfMonth: "700",
+    monthly: "1000",
+    yearly: "950"
   },
   2: {
-    halfMonth: "$1.400,00",
-    monthly: "$2.000,00",
-    yearly: "$1.900,00"
+    halfMonth: "1400",
+    monthly: "2000",
+    yearly: "1900"
   },
   3: {
-    halfMonth: "$2.100,00",
-    monthly: "$3.000,00",
-    yearly: "$2.850,00"
+    halfMonth: "2100",
+    monthly: "3000",
+    yearly: "2850"
   },
   4: {
-    halfMonth: "$2.800,00",
-    monthly: "$4.000,00",
-    yearly: "$3.800,00"
+    halfMonth: "2800",
+    monthly: "4000",
+    yearly: "3800"
   },
   5: {
-    halfMonth: "$3.500,00",
-    monthly: "$5.000,00",
-    yearly: "$4.750,00"
+    halfMonth: "3500",
+    monthly: "5000",
+    yearly: "4750"
   },
   6: {
-    halfMonth: "$4.200,00",
-    monthly: "$6.000,00",
-    yearly: "$5.700,00"
+    halfMonth: "4200",
+    monthly: "6000",
+    yearly: "5700"
   }
 }
 
@@ -73,9 +73,16 @@ const PriceCard = ({
           {management && render[1]}
         </ul>
       </div>
+      {subscription === 'yearly' && (
+        <div className="card--save">
+          <h3 className="open-sans">
+            SAVE ${(parseFloat(price[value].monthly) * 12) - (parseFloat(price[value].yearly) * 12)}
+          </h3>
+        </div>
+      )}
       <div className="card-2">
         <h2 className="open-sans">
-          {price[value][subscription]}
+          ${new Intl.NumberFormat().format(price[value][subscription])}
           <span className="adam">/month</span>
         </h2>
         <CardBtn />
