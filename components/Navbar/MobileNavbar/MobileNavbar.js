@@ -41,7 +41,7 @@ const MobileNavbar = () => {
           </Link>
           </li>
           <li>
-            <Link href="/services" onClick={onClick}>
+            <Link href="/our-services" onClick={onClick}>
               Services
           </Link>
           </li>
