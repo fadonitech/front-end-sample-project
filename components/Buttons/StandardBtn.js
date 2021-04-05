@@ -3,7 +3,7 @@ import Link from 'next/link';
 const StandardBtn = ({ title, url }) => (
   <Link
     href={url}
-    scroll={false}
+    scroll={true}
   >
     <button id="standard-btn">
       {title}
