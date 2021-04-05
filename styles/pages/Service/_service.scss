@@ -71,6 +71,10 @@
         height: auto;
         width: 160%;
 
+        @include respond(full-hd) {
+          width: 150%;
+        }
+
         @include respond(tab-land-small) {
           width: 200%;
         }
