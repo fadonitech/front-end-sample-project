@@ -14,7 +14,7 @@ const BlogSection = () => {
       </h1>
       <BlogSectionContent articles={articles} />
       <StandardBtn
-        title="READ MORE"
+        title="VISIT BLOG"
         url="/blog"
       />
     </div>

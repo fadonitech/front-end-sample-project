@@ -1,0 +1,111 @@
+.what-we-do {
+  height: max-content;
+  width: 100vw;
+  padding: 8rem 0;
+  background-image: linear-gradient(to bottom, rgba($color-black, 0.9), rgba($color-black, 0.9)),
+    url("/image/our-services-img-section.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    h1 {
+      font-size: 3.7rem;
+      font-weight: 600;
+      color: $color-white;
+    }
+
+    h2 {
+      width: 54rem;
+      margin: 3rem 0 4.5rem 0;
+      font-size: 2.3rem;
+      font-weight: 300;
+      color: $color-white;
+
+      @include respond(small-phone) {
+        width: 100%;
+        padding: 0 6rem;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 8rem;
+    color: $color-white;
+    margin: 4rem 0 8rem 0;
+
+    @include respond(tab-port-small) {
+      grid-column-gap: 5rem;
+    }
+
+    @include respond(large-phone) {
+      grid-column-gap: 3rem;
+    }
+
+    @include respond(medium-phone) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 8rem;
+      grid-row-gap: 8rem;
+      margin: 4rem 0;
+    }
+
+    @include respond(average-phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 8rem;
+      margin: 4rem 0 2rem 0;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    &-1 {
+      background-color: $color-white;
+      color: $color-black;
+      padding: 1.5rem 3rem;
+      border-radius: 1rem;
+      margin-bottom: 3rem;
+
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 600;
+
+        @include respond(large-phone) {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &-2 {
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include respond(average-phone) {
+        align-items: center;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 500;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
