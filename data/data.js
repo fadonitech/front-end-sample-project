@@ -1,6 +1,14 @@
 export default {
   articles: [
     {
+      id: "is-mobile-commerce-still-relevant-in-2021",
+      title: "Is mobile commerce still relevant in 2021?",
+      date: "April 13, 2021",
+      imgSrc: "/image/article-13-05-2021.jpg",
+      summary: "It's not a surprise to say e-commerce is booming since the pandemic drove everyone to stay at home, consequently forcing thousands",
+      content: "<p>It's not a surprise to say e-commerce is booming since the pandemic drove everyone to stay at home, consequently forcing thousands of stores to go digital. Naturally, people started buying more online, but a question remains, does mobile still matters?</p><p>Lately, one of the hugest topics in the e-commerce industry is that most of the traffic (70% to 85%) of an e-commerce store comes from mobile devices. Even though we still at home, cell phones remain determining a large percentage of buying decisions online.</p><p>Based on Statista's research, Mobile Commerce is eating the E-commerce industry alive. We expect that 72.9% of total e-commerce sales worldwide will be done on the mobile screen in 2021. A 2.5% increase compared to last year's data.</p><p>Additionally, we predict at least 30% of online shoppers will abandon their shopping cards after discovering a website is not mobile-friendly. As far as we know, e-commerce is reaching a point of almost being entirely done on smartphones. </p><p>Besides, 52.2% of all global website traffic in 2020 came from mobile devices. All of this data reinforces that phones are the next big thing for online stores. So, what is the conclusion?</p><p>The mobile experience has never been more essential than now. A good-looking website will not cut it if it does not function well on cell phones. Plus, we might even start wondering if a mobile-friendly website may be the best choice since most stores are going for websites and Shopify solutions. Once the mobile world is dominating B2C sales, it might be a good time to start thinking about creating a mobile application for your e-commerce store.</p><p>Statista Research: <a target=\"_blank\" href=\"https://www.statista.com/chart/13139/estimated-worldwide-mobile-e-commerce-sales/\">https://www.statista.com/chart/13139/estimated-worldwide-mobile-e-commerce-sales/</a></p>"
+    },
+    {
       id: "what-technologies-should-you-be-using",
       title: "What technologies we use?",
       metaDescription: "Which tech should you pick for that project? Learn more here in our detailed tech blog",
