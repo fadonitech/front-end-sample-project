@@ -12,10 +12,6 @@ html {
   -webkit-text-size-adjust: none;
 
   @include respond(medium-desktop) {
-    font-size: 10.52px;
-  }
-
-  @include respond(medium-big-gap-desktop) {
     font-size: 11px !important;
   }
 
@@ -24,7 +20,7 @@ html {
   }
 
   @include respond(full-hd) {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 
   @include respond(huge-desktop) {
@@ -36,19 +32,19 @@ html {
   }
 
   @include respond(tab-land) {
-    font-size: 9.6px;
+    font-size: 8.7px;
   }
 
   @include respond(tab-land-small) {
-    font-size: 9.2px;
+    font-size: 8.5px;
   }
 
   @include respond(tab-port) {
-    font-size: 8.64px;
+    font-size: 8px;
   }
 
   @include respond(tab-port-to-small) {
-    font-size: 8.32px;
+    font-size: 7.7px;
   }
 
   @include respond(tab-port-small) {
