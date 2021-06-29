@@ -1,0 +1,262 @@
+@keyframes showModal {
+  0% {
+    right: -80rem;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes hideModal {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -80rem;
+  }
+}
+
+@keyframes ModalConentOut {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 55rem;
+  }
+}
+
+@keyframes ModalConentIn {
+  0% {
+    right: -80rem;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.show-modal,
+.hide-modal {
+  position: fixed;
+  width: 55rem;
+  height: 100vh;
+  background-color: $color-white;
+  box-shadow: 2px 3px 10px rgba(#000000, 16%);
+  padding: 3rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7.9rem 56.5rem 4.8rem;
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.show-modal {
+  right: -80rem;
+  top: 0;
+  animation: 200ms showModal 200ms ease-out forwards;
+  overflow: hidden !important;
+}
+
+.hide-modal {
+  right: 0;
+  top: 0;
+  animation: 200ms hideModal 200ms ease-out forwards;
+  overflow: hidden !important;
+}
+
+.modal {
+  &__content {
+    position: relative;
+    overflow: hidden;
+
+    &-in {
+      right: -55rem;
+      height: 56.5rem;
+      width: 100%;
+      position: absolute;
+      animation: ModalConentIn 150ms linear forwards;
+    }
+
+    &-out {
+      height: 56.5rem;
+      width: 100%;
+      position: absolute;
+      animation: ModalConentOut 150ms linear forwards;
+    }
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    padding: 0 2rem;
+    margin-top: 4rem;
+
+    &--collumn {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-row-gap: 1.5rem;
+      padding-left: 2rem;
+
+      tr {
+        height: 2rem;
+      }
+
+      &-header {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+
+      &-title {
+        font-size: 1.5rem;
+      }
+
+      &-option-2,
+      &-option-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        text-align: center;
+        color: $color-grey-2;
+
+        svg {
+          height: 2rem;
+          width: 2rem;
+          color: $color-green;
+        }
+      }
+    }
+  }
+
+  &__plan {
+    &-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem;
+
+      &-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      input {
+        margin-right: 2.5rem;
+        cursor: pointer;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+      }
+
+      &-head {
+        span {
+          margin-left: 1rem;
+          color: $color-green;
+        }
+      }
+
+      &-subtext {
+        margin-top: 0.5rem;
+        font-size: 1.5rem !important;
+        color: $color-grey-3;
+      }
+
+      &-price {
+        h3 {
+          font-size: 3rem;
+
+          span {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__page-marker {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &-2,
+    &-1 {
+      height: 15px;
+      width: 15px;
+      background-color: $color-grey;
+      border-radius: 50%;
+    }
+
+    &-1 {
+      margin-right: 3rem;
+    }
+  }
+
+  &__line {
+    &-2,
+    &-1 {
+      height: 0.2rem;
+      width: 90%;
+      margin: 2rem 3rem;
+      background-color: $color-grey-2;
+    }
+  }
+
+  &__form {
+    height: 100%;
+
+    &-subs {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      input:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__btn-container {
+    width: 100%;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &__btn-seconda-page {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.marker-blue {
+  background-color: $color-blue;
+}
+
+.modal__submit-btn {
+  font-family: "Source Sans Light", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  border: none;
+  background-color: $color-blue;
+  color: $color-white;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 3rem;
+}

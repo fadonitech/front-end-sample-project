@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Navbar from '../../Navbar/WebNavbar/WebNavbar';
 import { useState, useEffect } from 'react';
 
 
@@ -13,7 +12,7 @@ const BlogWebNavbar = () => (
           width={40}
           alt="Software Development"
         />
-        <h3 className="adam">
+        <h3 className="open-sans-light">
           FadoniTech
         </h3>
       </div>
@@ -27,16 +26,6 @@ const BlogWebNavbar = () => (
           </Link>
         </li>
         <li>
-          <Link href="/service">
-            Service
-          </Link>
-        </li>
-        <li>
-          <Link href="/price">
-            Price
-          </Link>
-        </li>
-        <li>
           <Link href="/blog">
             Blog
           </Link>
@@ -44,7 +33,7 @@ const BlogWebNavbar = () => (
       </ul>
       <Link href="contactus">
         <button className="navbar--cta">
-          BOOK A MEETING
+          GET EARLY ACCESS
         </button>
       </Link>
     </div>
@@ -111,20 +100,20 @@ const BlogMobilebNavbar = () => {
 }
 
 const BlogNavbar = () => {
-  const [isPhone, setIsPhone] = useState(false);
+  // const [isPhone, setIsPhone] = useState(false);
 
-  const validateScreen = () => {
-    setIsPhone(window.innerWidth <= 600);
-  }
+  // const validateScreen = () => {
+  //   setIsPhone(window.innerWidth <= 600);
+  // }
 
-  useEffect(() => {
-    setIsPhone(window.innerWidth <= 600);
-    const resizeEvent = window.addEventListener('resize', validateScreen);
-    return window.removeEventListener('resize', resizeEvent)
-  }, []);
+  // useEffect(() => {
+  //   setIsPhone(window.innerWidth <= 600);
+  //   const resizeEvent = window.addEventListener('resize', validateScreen);
+  //   return window.removeEventListener('resize', resizeEvent)
+  // }, []);
 
   return (
-    !isPhone ? <BlogWebNavbar /> : <BlogMobilebNavbar />
+    <BlogWebNavbar />
   )
 }
 

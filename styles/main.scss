@@ -1,6 +1,8 @@
 // ABSTRACT
+@import "./fonts/fonts";
 @import "./abstract/mixins";
 @import "./abstract/variables";
+@import "./abstract/utilities";
 
 // ASSETS
 @import "./assets/hamburgers.scss";
@@ -9,27 +11,16 @@
 @import "./base/base";
 @import "./base/typography";
 
-
 //HOMEPAGE
-@import "./pages/HomePage/header";
-@import "./pages/HomePage/credibility";
-@import "./pages/HomePage/subscriptionPlan";
-@import "./pages/HomePage/benefits";
-@import "./pages/HomePage/pricing";
-@import "./pages/HomePage/guarantee";
-@import "./pages/HomePage/blog";
+@import "./pages/HomePage/homepage.scss";
 
 //BLOG 
 @import "./pages/Blog/blog";
 
-//PRICE
-@import "./pages/Price/price";
-
-//SERVICE
-@import "./pages/Service/service";
-
 //COMPONENTS
+@import "./components/Alerts/alerts";
 @import "./components/Buttons/ctaBtn";
+@import "./components/Buttons/default";
 @import "./components/Buttons/standardBtn";
 @import "./components/Navbar/navbar";
 @import "./components/Navbar/mobilenavbar";
@@ -38,3 +29,6 @@
 @import "./components/Warning/warning";
 @import "./components/UnderConstruction/underconstruction";
 @import "./components/WhatWeDo/WhatWeDo.scss";
+@import "./components/Modal/modal";
+@import "./components/Buttons/radio-input";
+@import "./components/inputs/input.scss";

@@ -1,35 +1,77 @@
-@font-face {
-  font-family: 'Adam';
-  src: 
-    url('../fonts/woff/Adam-Medium.woff') format('woff'),
-    url('../fonts/tff/Adam-Medium.ttf') format('truetype'),
-    url('../fonts/eot/Adam-Medium.eot') format('embedded-opentype');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: 
-    url('../fonts/woff/OpenSans-Regular.woff') format('woff'),
-    url('../fonts/tff/OpenSans-Regular.ttf') format('truetype'),
-    url('../fonts/eot/OpenSans-Regular.eot') format('embedded-opentype');
-}
-
-.adam {
-  font-family: 'Adam', sans-serif;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  text-align: center;
-}
-
 .open-sans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans Regular', sans-serif;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  text-align: center;
+}
+
+.open-sans-light {
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.open-sans-semibold {
+  font-family: 'Open Sans Semibold', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.open-sans-bold {
+  font-family: 'Open Sans Bold', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.source-sans-semibold {
+  font-family: "Source Sans SemiBold", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.source-sans {
+  font-family: "Source Sans Regular", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.source-sans-bold {
+  font-family: "Source Sans Bold", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.source-sans-light {
+  font-family: "Source Sans Light", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.title-8 {
+  font-size: 8.5rem;
+}
+
+.title-6 {
+  font-size: 6.5rem;
+}
+
+.subtitle-2 {
+  font-size: 2rem;
 }
 
 .bold {

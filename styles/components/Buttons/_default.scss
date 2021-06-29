@@ -1,0 +1,12 @@
+.button {
+  &__default {
+    width: 30rem;
+    border: none;
+    background-color: $color-blue;
+    border-radius: 5rem;
+    padding: 2rem 1rem;
+    font-family: "Source Sans Light";
+    font-size: 2rem;
+    color: $color-white;
+  }
+}
