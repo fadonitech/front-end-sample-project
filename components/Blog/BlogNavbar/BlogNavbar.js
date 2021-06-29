@@ -19,7 +19,7 @@ const BlogWebNavbar = ({ onClick }) => (
     </Link>
 
     <div className="blogNavbar--links">
-      <ul>
+      {/* <ul>
         <li>
           <Link href="/about-us">
             About Us
@@ -30,7 +30,7 @@ const BlogWebNavbar = ({ onClick }) => (
             Blog
           </Link>
         </li>
-      </ul>
+      </ul> */}
       <button className="navbar--cta" onClick={onClick}>
         JOIN WAITING LIST
       </button>
