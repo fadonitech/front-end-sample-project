@@ -12,7 +12,7 @@ html {
   -webkit-text-size-adjust: none;
 
   @include respond(medium-desktop) {
-    font-size: 11px !important;
+    font-size: 10px !important;
   }
 
   @include respond(big-desktop) {
