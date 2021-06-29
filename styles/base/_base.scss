@@ -44,11 +44,7 @@ html {
   }
 
   @include respond(tab-port-to-small) {
-    font-size: 7.7px;
-  }
-
-  @include respond(tab-port-small) {
-    font-size: 8px;
+    font-size: 7.5px;
   }
   @include respond(large-phone) {
     font-size: 7.36px;
