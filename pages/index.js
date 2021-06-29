@@ -85,7 +85,7 @@ const Home = () => {
       <main>
         {alert.isOpen && <Alert title={alert.title} message={alert.message} icon={faCheckCircle} />}
         {animateModal && <Modal showModal={modal} handleModal={onClick} handleAlert={handleAlert} />}
-        <Navbar />
+        <Navbar onClick={onClick} />
         <SubsPlanSelected.Provider value={{}}>
           <HomePage onClick={onClick} />
         </SubsPlanSelected.Provider>

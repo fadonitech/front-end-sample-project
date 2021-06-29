@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 
-const BlogWebNavbar = () => (
+const BlogWebNavbar = ({ onClick }) => (
   <div className="blogNavbar">
     <Link href="/">
       <div className="blogNavbar--logo">
@@ -31,11 +31,9 @@ const BlogWebNavbar = () => (
           </Link>
         </li>
       </ul>
-      <Link href="contactus">
-        <button className="navbar--cta">
-          GET EARLY ACCESS
-        </button>
-      </Link>
+      <button className="navbar--cta" onClick={onClick}>
+        JOIN WAITING LIST
+      </button>
     </div>
   </div>
 )
@@ -71,22 +69,22 @@ const BlogMobilebNavbar = () => {
           <li>
             <Link href="/about-us" onClick={onClick}>
               About Us
-          </Link>
+            </Link>
           </li>
           <li>
             <Link href="/service" onClick={onClick}>
               Service
-          </Link>
+            </Link>
           </li>
           <li>
             <Link href="/price" onClick={onClick}>
               Price
-          </Link>
+            </Link>
           </li>
           <li>
             <Link href="/blog" onClick={onClick}>
               Blog
-          </Link>
+            </Link>
           </li>
         </ul>
         <Link href="contactus" onClick={onClick}>
@@ -99,7 +97,7 @@ const BlogMobilebNavbar = () => {
   )
 }
 
-const BlogNavbar = () => {
+const BlogNavbar = ({ onClick }) => {
   // const [isPhone, setIsPhone] = useState(false);
 
   // const validateScreen = () => {
@@ -113,7 +111,7 @@ const BlogNavbar = () => {
   // }, []);
 
   return (
-    <BlogWebNavbar />
+    <BlogWebNavbar onClick={onClick} />
   )
 }
 
