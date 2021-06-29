@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 
 import { HomePage } from '../components/Pages/Page';
+import Footer from '../components/Footer/Footer';
 
 const Alert = ({ title, message, icon }) => (
   <div className="alert-success">
@@ -90,7 +91,7 @@ const Home = () => {
           <HomePage onClick={onClick} />
         </SubsPlanSelected.Provider>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
