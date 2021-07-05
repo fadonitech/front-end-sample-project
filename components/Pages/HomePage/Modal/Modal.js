@@ -81,7 +81,7 @@ const ModalPriceTable = () => (
   </div>
 )
 
-const ModalPlan = ({ id, title, discount = false, subtext = false, price, last = false, onClick }) => {
+const ModalPlan = ({ id, title, discount = false, subtext = false, price, last = false, onClick, plan }) => {
   const renderDiscount = discount && (<span>SAVE 20%</span>)
   const renderSubtext = subtext && (<h3 className="source-sans-bold text-align-left modal__plan-content-subtext">{subtext}</h3>)
   let renderPrice = price && (<h3 className="open-sans-bold">${price}<span>.99/month</span></h3>)
@@ -96,7 +96,7 @@ const ModalPlan = ({ id, title, discount = false, subtext = false, price, last =
       <div className="modal__plan-content">
         <div className="modal__plan-content-header">
           <label className="radio-container">
-            <input id={id} type="radio" name="service-plans" onChange={onClick} />
+            <input id={id} type="radio" name="service-plans" onChange={onClick} checked={plan === id} />
             <span class="radio-checkmark"></span>
           </label>
           <div className="modal__plan-content-head">
@@ -116,29 +116,32 @@ const ModalPlan = ({ id, title, discount = false, subtext = false, price, last =
   );
 }
 
-const ModalSubmitBtn = ({ onClick, secondPage }) => (
-  <div className={secondPage ? "modal__btn-seconda-page" : "modal__btn-container"} onClick={onClick}>
+const ModalSubmitBtn = ({ onBack, onClick, secondPage }) => (
+  <div className={secondPage ? "modal__btn-seconda-page" : "modal__btn-container"}>
+    <button className="modal__submit-btn" onClick={onBack} type="button">
+      {secondPage ? "BACK" : "EXIT"}
+    </button>
     <button className="modal__submit-btn" onClick={onClick} type={secondPage ? "submit" : "button"}>
       {secondPage ? "KEEP ME IN THE LOOP" : "NEXT"}
     </button>
   </div>
 )
 
-const ModalPlans = ({ setPlan }) => {
+const ModalPlans = ({ plan, setPlan }) => {
   const onClick = (event) => {
     setPlan(event.target.id)
   }
 
   return (
     <div>
-      <ModalPlan id="annual" onClick={onClick} title="Annual" discount={true} subtext="Billed yearly at $479.88" price={39} />
-      <ModalPlan id="monthly" onClick={onClick} title="Monthly" subtext="Cancel at anytime" price={49} />
-      <ModalPlan id="trial" onClick={onClick} title="14 Day Trial" price="FREE" last={true} />
+      <ModalPlan id="annual" plan={plan} onClick={onClick} title="Annual" discount={true} subtext="Billed yearly at $479.88" price={39} />
+      <ModalPlan id="monthly" plan={plan} onClick={onClick} title="Monthly" subtext="Cancel at anytime" price={49} />
+      <ModalPlan id="trial" plan={plan} onClick={onClick} title="14 Day Trial" price="FREE" last={true} />
     </div>
   )
 }
 
-const ModalSubsForm = ({ setFirstName, setLastName, setEmail }) => {
+const ModalSubsForm = ({ firstName, lastName, email, setFirstName, setLastName, setEmail }) => {
   const onChange = async (event) => {
     switch (event.target.name) {
       case "first-name":
@@ -156,9 +159,30 @@ const ModalSubsForm = ({ setFirstName, setLastName, setEmail }) => {
   return (
     <div className="modal__form">
       <form className="modal__form-subs">
-        <input onChange={onChange} className="text-input" type="text" name="first-name" placeholder="First Name" required />
-        <input onChange={onChange} className="text-input" type="text" name="last-name" placeholder="Last Name" required />
-        <input onChange={onChange} className="text-input" type="email" name="email" placeholder="E-mail" required />
+        <input
+          onChange={onChange}
+          value={firstName}
+          className="text-input" type="text"
+          name="first-name"
+          placeholder="First Name"
+          required
+        />
+        <input
+          onChange={onChange}
+          value={lastName}
+          className="text-input" type="text"
+          name="last-name"
+          placeholder="Last Name"
+          required
+        />
+        <input
+          onChange={onChange}
+          value={email}
+          className="text-input" type="email"
+          name="email"
+          placeholder="E-mail"
+          required
+        />
         {/* <div className="select-input">
           <select name="purpose" id="purpose" required>
             <option value="" disabled selected>Purpose</option>
@@ -196,18 +220,34 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
     }
   }
 
+  const onBack = async () => {
+    if (plan) {
+      setAnimate(true);
+
+      await setTimeout(() => {
+        setAnimate(false)
+      }, 300);
+
+      if (secondPage) {
+        await setTimeout(() => {
+          setSecondPage(false);
+        }, 100);
+      }
+    }
+  }
+
   const onSubmit = async () => {
     handleModal();
 
     if (firstName, lastName, email) {
-      const { data } = await axios.post("https://a3euwetft5.execute-api.us-east-1.amazonaws.com/test1/", {
+      const { data } = await axios.post(process.env.REACT_APP_API_URL, {
         firstName,
         lastName,
         email,
         subsPlan: plan
       });
       const { title, message } = JSON.parse(data.body)
-      handleAlert({title, message});
+      handleAlert({ title, message });
 
       await setTimeout(() => {
         setFirstName(null);
@@ -215,7 +255,7 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
         setEmail(null);
         setPlan(null);
         setSecondPage(false);
-      }, 200);
+      }, 50);
     }
   }
 
@@ -229,11 +269,14 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
               ? (
                 <>
                   <ModalPriceTable />
-                  <ModalPlans setPlan={setPlan} />
+                  <ModalPlans plan={plan} setPlan={setPlan} />
                 </>
               )
               : (
                 <ModalSubsForm
+                  firstName={firstName}
+                  lastName={lastName}
+                  email={email}
                   setFirstName={setFirstName}
                   setLastName={setLastName}
                   setEmail={setEmail}
@@ -242,7 +285,15 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
           }
         </div>
       </div>
-      <ModalSubmitBtn onClick={() => secondPage ? onSubmit() : onClick()} secondPage={secondPage} />
+      <ModalSubmitBtn
+        onBack={
+          () => secondPage ? onBack() : handleModal()
+        }
+        onClick={
+          () => secondPage ? onSubmit() : onClick()
+        }
+        secondPage={secondPage}
+      />
     </div>
   )
 }
