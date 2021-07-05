@@ -11,7 +11,7 @@ const ModalHeader = ({ secondPage }) => (
     </h2>
     <div className="modal__page-marker">
       <div className="modal__page-marker-1 marker-blue"></div>
-      <div className="modal__page-marker-2"></div>
+      <div className={`modal__page-marker-2 ${secondPage ? 'marker-blue' : ''}`}></div>
     </div>
   </div>
 )
