@@ -141,17 +141,45 @@ const ModalPlans = ({ plan, setPlan }) => {
   )
 }
 
-const ModalSubsForm = ({ firstName, lastName, email, setFirstName, setLastName, setEmail }) => {
+const ModalSubsForm = ({
+  firstName,
+  lastName,
+  email,
+  setFirstName,
+  setLastName,
+  setEmail,
+  warning,
+  setWarning
+}) => {
   const onChange = async (event) => {
-    switch (event.target.name) {
+    const info = event.target.name
+    switch (info) {
       case "first-name":
-        await setTimeout(() => { setFirstName(event.target.value) }, 700)
+        setFirstName(event.target.value)
+        if (warning.firstName) {
+          setWarning({
+            ...warning,
+            firstName: false
+          });
+        }
         break;
       case "last-name":
-        await setTimeout(() => { setLastName(event.target.value) }, 700)
+        setLastName(event.target.value)
+        if (warning.lastName) {
+          setWarning({
+            ...warning,
+            lastName: false
+          });
+        }
         break;
       case "email":
-        await setTimeout(() => { setEmail(event.target.value) }, 700)
+        setEmail(event.target.value)
+        if (warning.email) {
+          setWarning({
+            ...warning,
+            email: false
+          });
+        }
         break;
     }
   }
@@ -162,7 +190,7 @@ const ModalSubsForm = ({ firstName, lastName, email, setFirstName, setLastName, 
         <input
           onChange={onChange}
           value={firstName}
-          className="text-input" type="text"
+          className={warning.firstName ? "text-input--error" : "text-input"} type="text"
           name="first-name"
           placeholder="First Name"
           required
@@ -170,7 +198,7 @@ const ModalSubsForm = ({ firstName, lastName, email, setFirstName, setLastName, 
         <input
           onChange={onChange}
           value={lastName}
-          className="text-input" type="text"
+          className={warning.lastName ? "text-input--error" : "text-input"} type="text"
           name="last-name"
           placeholder="Last Name"
           required
@@ -178,7 +206,7 @@ const ModalSubsForm = ({ firstName, lastName, email, setFirstName, setLastName, 
         <input
           onChange={onChange}
           value={email}
-          className="text-input" type="email"
+          className={warning.email ? "text-input--error" : "text-input"} type="email"
           name="email"
           placeholder="E-mail"
           required
@@ -200,6 +228,11 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
   const [lastName, setLastName] = useState(null);
   const [email, setEmail] = useState(null);
   const [plan, setPlan] = useState(null);
+  const [warning, setWarning] = useState({
+    firstName: false,
+    lastName: false,
+    email: false
+  });
 
   const [animate, setAnimate] = useState(false);
   const [secondPage, setSecondPage] = useState(false);
@@ -236,26 +269,47 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
     }
   }
 
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
   const onSubmit = async () => {
-    handleModal();
+    if (
+      (firstName && firstName !== '') &&
+      (lastName && lastName !== '') &&
+      (email && email !== '')
+    ) {
+      if (validateEmail(email)) {
+        handleModal();
+        const { data } = await axios.post(process.env.REACT_APP_API_URL, {
+          firstName,
+          lastName,
+          email,
+          subsPlan: plan
+        });
+        const { title, message } = JSON.parse(data.body)
+        handleAlert({ title, message });
 
-    if (firstName, lastName, email) {
-      const { data } = await axios.post(process.env.REACT_APP_API_URL, {
-        firstName,
-        lastName,
-        email,
-        subsPlan: plan
-      });
-      const { title, message } = JSON.parse(data.body)
-      handleAlert({ title, message });
-
-      await setTimeout(() => {
-        setFirstName(null);
-        setLastName(null);
-        setEmail(null);
-        setPlan(null);
-        setSecondPage(false);
-      }, 50);
+        await setTimeout(() => {
+          setFirstName(null);
+          setLastName(null);
+          setEmail(null);
+          setPlan(null);
+          setSecondPage(false);
+        }, 50);
+      } else {
+        setWarning({
+          ...warning,
+          email: true
+        })
+      }
+    } else {
+      setWarning({
+        firstName: firstName || firstName !== '',
+        lastName: lastName || lastName !== '',
+        email: email || email !== ''
+      })
     }
   }
 
@@ -274,6 +328,8 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
               )
               : (
                 <ModalSubsForm
+                  warning={warning}
+                  setWarning={setWarning}
                   firstName={firstName}
                   lastName={lastName}
                   email={email}
