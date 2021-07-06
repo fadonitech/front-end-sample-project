@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "hamburgers": "^1.1.3",
     "next": "10.0.7",
     "react": "17.0.1",
