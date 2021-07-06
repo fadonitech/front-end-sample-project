@@ -176,13 +176,13 @@
         color: $color-grey-2;
 
         svg {
-          height: 2rem;
-          width: 2rem;
+          height: 2.5rem !important;
+          width: 2.5rem !important;
           color: $color-green;
 
           @include respond(tab-port-to-small) {
-            height: 3rem;
-            width: 3rem;
+            height: 3rem !important;
+            width: 3rem !important;
           }
         }
       }
