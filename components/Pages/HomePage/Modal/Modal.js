@@ -19,29 +19,15 @@ const ModalHeader = ({ secondPage }) => (
 const TableCell = ({ title = null, val1 = null, val2 = null }) => {
   if (title) {
     return (
-      <tr className="modal__table--collumn-title open-sans-semibold text-align-left">
-        {title}
-      </tr>
+      <tr className="modal__table--collumn-title open-sans-semibold text-align-left">{title}</tr>
     )
   } else if (val1 !== null) {
     return (
-      <tr className="modal__table--collumn-option-1">
-        {
-          val1
-            ? <FontAwesomeIcon icon={faCheckCircle} />
-            : <h3 className="source-sans-bold">-</h3>
-        }
-      </tr>
+      <tr className="modal__table--collumn-option-1">{val1 ? (<FontAwesomeIcon icon={faCheckCircle} />) : (<h3 className="source-sans-bold">-</h3>)}</tr>
     )
   } else if (val2 !== null) {
     return (
-      <tr className="modal__table--collumn-option-2">
-        {
-          val2
-            ? <FontAwesomeIcon icon={faCheckCircle} />
-            : <h3 className="source-sans-bold">-</h3>
-        }
-      </tr>
+      <tr className="modal__table--collumn-option-2">{val2 ? (<FontAwesomeIcon icon={faCheckCircle} />) : (<h3 className="source-sans-bold">-</h3>)}</tr>
     )
   }
 }
@@ -49,9 +35,7 @@ const TableCell = ({ title = null, val1 = null, val2 = null }) => {
 const ModalPriceTable = () => (
   <div className="modal__table">
     <th className="modal__table--collumn">
-      <tr className="modal__table--collumn-header source-sans-bold text-align-left">
-        FEATURES
-      </tr>
+      <tr className="modal__table--collumn-header source-sans-bold text-align-left">FEATURES</tr>
       <TableCell title="3D Model Library" />
       <TableCell title="Custom Models" />
       <TableCell title="24/7 Support" />
@@ -59,9 +43,7 @@ const ModalPriceTable = () => (
       <TableCell title="Credit Creator" />
     </th>
     <th className="modal__table--collumn">
-      <tr className="modal__table--collumn-header source-sans-bold">
-        14 DAY TRIAL
-      </tr>
+      <tr className="modal__table--collumn-header source-sans-bold">14 DAY TRIAL</tr>
       <TableCell val1={true} />
       <TableCell val1={false} />
       <TableCell val1={false} />
@@ -69,9 +51,7 @@ const ModalPriceTable = () => (
       <TableCell val1={true} />
     </th>
     <th className="modal__table--collumn">
-      <tr className="modal__table--collumn-header source-sans-bold">
-        MONTHLY
-      </tr>
+      <tr className="modal__table--collumn-header source-sans-bold">MONTHLY</tr>
       <TableCell val2={true} />
       <TableCell val2={true} />
       <TableCell val2={true} />
@@ -97,7 +77,7 @@ const ModalPlan = ({ id, title, discount = false, subtext = false, price, last =
         <div className="modal__plan-content-header">
           <label className="radio-container">
             <input id={id} type="radio" name="service-plans" onChange={onClick} checked={plan === id} />
-            <span class="radio-checkmark"></span>
+            <span className="radio-checkmark"></span>
           </label>
           <div className="modal__plan-content-head">
             <h3 className="source-sans-bold text-align-left">
