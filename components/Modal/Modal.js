@@ -94,8 +94,9 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
             setLastName(null);
             setEmail(null);
             setPlan(null);
-            setSecondPage(false);
           }, 50);
+          
+          setSecondPage(false);
         } else {
           setWarning({
             ...warning,
