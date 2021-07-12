@@ -1,0 +1,69 @@
+@keyframes logoLoop {
+  0% {
+    width: 8rem;
+  }
+
+  50% {
+    width: 10rem;
+  }
+
+  100% {
+    width: 8rem;
+  }
+}
+
+@keyframes logoStart {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 8;
+  }
+}
+
+@keyframes bgLoop {
+  0% {
+    opacity: 1;
+    height: 8rem;
+    width: 8rem;
+  }
+
+  50% {
+    height: 16rem;
+    width: 16rem;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    height: 8rem;
+    width: 8rem;
+  }
+}
+
+.loading-animation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    height: auto;
+    width: 8rem;
+    animation: 
+      500ms logoStart 200ms ease-out forwards, 
+      1500ms logoLoop 200ms ease-out infinite;
+  }
+
+  &__background {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $color-black;
+    border-radius: 50%;
+    animation: 1500ms bgLoop ease-out infinite;
+  }
+}

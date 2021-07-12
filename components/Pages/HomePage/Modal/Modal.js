@@ -200,6 +200,18 @@ const ModalSubsForm = ({
   )
 }
 
+export const LoadingAnimation = () => (
+  <div className="loading-animation">
+    <div className="loading-animation__background">
+    </div>
+      <img
+        className="loading-animation__logo"
+        src="/logo-black.png"
+        alt="Software Development"
+      />
+  </div>
+)
+
 export const Modal = ({ showModal, handleModal, handleAlert }) => {
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
@@ -211,6 +223,7 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
     email: false
   });
 
+  const [loading, setLoading] = useState(false);
   const [animate, setAnimate] = useState(false);
   const [secondPage, setSecondPage] = useState(false);
 
@@ -258,7 +271,7 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
       (email && email !== '')
     ) {
       if (validateEmail(email)) {
-        handleModal();
+        setLoading(true)
         const { data } = await axios.post(process.env.REACT_APP_API_URL, {
           firstName,
           lastName,
@@ -266,6 +279,8 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
           subsPlan: plan
         });
         const { title, message } = JSON.parse(data.body)
+        setLoading(false);
+        handleModal();
         handleAlert({ title, message });
 
         await setTimeout(() => {
@@ -304,16 +319,19 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
                 </>
               )
               : (
-                <ModalSubsForm
-                  warning={warning}
-                  setWarning={setWarning}
-                  firstName={firstName}
-                  lastName={lastName}
-                  email={email}
-                  setFirstName={setFirstName}
-                  setLastName={setLastName}
-                  setEmail={setEmail}
-                />
+                <>
+                  {loading ? <LoadingAnimation /> :
+                    <ModalSubsForm
+                      warning={warning}
+                      setWarning={setWarning}
+                      firstName={firstName}
+                      lastName={lastName}
+                      email={email}
+                      setFirstName={setFirstName}
+                      setLastName={setLastName}
+                      setEmail={setEmail}
+                    />}
+                </>
               )
           }
         </div>
