@@ -5,6 +5,9 @@ const ModalSubsForm = ({
   setFirstName,
   setLastName,
   setEmail,
+  error,
+  setError,
+  errorMsg,
   warning,
   setWarning
 }) => {
@@ -30,6 +33,7 @@ const ModalSubsForm = ({
         }
         break;
       case "email":
+        setError(false);
         setEmail(event.target.value)
         if (warning.email) {
           setWarning({
@@ -43,6 +47,7 @@ const ModalSubsForm = ({
 
   return (
     <div className="modal__form">
+      {error && (<h3 className="modal__error-message open-sans-bold">{errorMsg}</h3>)}
       <form className="modal__form-subs">
         <input
           onChange={onChange}

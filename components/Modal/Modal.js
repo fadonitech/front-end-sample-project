@@ -20,6 +20,8 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
     email: false
   });
 
+  const [errorForm, setErrorForm] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(false);
   const [loading, setLoading] = useState(false);
   const [animate, setAnimate] = useState(false);
   const [secondPage, setSecondPage] = useState(false);
@@ -69,24 +71,39 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
     ) {
       if (validateEmail(email)) {
         setLoading(true)
+
         const { data } = await axios.post(process.env.REACT_APP_API_URL, {
           firstName,
           lastName,
           email,
           subsPlan: plan
         });
-        const { title, message } = JSON.parse(data.body)
-        setLoading(false);
-        handleModal();
-        handleAlert({ title, message });
 
-        await setTimeout(() => {
-          setFirstName(null);
-          setLastName(null);
-          setEmail(null);
-          setPlan(null);
-          setSecondPage(false);
-        }, 50);
+        const { error, title, message } = JSON.parse(data.body);
+
+        setLoading(false);
+
+        if (!error) {
+          setErrorForm(false)
+          setErrorMsg('')
+          handleModal();
+          handleAlert({ title, message });
+  
+          await setTimeout(() => {
+            setFirstName(null);
+            setLastName(null);
+            setEmail(null);
+            setPlan(null);
+            setSecondPage(false);
+          }, 50);
+        } else {
+          setWarning({
+            ...warning,
+            email: true
+          });
+          setErrorMsg(message)
+          setErrorForm(true);
+        }
       } else {
         setWarning({
           ...warning,
@@ -119,6 +136,9 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
                 <>
                   {loading ? <LoadingAnimation /> :
                     <ModalSubsForm
+                      errorMsg={errorMsg}
+                      error={errorForm}
+                      setError={setErrorForm}
                       warning={warning}
                       setWarning={setWarning}
                       firstName={firstName}

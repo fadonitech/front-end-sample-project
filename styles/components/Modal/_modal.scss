@@ -333,6 +333,13 @@
     justify-content: space-between;
     align-items: flex-end;
   }
+
+  &__error-message {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $color-red;
+    font-size: 1.5rem;
+  }
 }
 
 .marker-blue {
