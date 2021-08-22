@@ -64,6 +64,7 @@
 
 .title-8 {
   font-size: 8.5rem;
+  text-transform: capitalize;
 
   @include respond(large-phone) {
     font-size: 12rem;
@@ -77,6 +78,7 @@
 
 .title-6 {
   font-size: 6.5rem;
+  text-transform: capitalize;
 
   @include respond(small-phone) {
     font-size: 5rem;
@@ -84,8 +86,33 @@
   }
 }
 
-.subtitle-2 {
+.title-4 {
+  font-size: 4rem;
+  text-transform: capitalize;
+
+  @include respond(small-phone) {
+    font-size: 4.5rem;
+  }
+}
+
+.title-25 {
+  font-size: 2.5rem;
+
+  @include respond(small-phone) {
+    font-size: 3rem;
+  }
+}
+
+.title-2 {
   font-size: 2rem;
+
+  @include respond(small-phone) {
+    font-size: 2.5rem;
+  }
+}
+
+.subtitle-2 {
+  font-size: 2.5rem;
 
   @include respond(large-phone) {
     width: 60rem;
@@ -97,6 +124,15 @@
     font-size: 2.3rem;
     margin-right: 2rem;
   }
+}
+
+.paragraph {
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 1.8rem;
 }
 
 .bold {

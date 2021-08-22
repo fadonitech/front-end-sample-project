@@ -71,6 +71,8 @@ const Home = () => {
         <meta name="description" content="Fast, reliable, and flexible software solution service for your businesses and project" />
         {/* <meta http-equiv="refresh" content={`5;url="https://www.fadonitech.com/`} /> */}
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"></link>
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"></link>
       </Head>
       <main>
         {alert.isOpen && <Alert />}
