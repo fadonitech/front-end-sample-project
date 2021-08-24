@@ -8,7 +8,7 @@ import WhyUs from './WhyUs';
 export const HomePage = ({ onClick }) => (
   <div className="homepage">
     <Header onClick={onClick} />
-    <WhatAreWeBuilding />
+    {/* <WhatAreWeBuilding /> */}
     <AboutUs />
     <HowItWorks />
     <WhyUs />
