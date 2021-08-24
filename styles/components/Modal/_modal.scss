@@ -1,0 +1,366 @@
+@keyframes showModal {
+  0% {
+    right: -80rem;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes hideModal {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100vw;
+  }
+}
+
+@keyframes ModalConentOut {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 55rem;
+  }
+}
+
+@keyframes ModalConentIn {
+  0% {
+    right: -80rem;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.show-modal,
+.hide-modal {
+  position: fixed;
+  width: 55rem;
+  height: 100vh;
+  background-color: $color-white;
+  box-shadow: 2px 3px 10px rgba(#000000, 16%);
+  padding: 2rem 0 3rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem 52rem 4.8rem;
+  grid-row-gap: 5rem;
+  justify-content: center;
+  align-content: center;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  @include respond(tab-port-to-small) {
+    width: 70rem;
+    grid-template-rows: 10rem 68rem 6rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @include respond(large-phone) {
+    width: 100vw;
+  }
+
+  @include respond(small-phone) {
+    grid-row-gap: 2rem;
+    grid-template-rows: max-content 70rem max-content;
+  }
+}
+
+.show-modal {
+  right: -80rem;
+  top: 0;
+  animation: 200ms showModal 200ms ease-out forwards;
+  overflow: hidden !important;
+}
+
+.hide-modal {
+  right: 0;
+  top: 0;
+  animation: 200ms hideModal 200ms ease-out forwards;
+  overflow: hidden !important;
+}
+
+.modal {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+
+    &-in {
+      right: -55rem;
+      height: max-content;
+      width: 100%;
+      position: absolute;
+      animation: ModalConentIn 150ms linear forwards;
+    }
+
+    &-out {
+      height: 56.5rem;
+      width: 100%;
+      position: absolute;
+      animation: ModalConentOut 150ms linear forwards;
+    }
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    padding: 0 2rem;
+    margin-top: 2.5rem;
+
+    @include respond(small-phone) {
+      padding: 0 1rem;
+    }
+
+    @include respond(tab-port-to-small) {
+      margin-bottom: 2rem;
+    }
+
+    &--collumn {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-row-gap: 1.5rem;
+      padding-left: 2rem;
+
+      @include respond(small-phone) {
+        &:not(:first-child) {
+          padding-left: 0;
+        }
+      }
+
+      tr {
+        height: 2rem;
+
+        @include respond(tab-port-to-small) {
+          margin-bottom: 2.5rem;
+        }
+      }
+
+      &-header {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        @include respond(tab-port-to-small) {
+          font-size: 2.5rem;
+          margin-bottom: 4rem !important;
+        }
+      }
+
+      &-title {
+        font-size: 1.5rem;
+        @include respond(tab-port-to-small) {
+          font-size: 2rem;
+        }
+      }
+
+      &-option-2,
+      &-option-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        text-align: center;
+        color: $color-grey-2;
+
+        svg {
+          height: 2.5rem !important;
+          width: 2.5rem !important;
+          color: $color-green;
+
+          @include respond(tab-port-to-small) {
+            height: 3rem !important;
+            width: 3rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__plan {
+    &-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem;
+
+      &-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      input {
+        margin-right: 2.5rem;
+        cursor: pointer;
+      }
+
+      h3:first-child {
+        font-size: 1.8rem;
+
+        @include respond(tab-port-to-small) {
+          font-size: 2.6rem;
+        }
+      }
+
+      &-head {
+        span {
+          margin-left: 1rem;
+          color: $color-green;
+        }
+      }
+
+      &-subtext {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+        color: $color-grey-3;
+
+        @include respond(tab-port-to-small) {
+          font-size: 2.3rem;
+        }
+        @include respond(medium-phone) {
+          font-size: 2.1rem;
+        }
+      }
+
+      &-price {
+        h3 {
+          font-size: 3rem;
+
+          @include respond(tab-port-to-small) {
+            font-size: 3.5rem;
+          }
+          span {
+            font-size: 1.8rem;
+
+            @include respond(tab-port-to-small) {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__page-marker {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &-2,
+    &-1 {
+      height: 3px;
+      width: 15px;
+      background-color: $color-grey;
+    }
+
+    &-1 {
+      margin-right: 3rem;
+    }
+  }
+
+  &__line {
+    &-2,
+    &-1 {
+      height: 0.2rem;
+      width: 90%;
+      margin: 2rem 3rem;
+      background-color: $color-grey-2;
+    }
+
+    &-1 {
+      margin: 2rem 3rem;
+    }
+
+    &-2 {
+      margin: 2rem 3rem 0rem 3rem;
+    }
+  }
+
+  &__form {
+    height: 100%;
+
+    &-subs {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include respond(tab-port-to-small) {
+        input {
+          height: 6rem;
+          width: 50%;
+        }
+      }
+      input:not(:last-child) {
+        margin-bottom: 2rem;
+
+        @include respond(tab-port-to-small) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  &__btn-container {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__btn-seconda-page {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__error-message {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $color-red;
+    font-size: 1.5rem;
+  }
+}
+
+.marker-blue {
+  background-color: $color-blue;
+}
+
+.modal__submit-btn {
+  font-family: "Source Sans Light", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  border: none;
+  background-color: $color-blue;
+  color: $color-white;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 3rem;
+
+  @include respond(tab-port-to-small) {
+    font-size: 2.6rem;
+    padding: 2rem 4rem;
+    border-radius: 5rem;
+  }
+}

@@ -1,44 +1,90 @@
 import { createContext } from 'react';
 import Head from 'next/head'
+import { useEffect, useState } from 'react';
+import Navbar from '../components/Blog/BlogNavbar/BlogNavbar';
+import { Modal } from '../components/Modal/Modal';
+import Alert from '../components/Alert/AlertSuccess';
 
-import data from '../data/data';
-import HomePage from '../components/HomePage/Homepage';
+import { HomePage } from '../components/Pages/Page';
 import Footer from '../components/Footer/Footer';
 
+
 export const SubsPlanSelected = createContext({});
-export const ArticlesContext = createContext({});
 
-const Home = () => (
-  <div>
-    <Head>
-      <title>FadoniTech</title>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
-      <meta name="robots" content="index, follow" />
-      <meta name="description" content="Fast, reliable, and flexible software solution service for your businesses and project" />
-      {/* <meta http-equiv="refresh" content={`5;url="https://www.fadonitech.com/`} /> */}
-      <link rel="shortcut icon" href="/favicon.ico" />
-    </Head>
-    <main>
-      <SubsPlanSelected.Provider value={{}}>
-        <ArticlesContext.Provider value={data.articles}>
-          <HomePage />
-        </ArticlesContext.Provider>
-      </SubsPlanSelected.Provider>
-    </main>
-    <Footer />
-  </div>
-)
+const Home = () => {
+  const [animateModal, setAnimateModal] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [alert, setAlert] = useState({
+    isOpen: false,
+    title: '',
+    message: ''
+  });
 
-// export async function getStaticProps() {
-//   const req = await fetch("http://localhost:3000/data/articles.json");
-//   const data = await req.json();
+  useEffect(() => {
+    const closeModal = (event) => {
+      const closest = event.target.closest('#subsModal');
 
-//   return {
-//     props: {
-//       ...data
-//     }
-//   }
-// }
+      if ((null === closest || 0 < closest.length) && modal) {
+        setModal(false);
+      }
+    }
+
+    window.addEventListener('click', closeModal);
+    window.addEventListener('touchend', closeModal);
+
+    return () => {
+      window.removeEventListener('click', closeModal);
+      window.removeEventListener('touchend', closeModal);
+    }
+  }, [modal]);
+
+  const onClick = () => {
+    setModal(!modal);
+
+    if (!modal) {
+      setTimeout(() => setAnimateModal(true), 300);
+    } else {
+      setAnimateModal(true)
+    }
+  }
+
+  const handleAlert = ({ title, message }) => {
+    setAlert({
+      isOpen: true,
+      title,
+      message
+    });
+
+    setTimeout(() => setAlert({
+      ...alert,
+      isOpen: false
+    }), 2600);
+  }
+
+  return (
+    <div>
+      <Head>
+        <title>FadoniTech</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="Fast, reliable, and flexible software solution service for your businesses and project" />
+        {/* <meta http-equiv="refresh" content={`5;url="https://www.fadonitech.com/`} /> */}
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"></link>
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"></link>
+      </Head>
+      <main>
+        {alert.isOpen && <Alert />}
+        {animateModal && <Modal showModal={modal} handleModal={onClick} handleAlert={handleAlert} />}
+        <Navbar onClick={onClick} />
+        <SubsPlanSelected.Provider value={{}}>
+          <HomePage onClick={onClick} />
+        </SubsPlanSelected.Provider>
+      </main>
+      <Footer />
+    </div>
+  )
+}
 
 export default Home;

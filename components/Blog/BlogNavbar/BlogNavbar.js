@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import Navbar from '../../Navbar/WebNavbar/WebNavbar';
 import { useState, useEffect } from 'react';
 
 
-const BlogWebNavbar = () => (
+const BlogWebNavbar = ({ onClick }) => (
   <div className="blogNavbar">
     <Link href="/">
       <div className="blogNavbar--logo">
@@ -13,27 +12,17 @@ const BlogWebNavbar = () => (
           width={40}
           alt="Software Development"
         />
-        <h3 className="adam">
+        <h3 className="open-sans-light">
           FadoniTech
         </h3>
       </div>
     </Link>
 
     <div className="blogNavbar--links">
-      <ul>
+      {/* <ul>
         <li>
           <Link href="/about-us">
             About Us
-          </Link>
-        </li>
-        <li>
-          <Link href="/service">
-            Service
-          </Link>
-        </li>
-        <li>
-          <Link href="/price">
-            Price
           </Link>
         </li>
         <li>
@@ -41,12 +30,10 @@ const BlogWebNavbar = () => (
             Blog
           </Link>
         </li>
-      </ul>
-      <Link href="contactus">
-        <button className="navbar--cta">
-          BOOK A MEETING
-        </button>
-      </Link>
+      </ul> */}
+      <button className="navbar--cta" onClick={onClick}>
+        JOIN WAITING LIST
+      </button>
     </div>
   </div>
 )
@@ -82,22 +69,22 @@ const BlogMobilebNavbar = () => {
           <li>
             <Link href="/about-us" onClick={onClick}>
               About Us
-          </Link>
+            </Link>
           </li>
           <li>
             <Link href="/service" onClick={onClick}>
               Service
-          </Link>
+            </Link>
           </li>
           <li>
             <Link href="/price" onClick={onClick}>
               Price
-          </Link>
+            </Link>
           </li>
           <li>
             <Link href="/blog" onClick={onClick}>
               Blog
-          </Link>
+            </Link>
           </li>
         </ul>
         <Link href="contactus" onClick={onClick}>
@@ -110,21 +97,21 @@ const BlogMobilebNavbar = () => {
   )
 }
 
-const BlogNavbar = () => {
-  const [isPhone, setIsPhone] = useState(false);
+const BlogNavbar = ({ onClick }) => {
+  // const [isPhone, setIsPhone] = useState(false);
 
-  const validateScreen = () => {
-    setIsPhone(window.innerWidth <= 600);
-  }
+  // const validateScreen = () => {
+  //   setIsPhone(window.innerWidth <= 600);
+  // }
 
-  useEffect(() => {
-    setIsPhone(window.innerWidth <= 600);
-    const resizeEvent = window.addEventListener('resize', validateScreen);
-    return window.removeEventListener('resize', resizeEvent)
-  }, []);
+  // useEffect(() => {
+  //   setIsPhone(window.innerWidth <= 600);
+  //   const resizeEvent = window.addEventListener('resize', validateScreen);
+  //   return window.removeEventListener('resize', resizeEvent)
+  // }, []);
 
   return (
-    !isPhone ? <BlogWebNavbar /> : <BlogMobilebNavbar />
+    <BlogWebNavbar onClick={onClick} />
   )
 }
 

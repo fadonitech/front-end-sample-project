@@ -1,35 +1,150 @@
-@font-face {
-  font-family: 'Adam';
-  src: 
-    url('../fonts/woff/Adam-Medium.woff') format('woff'),
-    url('../fonts/tff/Adam-Medium.ttf') format('truetype'),
-    url('../fonts/eot/Adam-Medium.eot') format('embedded-opentype');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: 
-    url('../fonts/woff/OpenSans-Regular.woff') format('woff'),
-    url('../fonts/tff/OpenSans-Regular.ttf') format('truetype'),
-    url('../fonts/eot/OpenSans-Regular.eot') format('embedded-opentype');
-}
-
-.adam {
-  font-family: 'Adam', sans-serif;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  text-align: center;
-}
-
 .open-sans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans Regular', sans-serif;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  text-align: center;
+}
+
+.open-sans-light {
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.open-sans-semibold {
+  font-family: 'Open Sans Semibold', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.open-sans-bold {
+  font-family: 'Open Sans Bold', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.source-sans-semibold {
+  font-family: "Source Sans SemiBold", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.source-sans {
+  font-family: "Source Sans Regular", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.source-sans-bold {
+  font-family: "Source Sans Bold", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.source-sans-light {
+  font-family: "Source Sans Light", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.title-8 {
+  font-size: 8.5rem;
+  text-transform: capitalize;
+
+  @include respond(large-phone) {
+    font-size: 12rem;
+  }
+
+  @include respond(small-phone) {
+    font-size: 10rem;
+    margin-right: 2rem;
+  }
+}
+
+.title-6 {
+  font-size: 6.5rem;
+  text-transform: capitalize;
+
+  @include respond(small-phone) {
+    font-size: 5rem;
+    margin-right: 2rem;
+  }
+}
+
+.title-4 {
+  font-size: 4rem;
+  text-transform: capitalize;
+
+  @include respond(small-phone) {
+    font-size: 4.5rem;
+  }
+
+  @include respond(medium-phone) {
+    font-size: 5.5rem;
+  }
+}
+
+.title-25 {
+  font-size: 2.5rem;
+
+  @include respond(small-phone) {
+    font-size: 3rem;
+  }
+
+  @include respond(medium-phone) {
+    font-size: 3.5rem;
+  }
+}
+
+.title-2 {
+  font-size: 2rem;
+
+  @include respond(small-phone) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(medium-phone) {
+    font-size: 3rem;
+  }
+}
+
+.subtitle-2 {
+  font-size: 2.5rem;
+
+  @include respond(large-phone) {
+    width: 60rem;
+    font-size: 3rem;
+  }
+
+  @include respond(small-phone) {
+    width: 45rem;
+    font-size: 2.3rem;
+    margin-right: 2rem;
+  }
+}
+
+.paragraph {
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 1.8rem;
 }
 
 .bold {

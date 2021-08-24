@@ -1,0 +1,39 @@
+// Text Align
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+// Margin Bottom
+
+.margin-bottom-8 {
+  margin-bottom: 8rem;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2rem;
+}
+
+.margin-left-10 {
+  margin-left: 10rem;
+}
+
+.padding-left-10 {
+  padding-left: 10rem;
+
+  @include respond(large-phone) {
+    padding-left: 4rem
+  }
+
+  @include respond(small-phone) {
+    padding-left: 3rem
+  }
+}

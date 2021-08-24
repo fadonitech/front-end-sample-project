@@ -6,5 +6,8 @@ module.exports = {
     });
 
     return config;
-  }
+  },
+  env: {
+    REACT_APP_API_URL:'https://a3euwetft5.execute-api.us-east-1.amazonaws.com/test1/',
+  },
 };

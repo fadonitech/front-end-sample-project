@@ -1,0 +1,67 @@
+@keyframes showAlert {
+  0% {
+    top: -40rem;
+  }
+  20% {
+    top: 3rem;
+  }
+  80% {
+    top: 3rem;
+  }
+  100% {
+    top: -40rem;
+  }
+}
+
+.alert-success {
+  position: fixed;
+  height: 18rem;
+  width: 40rem;
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: -40rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1rem;
+  background-color: $color-white;
+  padding: 3rem;
+  -webkit-box-shadow: 2px 3px 10px rgba(#000000, 5%);
+  box-shadow: 2px 3px 10px rgba(#000000, 5%);
+  animation: 2500ms showAlert forwards;
+
+  @include respond(tab-port) {
+    height: 22rem;
+    width: 50rem;
+  }  
+
+  h3 {
+    font-size: 2rem;
+    color: $color-green;
+    margin-bottom: 1rem;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }  
+  }
+
+  p {
+    font-size: 1.4rem;
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }  
+  }
+
+  svg {
+    height: 4rem !important;
+    width: 4rem !important;
+    color: $color-green !important;
+    margin-bottom: 1rem;
+    @include respond(tab-port) {
+      height: 6rem !important;
+      width: 6rem !important;
+    }  
+  }
+}

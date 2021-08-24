@@ -1,5 +1,6 @@
 .blogNavbar {
   height: 7rem;
+  width: 100%;
   background-color: $color-grey;
 
   display: flex;
@@ -23,7 +24,7 @@
       margin-right: 1rem;
 
       @include respond(tab-port-to-small) {
-        width: 7rem;
+        width: 6rem;
       }
     }
 

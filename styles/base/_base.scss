@@ -9,23 +9,14 @@
 html {
   font-size: 62.5%; // 10px
   scroll-behavior: smooth;
-  overflow-y: scroll;
-  -webkit-text-size-adjust:none;
+  -webkit-text-size-adjust: none;
 
   @include respond(medium-desktop) {
-    font-size: 10.52px;
-  }
-
-  @include respond(medium-big-gap-desktop) {
-    font-size: 11px !important;
+    font-size: 10px !important;
   }
 
   @include respond(big-desktop) {
     font-size: 12.32px !important;
-  }
-
-  @include respond(full-hd) {
-    font-size: 12px !important;
   }
 
   @include respond(huge-desktop) {
@@ -37,23 +28,19 @@ html {
   }
 
   @include respond(tab-land) {
-    font-size: 9.6px;
+    font-size: 8.7px;
   }
 
   @include respond(tab-land-small) {
-    font-size: 9.2px;
+    font-size: 8.5px;
   }
 
   @include respond(tab-port) {
-    font-size: 8.64px;
+    font-size: 8px;
   }
 
   @include respond(tab-port-to-small) {
-    font-size: 8.32px;
-  }
-
-  @include respond(tab-port-small) {
-    font-size: 8px;
+    font-size: 7.5px;
   }
   @include respond(large-phone) {
     font-size: 7.36px;
@@ -69,11 +56,20 @@ html {
   }
 }
 
-.main {
-  position: relative;
+main {
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  max-width: 100%;
+  background-color: $color-grey;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content auto;
 }
 
 body {
+  margin: 0 !important;
+  padding: 0;
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
 }
