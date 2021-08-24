@@ -71,19 +71,16 @@ const WhyUs = () => {
 
   return (
     <div className="homepage--section homepage__why">
-      <div className="homepage__what--title margin-bottom-2">
+      <div className="homepage__why--title margin-bottom-2">
         <h1 className="source-sans-semibold title-4">
           {stringWhyUs.title}
         </h1>
         <div className="line" />
         <h3 className="source-sans-light title-2">
-          {stringWhyUs.subtitle}
+          {stringWhyUs.text}
         </h3>
       </div>
       <div className="homepage__why--content">
-        <h3 className="open-sans-light">
-          {stringWhyUs.text}
-        </h3>
         <div className="homepage__why--content-list">
           {renderCards}
         </div>
