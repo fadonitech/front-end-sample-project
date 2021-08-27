@@ -9,7 +9,6 @@ const AboutUs = () => (
         Take advantage of new technology to grow your online store and be ahead of competition
       </h3>
 
-
       <div className="homepage__about-us--benefits">
         <div className="homepage__about-us--benefits-text">
           <div>
