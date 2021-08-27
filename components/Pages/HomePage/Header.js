@@ -10,7 +10,7 @@ const Header = ({ onClick }) => (
         You Caught Us Early!
       </h1>
       <h2 className="open-sans-light subtitle-2">
-        WE ARE MAKING AUGMENTED REALITY EASY WITH READY-TO-USE TEMPLATES!
+        WE ARE MAKING AUGMENTED REALITY EASY FOR E-COMMERCES! 
       </h2>
     </div>
     <div className="homepage__container--btn">
@@ -20,3 +20,4 @@ const Header = ({ onClick }) => (
 )
 
 export default Header;
+// with READY-TO-USE TEMPLATES
