@@ -67,9 +67,9 @@ const Home = () => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         <meta name="robots" content="index, follow" />
-        <meta name="description" content="Making Augumented Reality Easy For E-Commerces With Read-To-Use Templates" />
+        <meta name="description" content="Making Augmented Reality Easy For E-Commerces With Read-To-Use Templates" />
         <meta property="og:title" content="FadoniTech" key="ogtitle" />
-        <meta property="og:description" content="Making Augumented Reality Easy For E-Commerces With Read-To-Use Templates" key="ogdesc" />
+        <meta property="og:description" content="Making Augmented Reality Easy For E-Commerces With Read-To-Use Templates" key="ogdesc" />
 
         <meta property="og:url" content="https://www.fadonitech.com/" key="ogurl" />
         <meta property="og:image" content='/image/social-media-banner.png' key="ogimage" />
