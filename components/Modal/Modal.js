@@ -96,6 +96,7 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
             setPlan(null);
           }, 50);
           
+          gaSignUp();
           setSecondPage(false);
         } else {
           setWarning({
