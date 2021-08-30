@@ -22,10 +22,6 @@ const Home = () => {
   });
 
   useEffect(() => {
-    gaMainPage();
-  }, [])
-
-  useEffect(() => {
     const closeModal = (event) => {
       const closest = event.target.closest('#subsModal');
 
