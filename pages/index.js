@@ -8,6 +8,8 @@ import Alert from '../components/Alert/AlertSuccess';
 import { HomePage } from '../components/Pages/Page';
 import Footer from '../components/Footer/Footer';
 
+import * as ga from '../lib/ga';
+
 export const SubsPlanSelected = createContext({});
 
 const Home = () => {
@@ -18,6 +20,15 @@ const Home = () => {
     title: '',
     message: ''
   });
+
+  const gaSignUp = () => {
+    ga.event({
+      action: "screen_view",
+      params : {
+        screen_name: "Sign Up"
+      }
+    })
+  }
 
   useEffect(() => {
     const closeModal = (event) => {
@@ -39,6 +50,7 @@ const Home = () => {
 
   const onClick = () => {
     setModal(!modal);
+    gaSignUp();
 
     if (!modal) {
       setTimeout(() => setAnimateModal(true), 300);
@@ -79,6 +91,22 @@ const Home = () => {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"></link>
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"></link>
+        <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
       </Head>
       <main>
         {alert.isOpen && <Alert />}
