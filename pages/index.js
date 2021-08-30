@@ -8,7 +8,7 @@ import Alert from '../components/Alert/AlertSuccess';
 import { HomePage } from '../components/Pages/Page';
 import Footer from '../components/Footer/Footer';
 
-import { gaModalFirstPage, gaMainPage } from '../lib/ga/events';
+import { gaModalFirstPage } from '../lib/ga/events';
 
 export const SubsPlanSelected = createContext({});
 
@@ -41,9 +41,9 @@ const Home = () => {
 
   const onClick = () => {
     setModal(!modal);
-    gaModalFirstPage();
-
+    
     if (!modal) {
+      gaModalFirstPage();
       setTimeout(() => setAnimateModal(true), 300);
     } else {
       setAnimateModal(true)

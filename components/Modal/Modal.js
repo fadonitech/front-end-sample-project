@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { gaModalSecondPage, gaSignUp } from '../../lib/ga/events';
 
 import { LoadingAnimation } from '../Loading/Loading';
 
@@ -35,6 +36,8 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
       }, 300);
 
       if (!secondPage) {
+        gaModalSecondPage();
+        
         await setTimeout(() => {
           setSecondPage(true);
         }, 100);
@@ -88,14 +91,14 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
           setErrorMsg('')
           handleModal();
           handleAlert({ title, message });
-  
+
           await setTimeout(() => {
             setFirstName(null);
             setLastName(null);
             setEmail(null);
             setPlan(null);
           }, 50);
-          
+
           gaSignUp();
           setSecondPage(false);
         } else {
