@@ -1,7 +1,7 @@
 const ModalHeader = ({ secondPage }) => (
   <div>
     <h2 className="open-sans-light text-align-center">
-      {secondPage ? "Subscribe to our waiting list" : "Which plan would you be more interested?"}
+      {secondPage ? "Subscribe to our waiting list" : "Which plan would you be interested in the future?"}
     </h2>
     <div className="modal__page-marker">
       <div className="modal__page-marker-1 marker-blue"></div>
