@@ -296,6 +296,7 @@
           }
 
           svg {
+            cursor: pointer;
             margin-top: 0.2rem;
 
             @include respond(medium-phone) {
