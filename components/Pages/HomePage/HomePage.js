@@ -19,8 +19,6 @@ export const HomePage = ({ onClick }) => {
       {/* <WhatAreWeBuilding /> */}
       <AboutUs />
       <HowItWorks />
-      <WhyUs />
-      <WhoWeAre />
     </div>
   )
 }
