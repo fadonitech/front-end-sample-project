@@ -1,13 +1,13 @@
 .button {
   &__default {
-    width: 30rem;
     border: none;
     background-color: $color-blue;
     border-radius: 5rem;
-    padding: 2rem 1rem;
+    padding: 2rem 8rem;
     font-family: "Source Sans Light";
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: $color-white;
+    transition: 200ms ease-out;
 
     &:hover {
       background-color: darken($color-blue, 20%);

@@ -14,7 +14,7 @@ const Header = ({ onClick }) => (
       </h2>
     </div>
     <div className="homepage__container--btn">
-      <DefaultBtn content="JOIN WAITING LIST FOR FREE" onClick={onClick} />
+      <DefaultBtn content="GET INVITED" onClick={onClick} />
     </div>
   </div>
 )

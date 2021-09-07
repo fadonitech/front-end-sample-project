@@ -32,7 +32,7 @@ const BlogWebNavbar = ({ onClick }) => (
         </li>
       </ul> */}
       <button className="navbar--cta" onClick={onClick}>
-        JOIN WAITING LIST FOR FREE
+        GET INVITED
       </button>
     </div>
   </div>
