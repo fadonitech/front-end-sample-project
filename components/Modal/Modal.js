@@ -25,41 +25,6 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
   const [errorMsg, setErrorMsg] = useState(false);
   const [loading, setLoading] = useState(false);
   const [animate, setAnimate] = useState(false);
-  const [secondPage, setSecondPage] = useState(false);
-
-  const onClick = async () => {
-    if (plan) {
-      setAnimate(true);
-
-      await setTimeout(() => {
-        setAnimate(false)
-      }, 300);
-
-      if (!secondPage) {
-        gaModalSecondPage();
-        
-        await setTimeout(() => {
-          setSecondPage(true);
-        }, 100);
-      }
-    }
-  }
-
-  const onBack = async () => {
-    if (plan) {
-      setAnimate(true);
-
-      await setTimeout(() => {
-        setAnimate(false)
-      }, 300);
-
-      if (secondPage) {
-        await setTimeout(() => {
-          setSecondPage(false);
-        }, 100);
-      }
-    }
-  }
 
   function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -92,7 +57,7 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
           handleModal();
           handleAlert({ title, message });
 
-          await setTimeout(() => {
+          await setTimeout(() => { 
             setFirstName(null);
             setLastName(null);
             setEmail(null);
@@ -100,7 +65,6 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
           }, 50);
 
           gaSignUp();
-          setSecondPage(false);
         } else {
           setWarning({
             ...warning,
@@ -126,46 +90,32 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
 
   return (
     <div id="subsModal" className={showModal ? 'show-modal' : 'hide-modal'}>
-      <ModalHeader secondPage={secondPage} />
+      <ModalHeader />
       <div className="modal__content">
         <div className={animate ? "modal__content-out" : "modal__content-in"}>
           {
-            !secondPage
-              ? (
-                <>
-                  <ModalPriceTable />
-                  <ModalPlans plan={plan} setPlan={setPlan} />
-                </>
-              )
-              : (
-                <>
-                  {loading ? <LoadingAnimation /> :
-                    <ModalSubsForm
-                      errorMsg={errorMsg}
-                      error={errorForm}
-                      setError={setErrorForm}
-                      warning={warning}
-                      setWarning={setWarning}
-                      firstName={firstName}
-                      lastName={lastName}
-                      email={email}
-                      setFirstName={setFirstName}
-                      setLastName={setLastName}
-                      setEmail={setEmail}
-                    />}
-                </>
-              )
+            <>
+              {loading ? <LoadingAnimation /> :
+                <ModalSubsForm
+                  errorMsg={errorMsg}
+                  error={errorForm}
+                  setError={setErrorForm}
+                  warning={warning}
+                  setWarning={setWarning}
+                  firstName={firstName}
+                  lastName={lastName}
+                  email={email}
+                  setFirstName={setFirstName}
+                  setLastName={setLastName}
+                  setEmail={setEmail}
+                />}
+            </>
           }
         </div>
       </div>
       <ModalSubmitBtn
-        onBack={
-          () => secondPage ? onBack() : handleModal()
-        }
-        onClick={
-          () => secondPage ? onSubmit() : onClick()
-        }
-        secondPage={secondPage}
+        onBack={handleModal}
+        onClick={onSubmit}
       />
     </div>
   )
