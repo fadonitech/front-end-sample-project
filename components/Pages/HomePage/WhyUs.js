@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { DefaultBtn } from '../../Buttons/Buttons';
+
 import { stringWhyUs } from "../../../copywrite";
 
 const WhyUsCard = ({ title, paragraph }) => {
@@ -85,6 +87,7 @@ const WhyUs = () => {
           {renderCards}
         </div>
       </div>
+      <DefaultBtn content="GET YOUR INVITATION" />
     </div>
   )
 }

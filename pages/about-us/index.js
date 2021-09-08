@@ -1,21 +1,34 @@
+import { createContext } from 'react';
 import Head from 'next/head'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 
-import Navbar from '../components/Blog/BlogNavbar/BlogNavbar';
-import { HomePage } from '../components/Pages/Page';
-import Footer from '../components/Footer/Footer';
-import { gaHomePage } from '../lib/ga/events';
+import Header from '../../components/Pages/HomePage/Header';
+import WhoWeAre from '../../components/Pages/HomePage/WhoWeAre';
+import WhyUs from '../../components/Pages/HomePage/WhyUs';
+import Footer from '../../components/Footer/Footer';
+
+import { gaAboutUs } from '../../lib/ga/events';
+
+export const SubsPlanSelected = createContext({});
 
 
-const Home = () => {
+const AboutUs = () => (
+  <div className="homepage">
+    <WhyUs />
+    <WhoWeAre />
+  </div>
+)
+
+const AboutUsPage = () => {
   useEffect(() => {
-    gaHomePage();
+    gaAboutUs();
   }, []);
 
   return (
     <div>
       <Head>
-        <title>FadoniTech</title>
+        <title>FadoniTech | About Us</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         <meta name="robots" content="index, follow" />
@@ -50,11 +63,12 @@ const Home = () => {
       </Head>
       <main>
         <Navbar />
-        <HomePage />
+        <AboutUs />
       </main>
       <Footer />
     </div>
   )
 }
 
-export default Home;
+export default AboutUsPage;
+

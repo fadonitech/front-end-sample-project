@@ -1,6 +1,6 @@
 import { DefaultBtn } from '../../Buttons/Buttons';
 
-const Header = ({ onClick }) => (
+const Header = () => (
   <div className="homepage__title padding-left-10">
     <div className="margin-bottom-8">
       <h1 className="source-sans-semibold title-8">
@@ -14,7 +14,7 @@ const Header = ({ onClick }) => (
       </h2>
     </div>
     <div className="homepage__container--btn">
-      <DefaultBtn content="GET INVITED" onClick={onClick} />
+      <DefaultBtn content="GET YOUR INVITATION" />
     </div>
   </div>
 )

@@ -1,21 +1,43 @@
 import Head from 'next/head'
-import { useEffect } from 'react';
+import { createContext } from 'react';
+import { useEffect, useState } from 'react';
 
-import Navbar from '../components/Blog/BlogNavbar/BlogNavbar';
-import { HomePage } from '../components/Pages/Page';
-import Footer from '../components/Footer/Footer';
-import { gaHomePage } from '../lib/ga/events';
+import { GetInvitedSection } from '../../components/Pages/Page';
+import Alert from '../../components/Alert/AlertSuccess';
+import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
+import Footer from '../../components/Footer/Footer';
+
+import { gaSignUp } from '../../lib/ga/events';
 
 
-const Home = () => {
+const GetInvited = () => {
+  const [alert, setAlert] = useState({
+    isOpen: false,
+    title: '',
+    message: ''
+  });
+
   useEffect(() => {
-    gaHomePage();
+    gaSignUp();
   }, []);
+
+  const handleAlert = ({ title, message }) => {
+    setAlert({
+      isOpen: true,
+      title,
+      message
+    });
+
+    setTimeout(() => setAlert({
+      ...alert,
+      isOpen: false
+    }), 2600);
+  }
 
   return (
     <div>
       <Head>
-        <title>FadoniTech</title>
+        <title>FadoniTech | About Us</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         <meta name="robots" content="index, follow" />
@@ -49,12 +71,14 @@ const Home = () => {
         />
       </Head>
       <main>
+        {alert.isOpen && <Alert />}
         <Navbar />
-        <HomePage />
+        <GetInvitedSection handleAlert={handleAlert} />
       </main>
       <Footer />
     </div>
   )
 }
 
-export default Home;
+export default GetInvited;
+

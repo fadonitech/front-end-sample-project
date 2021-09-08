@@ -1,3 +1,5 @@
+import { DefaultBtn } from '../../Buttons/Buttons';
+
 const HowItWorks = () => (
   <div className="homepage--section homepage__how-it-works">
     <div className="homepage__what--title">
@@ -25,6 +27,7 @@ const HowItWorks = () => (
         </li>
       </ul>
     </div>
+    <DefaultBtn content="GET YOUR INVITATION" />
   </div>
 )
 

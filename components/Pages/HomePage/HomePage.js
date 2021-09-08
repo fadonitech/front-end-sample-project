@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { gaMainPage } from '../../../lib/ga/events';
+import { gaHomePage } from '../../../lib/ga/events';
 
 import Header from './Header';
 import WhatAreWeBuilding from './WhatAreWeBuilding';
@@ -8,17 +8,11 @@ import HowItWorks from './HowItWorks';
 import WhoWeAre from './WhoWeAre';
 import WhyUs from './WhyUs';
 
-export const HomePage = ({ onClick }) => {
-  useEffect(() => {
-    gaMainPage();
-  }, []);
-
-  return (
-    <div className="homepage">
-      <Header onClick={onClick} />
-      {/* <WhatAreWeBuilding /> */}
-      <AboutUs />
-      <HowItWorks />
-    </div>
-  )
-}
+export const HomePage = () => (
+  <div className="homepage">
+    <Header />
+    {/* <WhatAreWeBuilding /> */}
+    <AboutUs />
+    <HowItWorks />
+  </div>
+)

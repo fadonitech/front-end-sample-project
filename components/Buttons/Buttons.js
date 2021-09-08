@@ -1,8 +1,24 @@
-export const DefaultBtn = ({ content, onClick }) => (
-  <button 
-    className="button__default" 
-    onClick={onClick}
-  >
-    {content}
-  </button>
-)
+import Link from 'next/link';
+
+export const DefaultBtn = ({ content, onClick = null }) => {
+  if (!onClick) {
+    return (
+      <Link href="/get-invited">
+        <button
+          className="button__default"
+        >
+          {content}
+        </button>
+      </Link>
+    )
+  } else {
+    return (
+      <button
+        className="button__default"
+        onClick={onClick}
+      >
+        {content}
+      </button>
+    )
+  }
+}

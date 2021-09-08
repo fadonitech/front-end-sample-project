@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 
-const BlogWebNavbar = ({ onClick }) => (
+const BlogWebNavbar = () => (
   <div className="blogNavbar">
     <Link href="/">
       <div className="blogNavbar--logo">
@@ -19,21 +19,24 @@ const BlogWebNavbar = ({ onClick }) => (
     </Link>
 
     <div className="blogNavbar--links">
-      {/* <ul>
+      <ul>
         <li>
           <Link href="/about-us">
             About Us
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/blog">
             Blog
           </Link>
-        </li>
-      </ul> */}
-      <button className="navbar--cta" onClick={onClick}>
-        GET INVITED
-      </button>
+        </li> */}
+      </ul>
+
+      <Link href="/get-invited">
+        <button className="navbar--cta">
+          GET YOUR INVITATION
+        </button>
+      </Link>
     </div>
   </div>
 )
@@ -47,7 +50,19 @@ const BlogMobilebNavbar = () => {
 
   return (
     <>
-      <div className={`navbar-mobile__bg-${btnActive ? "show" : "hide"}`} />
+      <div className={`navbar-mobile__bg-${btnActive ? "show" : "hide"}`}>
+        <Link href="/">
+          <img
+            src="/logo-black.png"
+            height={65.6}
+            width={63}
+            alt="Software Development"
+            style={{
+              marginTop: "1rem"
+            }}
+          />
+        </Link>
+      </div>
 
       <button
         className={`
@@ -66,30 +81,15 @@ const BlogMobilebNavbar = () => {
           <img src="/logo-white.png" alt="Tech Partnership" />
         </Link>
         <ul>
-          <li>
+          <li className="open-sans-light">
             <Link href="/about-us" onClick={onClick}>
               About Us
             </Link>
           </li>
-          <li>
-            <Link href="/service" onClick={onClick}>
-              Service
-            </Link>
-          </li>
-          <li>
-            <Link href="/price" onClick={onClick}>
-              Price
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog" onClick={onClick}>
-              Blog
-            </Link>
-          </li>
         </ul>
-        <Link href="contactus" onClick={onClick}>
+        <Link href="/get-invited" onClick={onClick}>
           <button className="navbar--cta">
-            BOOK A MEETING
+            GET YOUR INVITATION
           </button>
         </Link>
       </div>
@@ -97,22 +97,20 @@ const BlogMobilebNavbar = () => {
   )
 }
 
-const BlogNavbar = ({ onClick }) => {
-  // const [isPhone, setIsPhone] = useState(false);
+const BlogNavbar = () => {
+  const [isPhone, setIsPhone] = useState(false);
 
-  // const validateScreen = () => {
-  //   setIsPhone(window.innerWidth <= 600);
-  // }
+  const validateScreen = () => {
+    setIsPhone(window.innerWidth <= 500);
+  }
 
-  // useEffect(() => {
-  //   setIsPhone(window.innerWidth <= 600);
-  //   const resizeEvent = window.addEventListener('resize', validateScreen);
-  //   return window.removeEventListener('resize', resizeEvent)
-  // }, []);
+  useEffect(() => {
+    setIsPhone(window.innerWidth <= 500);
+    const resizeEvent = window.addEventListener('resize', validateScreen);
+    return window.removeEventListener('resize', resizeEvent)
+  }, []);
 
-  return (
-    <BlogWebNavbar onClick={onClick} />
-  )
+  return isPhone ? <BlogMobilebNavbar /> : <BlogWebNavbar />
 }
 
 export default BlogNavbar;

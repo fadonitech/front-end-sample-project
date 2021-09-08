@@ -1,0 +1,132 @@
+.getinvited {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  @include respond(tab-port-small) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include respond(average-phone) {
+    padding-top: 30.5rem;
+  }
+
+  &__header {
+    display: inline-block;
+    font-size: 8rem;
+    margin-left: 5rem;
+
+    @include respond(tab-port-small) {
+      margin-left: 0;
+      margin-bottom: 5rem;
+      display: flex;
+      flex-direction: row;
+
+      h2 {
+        font-size: 6rem;
+      }
+      h2:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &__container {
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+
+    @include respond(tab-port-to-small) {
+      width: 50rem;
+    }
+
+    &--header {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        display: inline-block;
+      }
+    }
+
+    &--form {
+      margin-bottom: 4rem;
+    }
+
+    &--button {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__form {
+    height: min-content;
+    width: 100%;
+
+    &-subs {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 100%;
+      }
+
+      @include respond(tab-port) {
+        input {
+          height: 6rem;
+        }
+      }
+
+      @include respond(medium-phone) {
+        input {
+          height: 8rem;
+        }
+      }
+
+      input:not(:last-child) {
+        margin-bottom: 2.5rem;
+
+        @include respond(tab-port-to-small) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  &__error-message {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $color-red;
+    font-size: 1.5rem;
+  }
+
+  &__submit-btn {
+    font-family: "Source Sans Light", sans-serif;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    border: none;
+    background-color: $color-blue;
+    color: $color-white;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border-radius: 3rem;
+
+    @include respond(tab-port-to-small) {
+      font-size: 2.6rem;
+      padding: 1rem 3rem;
+      border-radius: 5rem;
+    }
+  }
+}

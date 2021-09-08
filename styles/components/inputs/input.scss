@@ -1,5 +1,6 @@
 // CUSTOM INPUT
 
+// MODAL
 .text-input {
   border: none;
   background-color: $color-grey;
@@ -16,6 +17,49 @@
   &--success,
   &--error {
     background-color: $color-grey;
+    font-family: "Source Sans Light", sans-serif;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+  }
+
+  &--error {
+    border: 1px solid $color-red;
+    color: $color-red;
+  }
+
+  &--success {
+    border: 1px solid $color-green;
+    color: $color-green;
+  }
+}
+
+// GET INVITE PAGE
+
+.getinvited-input {
+  border: none;
+  background-color: $color-white;
+  font-family: "Source Sans Light", sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: $color-black;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+
+  @include respond(medium-phone) {
+    font-size: 2.5rem;
+  }
+
+  &--success,
+  &--error {
+    background-color: $color-white;
     font-family: "Source Sans Light", sans-serif;
     font-weight: normal;
     font-stretch: normal;

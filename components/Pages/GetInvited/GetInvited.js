@@ -1,20 +1,23 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { gaCompletedSignUp } from '../../lib/ga/events';
+import { gaCompletedSignUp, gaHomePage } from '../../../lib/ga/events';
 
-import { LoadingAnimation } from '../Loading/Loading';
+import Form from './Form';
+import { LoadingAnimation } from '../../Loading/Loading';
 
-import ModalHeader from './Header/ModalHeader';
-import ModalPriceTable from './PriceTable/ModalPriceTable';
-import ModalPlans from './Plans/Plans';
-import ModalSubsForm from './Subscription/Subscription';
-import { ModalSubmitBtn } from './Button/Button';
 
-export const Modal = ({ showModal, handleModal, handleAlert }) => {
+export const SubmitBtn = ({ onClick }) => (
+  <div >
+    <button className="getinvited__submit-btn" onClick={onClick} type={"submit"}>
+      SUBMIT
+    </button>
+  </div>
+)
+
+export const GetInvitedSection = ({ handleAlert }) => {
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
   const [email, setEmail] = useState(null);
-  const [plan, setPlan] = useState(null);
   const [warning, setWarning] = useState({
     firstName: false,
     lastName: false,
@@ -24,7 +27,6 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
   const [errorForm, setErrorForm] = useState(false);
   const [errorMsg, setErrorMsg] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [animate, setAnimate] = useState(false);
 
   function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -44,7 +46,7 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
           firstName,
           lastName,
           email,
-          subsPlan: plan
+          subsPlan: "monthly"
         });
 
         const { error, title, message } = JSON.parse(data.body);
@@ -54,14 +56,12 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
         if (!error) {
           setErrorForm(false)
           setErrorMsg('')
-          handleModal();
           handleAlert({ title, message });
 
-          await setTimeout(() => { 
+          await setTimeout(() => {
             setFirstName(null);
             setLastName(null);
             setEmail(null);
-            setPlan(null);
           }, 50);
 
           gaCompletedSignUp();
@@ -89,34 +89,47 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
   }
 
   return (
-    <div id="subsModal" className={showModal ? 'show-modal' : 'hide-modal'}>
-      <ModalHeader />
-      <div className="modal__content">
-        <div className={animate ? "modal__content-out" : "modal__content-in"}>
-          {
-            <>
-              {loading ? <LoadingAnimation /> :
-                <ModalSubsForm
-                  errorMsg={errorMsg}
-                  error={errorForm}
-                  setError={setErrorForm}
-                  warning={warning}
-                  setWarning={setWarning}
-                  firstName={firstName}
-                  lastName={lastName}
-                  email={email}
-                  setFirstName={setFirstName}
-                  setLastName={setLastName}
-                  setEmail={setEmail}
-                />}
-            </>
-          }
-        </div>
+    <div className="getinvited">
+      <div className="getinvited__header">
+        <h2 className="source-sans-semibold">
+          GET
+        </h2>
+        <h2 className="source-sans-semibold">
+          INVITED
+        </h2>
+        <h2 className="source-sans-semibold">
+          NOW
+        </h2>
       </div>
-      <ModalSubmitBtn
-        onBack={handleModal}
-        onClick={onSubmit}
-      />
+      <div className="getinvited__container">
+        {loading ? <LoadingAnimation /> :
+          <>
+            <div className="getinvited__container--header">
+              <h2 className="open-sans">
+                Get Access For FREE!
+              </h2>
+            </div>
+            <div className="getinvited__container--form">
+              <Form
+                errorMsg={errorMsg}
+                error={errorForm}
+                setError={setErrorForm}
+                warning={warning}
+                setWarning={setWarning}
+                firstName={firstName}
+                lastName={lastName}
+                email={email}
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+                setEmail={setEmail}
+              />
+            </div>
+            <div className="getinvited__container--button">
+              <SubmitBtn onClick={onSubmit} />
+            </div>
+          </>
+        }
+      </div>
     </div>
   )
 }
