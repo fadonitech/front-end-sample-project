@@ -11,7 +11,7 @@ import WhyUs from './WhyUs';
 export const HomePage = () => (
   <div className="homepage">
     <Header />
-    {/* <WhatAreWeBuilding /> */}
+    <WhatAreWeBuilding />
     <AboutUs />
     <HowItWorks />
   </div>

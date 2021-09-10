@@ -32,7 +32,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 0 6rem 0;
+
+    &:first-child {
+      padding: 5rem 0 6rem 0;
+    }
   }
 
   &__how-it-works,
@@ -65,15 +68,41 @@
   }
 
   &__what {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     background-color: $color-white;
 
     .line {
       background-color: $color-blue;
     }
+
+    &--video {
+      margin-top: 5rem;
+      height: 50rem;
+      width: 100rem;
+
+      @include respond(large-phone) {
+        width: 100vw;
+        height: 45rem;
+        padding: 0 5rem;
+      }
+      @include respond(medium-phone) {
+        height: 40rem;
+      }
+      @include respond(average-phone) {
+        height: 42rem;
+        padding: 0;
+      }
+      @include respond(small-phone) {
+        height: 38rem;
+        padding: 0;
+      }
+    }
   }
 
   &__how-it-works {
     background-color: $color-white;
+    padding: 5rem 0;
 
     &--list {
       margin-top: 7rem;
@@ -109,7 +138,8 @@
   }
 
   &__about-us {
-    background-color: $color-white;
+    background-color: $color-grey;
+    padding: 5rem 0;
 
     .line {
       background-color: $color-blue;
@@ -125,7 +155,6 @@
       justify-content: center;
       align-items: flex-start;
       margin-top: 10rem;
-      margin-bottom: 5rem;
 
       @include respond(medium-phone) {
         grid-template-columns: repeat(1, max-content);
@@ -172,6 +201,7 @@
   }
 
   &__who-we-are {
+    padding: 5rem 0;
     background-color: $color-blue;
     color: $color-white;
 
