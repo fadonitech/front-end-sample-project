@@ -1,18 +1,16 @@
-import { useEffect } from 'react';
-import { gaHomePage } from '../../../lib/ga/events';
-
 import Header from './Header';
 import WhatAreWeBuilding from './WhatAreWeBuilding';
 import AboutUs from './AboutUs';
 import HowItWorks from './HowItWorks';
-import WhoWeAre from './WhoWeAre';
-import WhyUs from './WhyUs';
+import Prototype from './Prototype';
 
-export const HomePage = () => (
-  <div className="homepage">
-    <Header />
-    <WhatAreWeBuilding />
-    <AboutUs />
-    <HowItWorks />
-  </div>
-)
+export const HomePage = () => {
+  return (
+    <div className="homepage">
+      <Header />
+      <WhatAreWeBuilding />
+      <AboutUs />
+      <HowItWorks />
+    </div>
+  )
+}
