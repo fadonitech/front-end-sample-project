@@ -10,4 +10,8 @@ module.exports = {
   env: {
     REACT_APP_API_URL:'https://a3euwetft5.execute-api.us-east-1.amazonaws.com/test1/',
   },
+  withTM: require('next-transpile-modules')(['three'])
 };
+
+// const withTM = require('next-transpile-modules')(['three'])
+// module.exports = withTM()

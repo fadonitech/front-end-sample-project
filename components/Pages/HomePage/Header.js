@@ -1,4 +1,5 @@
 import { DefaultBtn } from '../../Buttons/Buttons';
+import { Canvas } from '@react-three/fiber';
 
 const Header = () => (
   <div className="homepage__title padding-left-10">
@@ -16,6 +17,14 @@ const Header = () => (
     <div className="homepage__container--btn">
       <DefaultBtn content="GET YOUR INVITATION" />
     </div>
+    <Canvas>
+      <ambientLight intensity={0.1} />
+      <directionalLight color="red" position={[0, 0, 5]} />
+      <mesh>
+        <boxGeometry />
+        <meshStandardMaterial />
+      </mesh>
+    </Canvas>
   </div>
 )
 
