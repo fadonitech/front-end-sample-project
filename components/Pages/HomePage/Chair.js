@@ -56,7 +56,7 @@ export default function Chair(props) {
 					rotation={[-Math.PI, 0, -Math.PI]}
 					scale={[0.25, 0.25, 0.25]}
 				/>
-				{/* <mesh
+				<mesh
 					name='base'
 					castShadow
 					receiveShadow
@@ -65,7 +65,7 @@ export default function Chair(props) {
 					material-color={props.baseColor}
 					rotation={[-Math.PI, 0, -Math.PI]}
 					scale={[0.25, 0.25, 0.25]}
-				/> */}
+				/>
 			</group>
 		</group>
 	);

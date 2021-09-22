@@ -24,8 +24,8 @@ export default function DraggableChair(props) {
 				legsColor={props.legsColor}
 				cushionsColor={props.cushionsColor}
 				supportsColor={props.supportsColor}
-				// backColor={props.backColor}
-				// baseColor={props.baseColor}
+				backColor={props.backColor}
+				baseColor={props.baseColor}
 			/>
 		</mesh>
 	);
