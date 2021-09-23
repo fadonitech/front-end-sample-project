@@ -40,12 +40,11 @@ const Prototype = () => {
       className='container__right'
       style={{
         display: 'flex',
-        marginTop: '16px',
+        flexDirection: 'column',
         width: '40%',
         height: '90vh',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingLeft: '2%',
       }}
     >
       <ChairOptions

@@ -5,7 +5,7 @@ import Prototype from './Prototype';
 
 const Header = () => {
 	return (
-		<div className='homepage__container' style={{ display: 'flex' }}>
+		<div className='homepage__container'>
 			<div className='container__left'>
 				<div className='homepage__title padding-left-10'>
 					<div className='margin-bottom-8'>
