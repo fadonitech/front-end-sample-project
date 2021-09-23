@@ -4,7 +4,13 @@ import { useDrag } from 'react-use-gesture';
 
 import Chair from './Chair';
 
-export default function DraggableChair(props) {
+const DraggableChair = ({
+	legsColor,
+	cushionsColor,
+	supportsColor,
+	backColor,
+	baseColor
+}) => {
 	const ref = useRef();
 	const [rotation, setRotation] = useState([0, 0, 0]);
 
@@ -19,14 +25,20 @@ export default function DraggableChair(props) {
 	);
 
 	return (
-		<mesh rotation={rotation} {...bind()} ref={ref}>
+		<mesh
+			rotation={rotation}
+			{...bind()}
+			ref={ref}
+		>
 			<Chair
-				legsColor={props.legsColor}
-				cushionsColor={props.cushionsColor}
-				supportsColor={props.supportsColor}
-				backColor={props.backColor}
-				baseColor={props.baseColor}
+				legsColor={legsColor}
+				cushionsColor={cushionsColor}
+				supportsColor={supportsColor}
+				backColor={backColor}
+				baseColor={baseColor}
 			/>
 		</mesh>
 	);
 }
+
+export default DraggableChair;

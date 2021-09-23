@@ -9,7 +9,6 @@ import ColorOptions from './ColorOptions';
 const Prototype = () => {
   const ref = useRef();
   const [selectedPart, setSelectedPart] = useState('legs');
-  const [chairColor, setChairColor] = useState([]);
   const [legsColor, setLegsColor] = useState('#fff');
   const [cushionsColor, setCushionsColor] = useState('#fff');
   const [supportsColor, setSupportsColor] = useState('#fff');
@@ -34,14 +33,6 @@ const Prototype = () => {
         setBaseColor(color);
         break;
     }
-
-    setChairColor([
-      ...chairColor,
-      {
-        name: selectedPart,
-        color: color,
-      },
-    ]);
   };
 
   return (
@@ -73,8 +64,15 @@ const Prototype = () => {
           debounce: 200,
         }}
       >
-        <Suspense fallback={null}>
-          <Stage controls={ref} preset="rembrandt" intensity={1} environment="city">
+        <Suspense
+          fallback={null}
+        >
+          <Stage
+            controls={ref}
+            preset="rembrandt"
+            intensity={1}
+            environment="city"
+          >
             <DraggableChair
               legsColor={legsColor}
               cushionsColor={cushionsColor}
@@ -84,7 +82,10 @@ const Prototype = () => {
             />
           </Stage>
         </Suspense>
-        <OrbitControls ref={ref} autoRotate />
+        <OrbitControls
+          ref={ref}
+          autoRotate
+        />
       </Canvas>
       <ColorOptions
         selectedPart={selectedPart}

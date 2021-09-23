@@ -22,50 +22,63 @@ export default function Chair(props) {
 					receiveShadow
 					geometry={nodes.legs.geometry}
 					material={nodes.legs.material}
-					material-color={props.legsColor}
 					rotation={[-Math.PI, 0, -Math.PI]}
 					scale={[0.25, 0.25, 0.25]}
-				/>
+          userData={{ name: 'legs' }}
+
+				>
+					<meshStandardMaterial color={props.legsColor} />
+				</mesh>
 				<mesh
 					name='cushions'
 					castShadow
 					receiveShadow
 					geometry={nodes.cushions.geometry}
 					material={materials.wire_196010216}
-					material-color={props.cushionsColor}
 					rotation={[-Math.PI, 0, -Math.PI]}
 					scale={[0.25, 0.25, 0.25]}
-				/>
+          userData={{ name: 'cushions' }}
+
+				>
+					<meshStandardMaterial color={props.cushionsColor} />
+				</mesh>
 				<mesh
 					name='back'
 					castShadow
 					receiveShadow
 					geometry={nodes.back.geometry}
 					material={nodes.back.material}
-					material-color={props.backColor}
 					rotation={[-Math.PI, 0, -Math.PI]}
 					scale={[0.25, 0.25, 0.25]}
-				/>
+          userData={{ name: 'back' }}
+
+				>
+					<meshStandardMaterial color={props.backColor} />
+				</mesh>
 				<mesh
 					name='supports'
 					castShadow
 					receiveShadow
 					geometry={nodes.supports.geometry}
 					material={nodes.supports.material}
-					material-color={props.supportsColor}
 					rotation={[-Math.PI, 0, -Math.PI]}
 					scale={[0.25, 0.25, 0.25]}
-				/>
+          userData={{ name: 'supports' }}
+				>
+					<meshStandardMaterial color={props.supportsColor} />
+				</mesh>
 				<mesh
 					name='base'
 					castShadow
 					receiveShadow
 					geometry={nodes.base.geometry}
 					material={nodes.base.material}
-					material-color={props.baseColor}
 					rotation={[-Math.PI, 0, -Math.PI]}
 					scale={[0.25, 0.25, 0.25]}
-				/>
+          userData={{ name: 'base' }}
+				>
+					<meshStandardMaterial color={props.baseColor} />
+				</mesh>
 			</group>
 		</group>
 	);
