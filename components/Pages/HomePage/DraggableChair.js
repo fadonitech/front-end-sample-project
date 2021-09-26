@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useThree } from '@react-three/fiber';
 import { useDrag } from 'react-use-gesture';
+import { PerspectiveCamera } from '@react-three/drei';
 
 import Chair from './Chair';
 
@@ -9,7 +10,7 @@ const DraggableChair = ({
 	cushionsColor,
 	supportsColor,
 	backColor,
-	baseColor
+	baseColor,
 }) => {
 	const ref = useRef();
 	const [rotation, setRotation] = useState([0, 0, 0]);
@@ -25,11 +26,7 @@ const DraggableChair = ({
 	);
 
 	return (
-		<mesh
-			rotation={rotation}
-			{...bind()}
-			ref={ref}
-		>
+		<mesh {...bind()} ref={ref}>
 			<Chair
 				legsColor={legsColor}
 				cushionsColor={cushionsColor}
@@ -39,6 +36,6 @@ const DraggableChair = ({
 			/>
 		</mesh>
 	);
-}
+};
 
 export default DraggableChair;

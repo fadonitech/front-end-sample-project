@@ -23,9 +23,8 @@ export default function Chair(props) {
 					geometry={nodes.legs.geometry}
 					material={nodes.legs.material}
 					rotation={[-Math.PI, 0, -Math.PI]}
-					scale={[0.25, 0.25, 0.25]}
-          userData={{ name: 'legs' }}
-
+					scale={[0.2, 0.2, 0.2]}
+					userData={{ name: 'legs' }}
 				>
 					<meshStandardMaterial color={props.legsColor} />
 				</mesh>
@@ -36,9 +35,8 @@ export default function Chair(props) {
 					geometry={nodes.cushions.geometry}
 					material={materials.wire_196010216}
 					rotation={[-Math.PI, 0, -Math.PI]}
-					scale={[0.25, 0.25, 0.25]}
-          userData={{ name: 'cushions' }}
-
+					scale={[0.2, 0.2, 0.2]}
+					userData={{ name: 'cushions' }}
 				>
 					<meshStandardMaterial color={props.cushionsColor} />
 				</mesh>
@@ -49,9 +47,8 @@ export default function Chair(props) {
 					geometry={nodes.back.geometry}
 					material={nodes.back.material}
 					rotation={[-Math.PI, 0, -Math.PI]}
-					scale={[0.25, 0.25, 0.25]}
-          userData={{ name: 'back' }}
-
+					scale={[0.2, 0.2, 0.2]}
+					userData={{ name: 'back' }}
 				>
 					<meshStandardMaterial color={props.backColor} />
 				</mesh>
@@ -62,8 +59,8 @@ export default function Chair(props) {
 					geometry={nodes.supports.geometry}
 					material={nodes.supports.material}
 					rotation={[-Math.PI, 0, -Math.PI]}
-					scale={[0.25, 0.25, 0.25]}
-          userData={{ name: 'supports' }}
+					scale={[0.2, 0.2, 0.2]}
+					userData={{ name: 'supports' }}
 				>
 					<meshStandardMaterial color={props.supportsColor} />
 				</mesh>
@@ -74,8 +71,8 @@ export default function Chair(props) {
 					geometry={nodes.base.geometry}
 					material={nodes.base.material}
 					rotation={[-Math.PI, 0, -Math.PI]}
-					scale={[0.25, 0.25, 0.25]}
-          userData={{ name: 'base' }}
+					scale={[0.2, 0.2, 0.2]}
+					userData={{ name: 'base' }}
 				>
 					<meshStandardMaterial color={props.baseColor} />
 				</mesh>
