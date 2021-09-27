@@ -1,13 +1,23 @@
 .picker-div {
 	background-color: #ffffff;
-	border: .4rem solid #ffffff !important;
+	border: 0.4rem solid #ffffff !important;
 	border-radius: 1.6rem;
-	padding: .4rem;
+	padding: 0.4rem;
 	margin-left: 1.2rem;
 	height: 5.2rem;
 	width: 5.2rem;
-	box-shadow: 0 0 .5rem #c4c4c4;
+	box-shadow: 0 0 0.5rem #c4c4c4;
 	transition: all 200ms ease-out;
+
+	@include respond(normal-desktop) {
+		height: 7.25rem;
+		width: 7.25rem;
+	}
+
+	@include respond(average-phone) {
+		width: 6.2rem;
+		height: 6.2rem;
+	}
 
 	&:hover {
 		transform: scale(1.1);
@@ -26,7 +36,7 @@
 }
 
 .picker-div.selected {
-	border: .4rem solid $color-blue !important;
+	border: 0.4rem solid $color-blue !important;
 	box-shadow: 0 0 5px $color-blue;
 }
 
@@ -42,13 +52,24 @@
 .color-picker {
 	height: 5.2rem;
 	width: 5.2rem;
-	border: .4rem solid #ffffff !important;
+	border: 0.4rem solid #ffffff !important;
 	border-radius: 1.6rem;
-	padding: .4rem;
+	padding: 0.4rem;
 	margin-left: 1.2rem;
-	box-shadow: 0 0 .5rem #c4c4c4;
+	box-shadow: 0 0 0.5rem #c4c4c4;
 	transition: all 200ms ease-out;
 	cursor: pointer;
+
+	@include respond(normal-desktop) {
+		height: 7.25rem;
+		width: 7.25rem;
+	}
+
+	@include respond(average-phone) {
+		width: 5.2rem;
+		height: 5.2rem;
+		border-radius: 50%;
+	}
 
 	&:hover {
 		transform: scale(1.1);
