@@ -7,8 +7,8 @@ const Header = () => {
 	return (
 		<div className='homepage__container'>
 			<div className='container__left'>
-				<div className='homepage__title padding-left-10'>
-					<div className='margin-bottom-8'>
+				<div className='homepage__title'>
+					<div className='homepage__text margin-bottom-8'>
 						<h1 className='source-sans-semibold title-8 '>OOPS,</h1>
 						<h1 className='source-sans-semibold title-6 margin-bottom-2'>
 							You Caught Us Early!
