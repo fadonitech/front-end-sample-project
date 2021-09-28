@@ -65,10 +65,11 @@
 		width: 7.25rem;
 	}
 
-	@include respond(average-phone) {
-		width: 5.2rem;
-		height: 5.2rem;
+	@include respond(tab-land) {
+		width: 6.2rem;
+		height: 6.2rem;
 		border-radius: 50%;
+		margin-top: 1rem;
 	}
 
 	&:hover {
