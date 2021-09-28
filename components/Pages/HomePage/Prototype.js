@@ -1,6 +1,6 @@
 import React, { useState, Suspense, useRef, useEffect } from 'react';
 import { OrbitControls, Stage, Html } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useThree, useFrame } from '@react-three/fiber';
 
 import { LoadingAnimation } from '../../Loading/Loading';
 
@@ -84,7 +84,7 @@ const Prototype = () => {
 				shadows
 				shadowMap
 				dpr={[1, 2]}
-				camera={{ fov: 50 }}
+				camera={{ fov: 50, position: [0, 3, 5] }}
 				frameloop='demand'
 				performance={{
 					current: 1,

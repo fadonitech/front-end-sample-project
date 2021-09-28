@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useThree } from '@react-three/fiber';
 import { useDrag } from 'react-use-gesture';
-import { PerspectiveCamera } from '@react-three/drei';
 
 import Chair from './Chair';
 
