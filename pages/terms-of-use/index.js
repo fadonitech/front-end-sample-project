@@ -8,7 +8,7 @@ import Footer from '../../components/Footer/Footer';
 import { gaTermsOfUse } from '../../lib/ga/events';
 
 
-const Home = () => {
+const TermsOfUse = () => {
   useEffect(() => {
     gaTermsOfUse();
   }, []);
@@ -424,4 +424,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default TermsOfUse;
