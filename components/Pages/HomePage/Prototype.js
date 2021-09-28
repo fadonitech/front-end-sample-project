@@ -1,6 +1,8 @@
 import React, { useState, Suspense, useRef, useEffect } from 'react';
-import { OrbitControls, Stage } from '@react-three/drei';
+import { OrbitControls, Stage, Html } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+
+import { LoadingAnimation } from '../../Loading/Loading';
 
 import DraggableChair from './DraggableChair';
 import ChairOptions from './ChairOptions';
@@ -61,6 +63,14 @@ const Prototype = () => {
 		);
 	}
 
+	function Loader() {
+		return (
+			<Html center>
+				<LoadingAnimation />
+			</Html>
+		);
+	}
+
 	return (
 		<div
 			className='container__right'
@@ -84,7 +94,7 @@ const Prototype = () => {
 				}}
 			>
 				{/* <Lights /> */}
-				<Suspense fallback={null}>
+				<Suspense fallback={<Loader />}>
 					<Stage
 						controls={ref}
 						preset='rembrandt'

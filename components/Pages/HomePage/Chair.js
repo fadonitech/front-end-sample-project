@@ -22,7 +22,7 @@ export default function Chair(props) {
 					receiveShadow
 					geometry={nodes.legs.geometry}
 					material={nodes.legs.material}
-					rotation={[-Math.PI, 0, -Math.PI]}
+					rotation={[-Math.PI, -90, -Math.PI]}
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'legs' }}
 				>
@@ -34,7 +34,7 @@ export default function Chair(props) {
 					receiveShadow
 					geometry={nodes.cushions.geometry}
 					material={materials.wire_196010216}
-					rotation={[-Math.PI, 0, -Math.PI]}
+					rotation={[-Math.PI, -90, -Math.PI]}
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'cushions' }}
 				>
@@ -46,7 +46,7 @@ export default function Chair(props) {
 					receiveShadow
 					geometry={nodes.back.geometry}
 					material={nodes.back.material}
-					rotation={[-Math.PI, 0, -Math.PI]}
+					rotation={[-Math.PI, -90, -Math.PI]}
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'back' }}
 				>
@@ -58,7 +58,7 @@ export default function Chair(props) {
 					receiveShadow
 					geometry={nodes.supports.geometry}
 					material={nodes.supports.material}
-					rotation={[-Math.PI, 0, -Math.PI]}
+					rotation={[-Math.PI, -90, -Math.PI]}
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'supports' }}
 				>
@@ -70,7 +70,7 @@ export default function Chair(props) {
 					receiveShadow
 					geometry={nodes.base.geometry}
 					material={nodes.base.material}
-					rotation={[-Math.PI, 0, -Math.PI]}
+					rotation={[-Math.PI, -90, -Math.PI]}
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'base' }}
 				>

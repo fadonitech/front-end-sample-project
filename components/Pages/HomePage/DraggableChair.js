@@ -26,10 +26,7 @@ const DraggableChair = ({
 	);
 
 	return (
-		<mesh
-			{...bind()}
-			ref={ref}
-		>
+		<mesh {...bind()} ref={ref}>
 			<Chair
 				legsColor={legsColor}
 				cushionsColor={cushionsColor}
