@@ -70,6 +70,12 @@
     height: min-content;
     width: 100%;
 
+    &--legal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     &-subs {
       height: inherit;
       display: flex;

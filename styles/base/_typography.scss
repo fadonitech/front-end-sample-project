@@ -132,7 +132,7 @@
 
   @include respond(large-phone) {
     width: 60rem;
-    font-size: 3rem;
+    font-size:t 3rem;
   }
 
   @include respond(small-phone) {
@@ -149,6 +149,19 @@
   font-style: normal;
   line-height: normal;
   font-size: 1.8rem;
+}
+
+.paragraph-small {
+  width: 70%;
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-size: 1.5rem;
+  @include respond(tab-port-to-small) {
+    font-size: 1.8rem;
+  }
 }
 
 .bold {

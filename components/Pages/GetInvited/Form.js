@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Form = ({
   firstName = '',
   lastName = '',
@@ -73,6 +75,11 @@ const Form = ({
           placeholder="E-mail"
           required
         />
+        <div className="getinvited__form--legal">
+          <p className="paragraph-small text-align-center">
+          By signing up, you agree to our <Link className="open-sans-bold" href="/terms-of-use">Terms of Use</Link > and <Link className="open-sans-bold" href="/privacy-policy">Privacy Policy</Link >.
+          </p>
+        </div>
         {/* <div className="select-input">
           <select name="purpose" id="purpose" required>
             <option value="" disabled selected>Purpose</option>
