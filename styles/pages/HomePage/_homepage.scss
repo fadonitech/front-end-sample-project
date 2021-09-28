@@ -411,7 +411,7 @@
 		height: auto;
 	}
 	@include respond(tab-land) {
-		min-height: 100vh;
+		min-height: 80vh;
 		padding: 0 10rem;
 	}
 	@include respond(average-phone) {
