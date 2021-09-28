@@ -1,426 +1,468 @@
 .homepage {
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: flex-start;
+	min-height: 100vh;
+	height: auto;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
 
-  @include respond(average-phone) {
-    padding-top: 10.5rem;
-  }
+	@include respond(average-phone) {
+		padding-top: 10.5rem;
+	}
 
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-row-gap: 2rem;
-    padding: 0 10rem;
-  }
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		grid-row-gap: 2rem;
+		padding: 0 10rem;
+		@include respond(normal-desktop) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 
-  &__title {
-    width: 100%;
-    height: 90vh;
-    max-width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: flex-start;
-  }
+		@include respond(average-phone) {
+			padding: 0 5rem;
+		}
+	}
 
-  &__text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+	&__title {
+		width: 100%;
+		height: 90vh;
+		max-width: 100%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: flex-start;
+		@include respond(normal-desktop) {
+			height: auto;
+			margin-top: 25vh;
+		}
+	}
 
-  &--section {
-    width: 100%;
-    height: max-content;
-    max-width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	&__text {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
 
-    &:first-child {
-      padding: 5rem 0 6rem 0;
-    }
-  }
+	&--section {
+		width: 100%;
+		height: max-content;
+		max-width: 100%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-  &__how-it-works,
-  &__who-we-are,
-  &__about-us,
-  &__what,
-  &__why {
-    &--title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+		&:first-child {
+			padding: 5rem 0 6rem 0;
+		}
+	}
 
-      .line {
-        height: 0.3rem;
-        width: 15rem;
-        margin: 0.5rem 0 3.5rem 0;
-      }
+	&__how-it-works,
+	&__who-we-are,
+	&__about-us,
+	&__what,
+	&__why {
+		&--title {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
 
-      h3 {
-        width: 40rem;
-        text-align: center;
+			.line {
+				height: 0.3rem;
+				width: 15rem;
+				margin: 0.5rem 0 3.5rem 0;
+			}
 
-        @include respond(medium-phone) {
-          width: 80vw;
-        }
-      }
-    }
-  }
+			h3 {
+				width: 40rem;
+				text-align: center;
 
-  &__what {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-color: $color-white;
+				@include respond(medium-phone) {
+					width: 80vw;
+				}
+			}
+		}
+	}
 
-    .line {
-      background-color: $color-blue;
-    }
+	&__what {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+		background-color: $color-white;
 
-    &--video {
-      margin-top: 5rem;
-      height: 50rem;
-      width: 100rem;
+		.line {
+			background-color: $color-blue;
+		}
 
-      @include respond(large-phone) {
-        width: 100vw;
-        height: 45rem;
-        padding: 0 5rem;
-      }
-      @include respond(medium-phone) {
-        height: 40rem;
-      }
-      @include respond(average-phone) {
-        height: 42rem;
-        padding: 0;
-      }
-      @include respond(small-phone) {
-        height: 38rem;
-        padding: 0;
-      }
-    }
-  }
+		&--video {
+			margin-top: 5rem;
+			height: 50rem;
+			width: 100rem;
 
-  &__how-it-works {
-    background-color: $color-white;
-    padding: 5rem 0;
+			@include respond(large-phone) {
+				width: 100vw;
+				height: 45rem;
+				padding: 0 5rem;
+			}
+			@include respond(medium-phone) {
+				height: 40rem;
+			}
+			@include respond(average-phone) {
+				height: 42rem;
+				padding: 0;
+			}
+			@include respond(small-phone) {
+				height: 38rem;
+				padding: 0;
+			}
+		}
+	}
 
-    &--list {
-      margin-top: 7rem;
-      margin-bottom: 7rem;
+	&__how-it-works {
+		background-color: $color-white;
+		padding: 5rem 0;
 
-      @include respond(medium-phone) {
-        margin-bottom: 7rem;
-      }
-    }
+		&--list {
+			margin-top: 7rem;
+			margin-bottom: 7rem;
 
-    ul {
-      list-style: none;
+			@include respond(medium-phone) {
+				margin-bottom: 7rem;
+			}
+		}
 
-      li {
-        background-color: $color-grey;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        box-shadow: 2px 3px 10px rgba(#000000, 5%);
-      }
+		ul {
+			list-style: none;
 
-      li:not(:last-child) {
-        margin-bottom: 3rem;
+			li {
+				background-color: $color-grey;
+				padding: 1.5rem;
+				border-radius: 1rem;
+				box-shadow: 2px 3px 10px rgba(#000000, 5%);
+			}
 
-        @include respond(medium-phone) {
-          margin-bottom: 4rem;
-        }
-      }
-    }
+			li:not(:last-child) {
+				margin-bottom: 3rem;
 
-    .line {
-      background-color: $color-blue;
-    }
-  }
+				@include respond(medium-phone) {
+					margin-bottom: 4rem;
+				}
+			}
+		}
 
-  &__about-us {
-    background-color: $color-grey;
-    padding: 5rem 0;
+		.line {
+			background-color: $color-blue;
+		}
+	}
 
-    .line {
-      background-color: $color-blue;
-    }
+	&__about-us {
+		background-color: $color-grey;
+		padding: 5rem 0;
 
-    &--benefits {
-      width: 100vw;
-      display: grid;
-      grid-template-columns: repeat(2, max-content);
-      grid-template-rows: repeat(2, max-content);
-      grid-column-gap: 3rem;
-      grid-row-gap: 3rem;
-      justify-content: center;
-      align-items: flex-start;
-      margin-top: 10rem;
+		.line {
+			background-color: $color-blue;
+		}
 
-      @include respond(medium-phone) {
-        grid-template-columns: repeat(1, max-content);
-        grid-template-rows: auto;
-      }
+		&--benefits {
+			width: 100vw;
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			grid-template-rows: repeat(2, max-content);
+			grid-column-gap: 3rem;
+			grid-row-gap: 3rem;
+			justify-content: center;
+			align-items: flex-start;
+			margin-top: 10rem;
 
-      &-text {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-        justify-content: center;
-        align-items: center;
+			@include respond(medium-phone) {
+				grid-template-columns: repeat(1, max-content);
+				grid-template-rows: auto;
+			}
 
-        div {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 8rem;
-          width: 8rem;
-          background-color: $color-blue;
-        }
+			&-text {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 2rem;
+				justify-content: center;
+				align-items: center;
 
-        h4 {
-          margin: 2rem 0;
-        }
+				div {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					height: 8rem;
+					width: 8rem;
+					background-color: $color-blue;
+				}
 
-        p {
-          font-size: 1.5rem;
-          width: 26.5rem;
-          text-align: center;
+				h4 {
+					margin: 2rem 0;
+				}
 
-          @include respond(medium-phone) {
-            font-size: 2rem;
-          }
-        }
+				p {
+					font-size: 1.5rem;
+					width: 26.5rem;
+					text-align: center;
 
-        i {
-          font-size: 5.5rem;
-          color: $color-white;
-        }
-      }
-    }
-  }
+					@include respond(medium-phone) {
+						font-size: 2rem;
+					}
+				}
 
-  &__who-we-are {
-    padding: 5rem 0;
-    background-color: $color-blue;
-    color: $color-white;
+				i {
+					font-size: 5.5rem;
+					color: $color-white;
+				}
+			}
+		}
+	}
 
-    &--content {
-      width: 100%;
-      margin-top: 5rem;
-      display: grid;
-      grid-template-columns: min-content min-content;
-      grid-template-rows: auto;
-      grid-column-gap: 5rem;
-      justify-content: center;
-      align-items: center;
+	&__who-we-are {
+		padding: 5rem 0;
+		background-color: $color-blue;
+		color: $color-white;
 
-      @include respond(medium-phone) {
-        grid-template-columns: 1fr;
-        grid-column-gap: 0;
-        width: min-content;
-      }
-    }
+		&--content {
+			width: 100%;
+			margin-top: 5rem;
+			display: grid;
+			grid-template-columns: min-content min-content;
+			grid-template-rows: auto;
+			grid-column-gap: 5rem;
+			justify-content: center;
+			align-items: center;
 
-    &--image {
-      @include respond(medium-phone) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5rem;
-      }
-      img {
-        height: auto;
-        width: 37rem;
+			@include respond(medium-phone) {
+				grid-template-columns: 1fr;
+				grid-column-gap: 0;
+				width: min-content;
+			}
+		}
 
-        @include respond(tab-port-small) {
-          width: 39rem;
-        }
+		&--image {
+			@include respond(medium-phone) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 5rem;
+			}
+			img {
+				height: auto;
+				width: 37rem;
 
-        @include respond(medium-phone) {
-          width: 80vw;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-    }
+				@include respond(tab-port-small) {
+					width: 39rem;
+				}
 
-    &--text {
-      @include respond(medium-phone) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+				@include respond(medium-phone) {
+					width: 80vw;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
 
-      p {
-        width: 50rem;
-        margin-bottom: 1.8rem;
-        text-align: left;
+		&--text {
+			@include respond(medium-phone) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 
-        @include respond(tab-port-small) {
-          width: 38rem;
-        }
+			p {
+				width: 50rem;
+				margin-bottom: 1.8rem;
+				text-align: left;
 
-        @include respond(medium-phone) {
-          width: 80vw;
-          font-size: 2.5rem;
-        }
-      }
-    }
+				@include respond(tab-port-small) {
+					width: 38rem;
+				}
 
-    .line {
-      background-color: $color-black;
-    }
-  }
+				@include respond(medium-phone) {
+					width: 80vw;
+					font-size: 2.5rem;
+				}
+			}
+		}
 
-  &__why {
-    background-color: $color-grey;
-    color: $color-black;
+		.line {
+			background-color: $color-black;
+		}
+	}
 
-    @include respond(average-phone) {
-      padding-top: 8.5rem;
-    }
+	&__why {
+		background-color: $color-grey;
+		color: $color-black;
 
-    &--title {
-      h3 {
-        width: 70rem;
+		@include respond(average-phone) {
+			padding-top: 8.5rem;
+		}
 
-        @include respond(medium-phone) {
-          width: 80vw;
-        }
-      }
-    }
+		&--title {
+			h3 {
+				width: 70rem;
 
-    .line {
-      background-color: $color-blue;
-    }
+				@include respond(medium-phone) {
+					width: 80vw;
+				}
+			}
+		}
 
-    &--content {
-      height: min-content;
-      width: 60vw;
-      justify-content: flex-start;
-      align-content: center;
-      margin-top: 2rem;
-      margin-bottom: 4rem;
+		.line {
+			background-color: $color-blue;
+		}
 
-      h3 {
-        font-size: 1.8rem;
-        text-align: start;
-      }
+		&--content {
+			height: min-content;
+			width: 60vw;
+			justify-content: flex-start;
+			align-content: center;
+			margin-top: 2rem;
+			margin-bottom: 4rem;
 
-      &-cards {
-        &:not(:last-child) {
-          padding: 0 0 4rem 0;
-        }
+			h3 {
+				font-size: 1.8rem;
+				text-align: start;
+			}
 
-        &--header {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-content: center;
-          margin-bottom: 1rem;
+			&-cards {
+				&:not(:last-child) {
+					padding: 0 0 4rem 0;
+				}
 
-          @include respond(medium-phone) {
-            width: 80vw;
-            margin-bottom: 2rem;
-          }
+				&--header {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-content: center;
+					margin-bottom: 1rem;
 
-          h4 {
-            margin-right: 1rem;
+					@include respond(medium-phone) {
+						width: 80vw;
+						margin-bottom: 2rem;
+					}
 
-            @include respond(medium-phone) {
-              font-size: 3rem !important;
-            }
-          }
+					h4 {
+						margin-right: 1rem;
 
-          svg {
-            cursor: pointer;
-            margin-top: 0.2rem;
+						@include respond(medium-phone) {
+							font-size: 3rem !important;
+						}
+					}
 
-            @include respond(medium-phone) {
-              margin-top: 0.5rem;
-            }
-          }
-        }
-      }
+					svg {
+						cursor: pointer;
+						margin-top: 0.2rem;
 
-      &-list {
-        height: min-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2rem;
+						@include respond(medium-phone) {
+							margin-top: 0.5rem;
+						}
+					}
+				}
+			}
 
-        h4 {
-          font-size: 2rem;
-        }
+			&-list {
+				height: min-content;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-top: 2rem;
 
-        p {
-          width: 40rem;
-          font-size: 1.5rem;
-          text-align: center;
+				h4 {
+					font-size: 2rem;
+				}
 
-          @include respond(medium-phone) {
-            font-size: 2.5rem;
-            width: 80vw;
-          }
-        }
-      }
-    }
-  }
+				p {
+					width: 40rem;
+					font-size: 1.5rem;
+					text-align: center;
+
+					@include respond(medium-phone) {
+						font-size: 2.5rem;
+						width: 80vw;
+					}
+				}
+			}
+		}
+	}
 }
 
 .container__left {
-  height: 90vh;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+	height: 90vh;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+	@include respond(normal-desktop) {
+		height: auto;
+	}
 }
 
 .container__right {
-  display: flex;
-  flex-direction: column;
-  height: 90vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+
+	@include respond(average-phone) {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}
+
+.chair__canvas {
+	width: 95% !important;
+	height: 95% !important;
+	@include respond(normal-desktop) {
+		order: 3;
+	}
+
+	@include respond(average-phone) {
+		height: 65% !important;
+	}
 }
 
 .colorpicker-container {
-  display: flex;
+	display: flex;
+	@include respond(normal-desktop) {
+		margin-bottom: 2rem;
+		order: 2;
+	}
+
+	@include respond(average-phone) {
+		margin-left: 1.5rem;
+	}
 }
 
 .chairoptions {
-  display: flex;
-  margin-bottom: 2rem;
+	display: flex;
+	margin-bottom: 2rem;
+	@include respond(normal-desktop) {
+		order: 1;
+	}
 
-  &--options {
-    margin-bottom: 0.8rem;
-    cursor: pointer;
-    padding: 2px;
-    img {
-      width: 5rem;
-      height: 5rem;
-    }
-  }
+	&--options {
+		margin-bottom: 0.8rem;
+		cursor: pointer;
+		padding: 2px;
+		img {
+			width: 5rem;
+			height: 5rem;
+		}
+	}
 }
