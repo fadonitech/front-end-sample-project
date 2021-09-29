@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState, Suspense, useRef } from 'react';
 import axios from 'axios';
 import { gaCompletedSignUp } from '../../../lib/ga/events';
 
 import Form from './Form';
 import { LoadingAnimation } from '../../Loading/Loading';
 
+// import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
+import { SceneOfficeModel } from './SceneOfficeModel';
+import { Canvas, useThree, useFrame } from '@react-three/fiber';
+import { OrbitControls, Stage, Html } from '@react-three/drei';
 
 export const SubmitBtn = ({ onClick }) => (
   <div >
@@ -27,6 +31,11 @@ export const GetInvitedSection = ({ handleAlert }) => {
   const [errorForm, setErrorForm] = useState(false);
   const [errorMsg, setErrorMsg] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const ref = useRef();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => setHasMounted(true), []);
 
   function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -91,15 +100,45 @@ export const GetInvitedSection = ({ handleAlert }) => {
   return (
     <div className="getinvited">
       <div className="getinvited__header">
-        <h2 className="source-sans-semibold">
-          GET
-        </h2>
-        <h2 className="source-sans-semibold">
-          INVITED
-        </h2>
-        <h2 className="source-sans-semibold">
-          NOW
-        </h2>
+        <Canvas
+          shadows
+          shadowMap
+          dpr={[1, 2]}
+          camera={{ fov: 75, position: [0, 0, 0] }}
+          frameloop='demand'
+          performance={{
+            current: 1,
+            min: 0.1,
+            max: 1,
+            debounce: 200,
+          }}
+        >
+          {
+            hasMounted && (
+              <Suspense fallback={null}>
+                <Stage
+                  controls={ref}
+                  preset='rembrandt'
+                  intensity={1}
+                  environment='city'
+                >
+                  <SceneOfficeModel />
+                </Stage>
+              </Suspense>
+            )
+          }
+          <OrbitControls
+            ref={ref}
+            autoRotate={true}
+            minDistance='1'
+            maxDistance='10'
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 3}
+            enableDamping={true}
+            dampingFactor='0.1'
+            enablePan={false}
+          />
+        </Canvas>
       </div>
       <div className="getinvited__container">
         {loading ? <LoadingAnimation /> :
