@@ -115,8 +115,8 @@ const Prototype = () => {
 					autoRotate={true}
 					minDistance='5'
 					maxDistance='10'
-					maxPolarAngle={Math.PI / 2}
 					minPolarAngle={Math.PI / 3}
+					maxPolarAngle={Math.PI / 2}
 					enableDamping={true}
 					dampingFactor='0.1'
 					enablePan={false}
