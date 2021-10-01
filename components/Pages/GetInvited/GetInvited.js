@@ -1,141 +1,125 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, Suspense, useRef } from 'react';
 import axios from 'axios';
 import { gaCompletedSignUp } from '../../../lib/ga/events';
 
 import Form from './Form';
 import { LoadingAnimation } from '../../Loading/Loading';
 
-import SceneModelCanvas from './SceneModelCanvas';
-
 export const SubmitBtn = ({ onClick }) => (
-	<div>
-		<button
-			className='getinvited__submit-btn'
-			onClick={onClick}
-			type={'submit'}
-		>
-			SUBMIT
-		</button>
-	</div>
-);
+  <div >
+    <button className="getinvited__submit-btn" onClick={onClick} type={"submit"}>
+      SUBMIT
+    </button>
+  </div>
+)
 
 export const GetInvitedSection = ({ handleAlert }) => {
-	const [firstName, setFirstName] = useState(null);
-	const [lastName, setLastName] = useState(null);
-	const [email, setEmail] = useState(null);
-	const [warning, setWarning] = useState({
-		firstName: false,
-		lastName: false,
-		email: false,
-	});
+  const [firstName, setFirstName] = useState(null);
+  const [lastName, setLastName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [warning, setWarning] = useState({
+    firstName: false,
+    lastName: false,
+    email: false
+  });
 
-	const [errorForm, setErrorForm] = useState(false);
-	const [errorMsg, setErrorMsg] = useState(false);
-	const [loading, setLoading] = useState(false);
+  const [errorForm, setErrorForm] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-	const ref = useRef();
-	const [hasMounted, setHasMounted] = useState(false);
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
 
-	useEffect(() => setHasMounted(true), []);
+  const onSubmit = async () => {
+    if (
+      (firstName && firstName !== '') &&
+      (lastName && lastName !== '') &&
+      (email && email !== '')
+    ) {
+      if (validateEmail(email)) {
+        setLoading(true)
 
-	function validateEmail(email) {
-		const re =
-			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return re.test(String(email).toLowerCase());
-	}
+        const { data } = await axios.post(process.env.REACT_APP_API_URL, {
+          firstName,
+          lastName,
+          email,
+          subsPlan: "monthly"
+        });
 
-	const onSubmit = async () => {
-		if (
-			firstName &&
-			firstName !== '' &&
-			lastName &&
-			lastName !== '' &&
-			email &&
-			email !== ''
-		) {
-			if (validateEmail(email)) {
-				setLoading(true);
+        const { error, title, message } = JSON.parse(data.body);
 
-				const { data } = await axios.post(process.env.REACT_APP_API_URL, {
-					firstName,
-					lastName,
-					email,
-					subsPlan: 'monthly',
-				});
+        setLoading(false);
 
-				const { error, title, message } = JSON.parse(data.body);
+        if (!error) {
+          setErrorForm(false)
+          setErrorMsg('')
+          handleAlert({ title, message });
 
-				setLoading(false);
+          await setTimeout(() => {
+            setFirstName(null);
+            setLastName(null);
+            setEmail(null);
+          }, 50);
 
-				if (!error) {
-					setErrorForm(false);
-					setErrorMsg('');
-					handleAlert({ title, message });
+          gaCompletedSignUp();
+        } else {
+          setWarning({
+            ...warning,
+            email: true
+          });
+          setErrorMsg(message)
+          setErrorForm(true);
+        }
+      } else {
+        setWarning({
+          ...warning,
+          email: true
+        })
+      }
+    } else {
+      setWarning({
+        firstName: firstName || firstName !== '',
+        lastName: lastName || lastName !== '',
+        email: email || email !== ''
+      })
+    }
+  }
 
-					await setTimeout(() => {
-						setFirstName(null);
-						setLastName(null);
-						setEmail(null);
-					}, 50);
+  return (
+    <div className="getinvited">
+      <div className="getinvited__header"></div>
+      <div className="getinvited__container">
+        {loading ? <LoadingAnimation /> :
+          <div className="getinvited__container--block">
+            <div className="getinvited__container--header">
+              <h2 className="open-sans">
+                Get Access For FREE!
+              </h2>
+            </div>
+            <div className="getinvited__container--form">
+              <Form
+                errorMsg={errorMsg}
+                error={errorForm}
+                setError={setErrorForm}
+                warning={warning}
+                setWarning={setWarning}
+                firstName={firstName}
+                lastName={lastName}
+                email={email}
+                setFirstName={setFirstName}
+                setLastName={setLastName}
+                setEmail={setEmail}
+              />
+            </div>
+            <div className="getinvited__container--button">
+              <SubmitBtn onClick={onSubmit} />
+            </div>
+          </div>
 
-					gaCompletedSignUp();
-				} else {
-					setWarning({
-						...warning,
-						email: true,
-					});
-					setErrorMsg(message);
-					setErrorForm(true);
-				}
-			} else {
-				setWarning({
-					...warning,
-					email: true,
-				});
-			}
-		} else {
-			setWarning({
-				firstName: firstName || firstName !== '',
-				lastName: lastName || lastName !== '',
-				email: email || email !== '',
-			});
-		}
-	};
-
-	return (
-		<div className='getinvited'>
-			<div className='getinvited__header'>
-				<SceneModelCanvas />
-			</div>
-			<div className='getinvited__container'>
-				{loading ? (
-					<LoadingAnimation />
-				) : (
-					<>
-						<div className='getinvited__container--header'>
-							<h2 className='open-sans'>Get Access For FREE!</h2>
-						</div>
-						<div className='getinvited__container--form'>
-							<Form
-								errorMsg={errorMsg}
-								error={errorForm}
-								setError={setErrorForm}
-								warning={warning}
-								setWarning={setWarning}
-								firstName={firstName}
-								lastName={lastName}
-								email={email}
-								setFirstName={setFirstName}
-								setLastName={setLastName}
-								setEmail={setEmail}
-							/>
-						</div>
-						<div className='getinvited__container--button'>
-							<SubmitBtn onClick={onSubmit} />
-						</div>
-					</>
-				)}
-			</div>
-		</div>
-	);
-};
+        }
+      </div>
+    </div >
+  )
+}

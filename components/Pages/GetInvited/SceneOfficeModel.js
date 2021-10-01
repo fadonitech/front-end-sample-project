@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export const SceneOfficeModel = (props) => {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/uploads_files_2471907_ikea_office_workplace_7 (1).gltf')
+  const { nodes, materials } = useGLTF('/sceneOfficeModel.gltf')
   return (
     <group ref={group} {...props} dispose={null}>
       <group>

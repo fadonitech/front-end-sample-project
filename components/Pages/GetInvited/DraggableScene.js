@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useThree } from '@react-three/fiber';
 import { useDrag } from 'react-use-gesture';
 
-import SceneOfficeModel from './SceneOfficeModel';
+import { SceneOfficeModel } from './SceneOfficeModel';
 
 const DraggableScene = () => {
 	const ref = useRef();
