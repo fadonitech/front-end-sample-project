@@ -41,7 +41,8 @@ export const GetInvitedSection = ({ handleAlert }) => {
     ) {
       if (validateEmail(email)) {
         setLoading(true)
-
+        gaCompletedSignUp();
+        
         const { data } = await axios.post(process.env.REACT_APP_API_URL, {
           firstName,
           lastName,
@@ -63,8 +64,6 @@ export const GetInvitedSection = ({ handleAlert }) => {
             setLastName(null);
             setEmail(null);
           }, 50);
-
-          gaCompletedSignUp();
         } else {
           setWarning({
             ...warning,
