@@ -44,12 +44,6 @@ export default function Chair(props) {
 					{typeof props.legsColor !== 'string' ? (
 						props.legsColor.name === 'wood' ? (
 							<meshPhongMaterial {...woodMap} />
-						) : props.legsColor.name === 'denim' ? (
-							<meshPhongMaterial {...denimMap} />
-						) : props.legsColor.name === 'vintage_floral' ? (
-							<meshPhongMaterial {...vintageFloralMap} />
-						) : props.legsColor.name === 'vintage_artwork' ? (
-							<meshPhongMaterial {...vintageArtworkMap} />
 						) : (
 							<meshPhongMaterial />
 						)
@@ -68,9 +62,7 @@ export default function Chair(props) {
 					userData={{ name: 'cushions' }}
 				>
 					{typeof props.cushionsColor !== 'string' ? (
-						props.cushionsColor.name === 'wood' ? (
-							<meshPhongMaterial {...woodMap} />
-						) : props.cushionsColor.name === 'denim' ? (
+						props.cushionsColor.name === 'denim' ? (
 							<meshPhongMaterial {...denimMap} />
 						) : props.cushionsColor.name === 'vintage_floral' ? (
 							<meshPhongMaterial {...vintageFloralMap} />
@@ -93,7 +85,17 @@ export default function Chair(props) {
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'back' }}
 				>
-					<meshStandardMaterial color={props.backColor} />
+
+					{typeof props.backColor !== 'string' ? (
+						props.backColor.name === 'wood' ? (
+							<meshPhongMaterial {...woodMap} />
+						) : (
+							<meshPhongMaterial />
+						)
+					) : (
+						<meshStandardMaterial color={props.backColor} />
+					)}
+
 				</mesh>
 				<mesh
 					name='supports'
@@ -105,7 +107,15 @@ export default function Chair(props) {
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'supports' }}
 				>
-					<meshStandardMaterial color={props.supportsColor} />
+					{typeof props.supportsColor !== 'string' ? (
+						props.supportsColor.name === 'wood' ? (
+							<meshPhongMaterial {...woodMap} />
+						) : (
+							<meshPhongMaterial />
+						)
+					) : (
+						<meshStandardMaterial color={props.supportsColor} />
+					)}
 				</mesh>
 				<mesh
 					name='base'
@@ -117,7 +127,15 @@ export default function Chair(props) {
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'base' }}
 				>
-					<meshStandardMaterial color={props.baseColor} />
+					{typeof props.baseColor !== 'string' ? (
+						props.baseColor.name === 'wood' ? (
+							<meshPhongMaterial {...woodMap} />
+						) : (
+							<meshPhongMaterial />
+						)
+					) : (
+						<meshStandardMaterial color={props.baseColor} />
+					)}
 				</mesh>
 			</group>
 		</group>
