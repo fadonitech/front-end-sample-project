@@ -25,10 +25,6 @@
 			grid-template-rows: repeat(1, 1fr);
 			padding: 0
 		}
-
-		@include respond(average-phone) {
-			padding: 0 5rem;
-		}
 	}
 
 	&__title {
@@ -415,16 +411,16 @@
 		padding: 0 10rem;
 	}
 	@include respond(average-phone) {
-		padding: 0;
+		padding: 0 5rem;
 		min-height: 100vh;
 	}
 }
 
 .container__right {
+	height: 90vh;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
-	height: 90vh;
-	width: 100%;
 	justify-content: center;
 	align-items: center;
 	padding-top: 1rem;
@@ -433,10 +429,6 @@
 	@include respond(tab-land) {
 		padding-top: 5rem;
 		background-color: $color-blue;
-	}
-
-	@include respond(average-phone) {
-		display: none;
 	}
 }
 
@@ -449,6 +441,13 @@
 	}
 	@include respond(average-phone) {
 		height: 65% !important;
+		width: 80vw !important;
+
+		@include respond(average-phone) {
+			canvas {
+				width: 80vw !important;
+			}
+		}
 	}
 }
 
@@ -464,7 +463,9 @@
 	}
 
 	@include respond(average-phone) {
-		margin-left: 1.5rem;
+		display: grid;
+		grid-template-columns: repeat(4, min-content);
+		grid-template-rows: auto;
 	}
 }
 
@@ -480,9 +481,14 @@
 		margin-bottom: 0.8rem;
 		cursor: pointer;
 		padding: 2px;
+
 		img {
 			width: 5rem;
 			height: 5rem;
+			@include respond(average-phone) {
+				width: 15rem;
+				height: 15rem;
+			}
 		}
 	}
 }
