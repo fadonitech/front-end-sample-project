@@ -5,12 +5,12 @@ import HowItWorks from './HowItWorks';
 import Prototype from './Prototype';
 
 export const HomePage = () => {
-  return (
-    <div className="homepage">
-      <Header />
-      <WhatAreWeBuilding />
-      <AboutUs />
-      <HowItWorks />
-    </div>
-  )
-}
+	return (
+		<div className='homepage'>
+			<Header />
+			<WhatAreWeBuilding />
+			<AboutUs />
+			<HowItWorks />
+		</div>
+	);
+};
