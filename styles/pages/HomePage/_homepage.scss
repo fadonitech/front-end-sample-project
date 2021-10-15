@@ -411,8 +411,9 @@
 		padding: 0 10rem;
 	}
 	@include respond(average-phone) {
-		padding: 0 5rem;
-		min-height: 100vh;
+		padding: 0;
+		min-height: 85vh;
+		margin-left: 2rem;
 	}
 }
 
