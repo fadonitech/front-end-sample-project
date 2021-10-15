@@ -12,9 +12,7 @@ const Header = () => {
 						<h1 className='source-sans-semibold title-8'>AR Made Easy</h1>
 						<h1 className='source-sans-semibold title-6'>
 							With READY-TO-USE
-							3D Models
-						</h1>
-						<h1 className="source-sans-light title-4">
+							3D Models 
 							For E-commerces
 						</h1>
 					</div>
