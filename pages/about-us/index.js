@@ -14,7 +14,7 @@ import { gaAboutUs } from '../../lib/ga/events';
 export const SubsPlanSelected = createContext({});
 
 const AboutUs = () => (
-	<div className='homepage'>
+	<div className='aboutus'>
 		<WhyUs />
 		<WhoWeAre />
 		<OurStory />

@@ -1,49 +1,11 @@
-import { useState } from 'react';
 import { DefaultBtn } from '../../Buttons/Buttons';
 
 import { stringWhyUs } from '../../../copywrite';
 
 const WhyUsCard = ({ title, paragraph }) => {
-	const minusIcon = (
-		<svg
-			xmlns='http://www.w3.org/2000/svg'
-			width='24'
-			height='24'
-			viewBox='0 0 24 24'
-			fill='none'
-			stroke='currentColor'
-			strokeWidth='2'
-			strokeLinecap='round'
-			strokeLinejoin='round'
-			className='feather feather-minus-circle'
-		>
-			<circle cx='12' cy='12' r='10'></circle>
-			<line x1='8' y1='12' x2='16' y2='12'></line>
-		</svg>
-	);
-
-	const plusIcon = (
-		<svg
-			xmlns='http://www.w3.org/2000/svg'
-			width='24'
-			height='24'
-			viewBox='0 0 24 24'
-			fill='none'
-			stroke='currentColor'
-			strokeWidth='2'
-			strokeLinecap='round'
-			strokeLinejoin='round'
-			className='feather feather-plus-circle'
-		>
-			<circle cx='12' cy='12' r='10'></circle>
-			<line x1='12' y1='8' x2='12' y2='16'></line>
-			<line x1='8' y1='12' x2='16' y2='12'></line>
-		</svg>
-	);
-
 	return (
-		<dir className='homepage__why--content-cards'>
-			<div className='homepage__why--content-cards--header'>
+		<dir className='aboutus__why--content-cards'>
+			<div className='aboutus__why--content-cards--header'>
 				<h4 className='source-sans-bold'>{title}</h4>
 			</div>
 			<p className='open-sans-light'>{paragraph}</p>
@@ -57,13 +19,13 @@ const WhyUs = () => {
 	));
 
 	return (
-		<div className='homepage--section homepage__why'>
-			<div className='homepage__why--title margin-bottom-2'>
+		<div className='aboutus__why'>
+			<div className='aboutus__why--title margin-bottom-2'>
 				<h1 className='source-sans-bold title-9'>{stringWhyUs.title}</h1>
 				<h3 className='open-sans-light title-2'>{stringWhyUs.text}</h3>
 			</div>
-			<div className='homepage__why--content'>
-				<div className='homepage__why--content-list'>{renderCards}</div>
+			<div className='aboutus__why--content'>
+				<div className='aboutus__why--content-list'>{renderCards}</div>
 			</div>
 			<DefaultBtn content='GET YOUR INVITATION' />
 		</div>
