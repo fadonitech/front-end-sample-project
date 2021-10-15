@@ -68,17 +68,22 @@
   display: inline-block;
 
   @include respond(large-phone) {
-    font-size: 12rem;
-  }
-
-  @include respond(small-phone) {
     font-size: 10rem;
+  }
+  @include respond(medium-phone) {
+    font-size: 9rem;
+  }
+  @include respond(average-phone) {
+    font-size: 9rem;
+  }
+  @include respond(small-phone) {
+    font-size: 7rem;
     margin-right: 2rem;
   }
 }
 
 .title-6 {
-  font-size: 6.5rem;
+  font-size: 4rem;
   text-transform: capitalize;
   display: inline-block;
 
