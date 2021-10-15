@@ -15,8 +15,8 @@
 	}
 
 	@include respond(average-phone) {
-		width: 6.2rem;
-		height: 6.2rem;
+		width: 7rem;
+		height: 7rem;
 	}
 
 	&:hover {
@@ -109,6 +109,10 @@
 		height: 6.2rem;
 		border-radius: 50%;
 		margin-top: 1rem;
+
+		& img {
+			border-radius: 50%;
+		}
 	}
 
 	&:hover {
