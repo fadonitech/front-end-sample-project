@@ -65,7 +65,9 @@ const WhyUs = () => {
 			<div className='about-us__why--content'>
 				<div className='about-us__why--content-list'>{renderCards}</div>
 			</div>
-			<DefaultBtn content='GET YOUR INVITATION' />
+			<div className='about-us__why-invite-btn'>
+				<DefaultBtn content='GET YOUR INVITATION' />
+			</div>
 		</div>
 	);
 };

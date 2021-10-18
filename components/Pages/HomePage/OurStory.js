@@ -1,7 +1,7 @@
 const WhoWeAre = () => (
 	<div className='about-us--section about-us__our-story'>
 		<div className='about-us__our-story--title'>
-			<h1 className='source-sans-bold title-6'>Our Story</h1>
+			<h1 className='source-sans-bold'>Our Story</h1>
 			<h3 className='open-sans-light title-26'>
 				<span>
 					The world has gone digital shopping and COVID has only amplified the

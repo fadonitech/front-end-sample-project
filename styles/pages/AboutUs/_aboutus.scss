@@ -62,18 +62,18 @@
 		align-items: center;
 
 		&:first-child {
-			padding: 5rem 0;
+			padding-top: 14rem;
 		}
 
 		@include respond(tab-port-to-small) {
 			&:first-child {
-				padding: 5rem 0 8rem 0;
+				padding-top: 16rem;
 			}
 		}
 
 		@include respond(medium-phone) {
 			&:first-child {
-				padding: 5rem 0 7rem 0;
+				padding-top: 9rem;
 			}
 		}
 	}
@@ -270,6 +270,11 @@
 			padding: 7rem 0;
 		}
 
+		h1 {
+			font-size: 5rem;
+			margin-bottom: 5rem;
+		}
+
 		&--content {
 			width: 100%;
 			margin-top: 10rem;
@@ -335,6 +340,7 @@
 				filter: grayscale(100%);
 				object-fit: cover;
 				margin-bottom: 3.014rem;
+				border-radius: 7px;
 
 				@include respond(tab-port-small) {
 					width: 39rem;
@@ -396,11 +402,13 @@
 			align-items: center;
 
 			h1 {
+				font-size: 5rem;
 				margin-bottom: 5rem;
 			}
 
 			h3 {
 				width: 78rem;
+				text-align: left;
 				@include respond(medium-phone) {
 					width: 100%;
 					padding: 0 6rem;
@@ -427,6 +435,18 @@
 
 			@include respond(medium-phone) {
 				padding: 0 1.75rem;
+			}
+
+			h1 {
+				margin-bottom: 2.5rem;
+
+				@include respond(tab-port-to-small) {
+					margin-bottom: 2.75rem;
+				}
+
+				@include respond(medium-phone) {
+					margin-bottom: 3.5rem;
+				}
 			}
 
 			h3 {
@@ -476,13 +496,14 @@
 					align-self: flex-end;
 					max-width: 53rem;
 					text-align: right;
+					padding-bottom: 6.75rem;
 
 					@include respond(medium-phone) {
 						align-items: flex-start;
 						align-self: flex-start;
-						max-width: none;
 						text-align: center;
-						padding: 0px 1.7rem 6.75rem 1.7rem;
+						max-width: none;
+						width: 100%;
 					}
 				}
 
@@ -490,22 +511,30 @@
 					align-items: flex-start;
 					align-self: flex-start;
 					max-width: 60rem;
-					text-align: center;
+					text-align: left;
 					padding: 0px 1.7rem 6.75rem 1.7rem;
 
 					@include respond(medium-phone) {
+						text-align: center;
 						max-width: none;
+						width: 100%;
+						padding: 0px 0px 5rem 0px;
 					}
 				}
 
 				&--header {
 					display: flex;
 					flex-direction: row;
-					margin-bottom: 2rem;
+					margin-bottom: 2.5rem;
+
+					@include respond(tab-port-to-small) {
+						margin-bottom: 2.75rem;
+					}
 
 					@include respond(medium-phone) {
 						width: 100%;
 						justify-content: center;
+						margin-bottom: 2.5rem;
 					}
 
 					svg {
@@ -515,6 +544,19 @@
 						@include respond(medium-phone) {
 							margin-top: 0.5rem;
 						}
+					}
+				}
+
+				p {
+					@include respond(medium-phone) {
+						width: 62rem;
+						margin: 0 auto;
+					}
+
+					@include respond(small-phone) {
+						width: auto;
+						margin: 0 auto;
+						padding: 0 4.1rem;
 					}
 				}
 			}
@@ -537,6 +579,10 @@
 					}
 				}
 			}
+		}
+
+		&-invite-btn {
+			margin-bottom: 7.2rem;
 		}
 	}
 }
