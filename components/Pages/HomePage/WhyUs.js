@@ -42,8 +42,8 @@ const WhyUsCard = ({ title, paragraph }) => {
 	);
 
 	return (
-		<dir className='homepage__why--content-cards'>
-			<div className='homepage__why--content-cards--header'>
+		<dir className='about-us__why--content-cards'>
+			<div className='about-us__why--content-cards--header'>
 				<h4 className='source-sans-bold'>{title}</h4>
 			</div>
 			<p className='open-sans-light'>{paragraph}</p>
@@ -52,18 +52,18 @@ const WhyUsCard = ({ title, paragraph }) => {
 };
 
 const WhyUs = () => {
-	const renderCards = stringWhyUs.cards.map((card) => (
-		<WhyUsCard title={card.title} paragraph={card.paragraph} />
+	const renderCards = stringWhyUs.cards.map((card, index) => (
+		<WhyUsCard key={index} title={card.title} paragraph={card.paragraph} />
 	));
 
 	return (
-		<div className='homepage--section homepage__why'>
-			<div className='homepage__why--title margin-bottom-2'>
+		<div className='about-us--section about-us__why'>
+			<div className='about-us__why--title margin-bottom-2'>
 				<h1 className='source-sans-bold title-9'>{stringWhyUs.title}</h1>
 				<h3 className='open-sans-light title-2'>{stringWhyUs.text}</h3>
 			</div>
-			<div className='homepage__why--content'>
-				<div className='homepage__why--content-list'>{renderCards}</div>
+			<div className='about-us__why--content'>
+				<div className='about-us__why--content-list'>{renderCards}</div>
 			</div>
 			<DefaultBtn content='GET YOUR INVITATION' />
 		</div>

@@ -1,6 +1,6 @@
 const WhoWeAre = () => (
-	<div className='homepage--section homepage__our-story'>
-		<div className='homepage__our-story--title'>
+	<div className='about-us--section about-us__our-story'>
+		<div className='about-us__our-story--title'>
 			<h1 className='source-sans-bold title-6'>Our Story</h1>
 			<h3 className='open-sans-light title-26'>
 				<span>
