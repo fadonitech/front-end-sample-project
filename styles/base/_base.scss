@@ -1,86 +1,90 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }
 
 html {
-  font-size: 62.5%; // 10px
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: none;
+	font-size: 62.5%; // 10px
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: none;
 
-  @include respond(medium-desktop) {
-    font-size: 10px !important;
-  }
+	@include respond(medium-desktop) {
+		font-size: 10px !important;
+	}
 
-  @include respond(big-desktop) {
-    font-size: 12.32px !important;
-  }
+	@include respond(big-desktop) {
+		font-size: 12.32px !important;
+	}
 
-  @include respond(huge-desktop) {
-    font-size: 26.4px !important;
-  }
+	@include respond(huge-desktop) {
+		font-size: 26.4px !important;
+	}
 
-  @include respond(normal-desktop) {
-    font-size: 9px;
-  }
+	@include respond(normal-desktop) {
+		font-size: 9px;
+	}
 
-  @include respond(tab-land) {
-    font-size: 8.7px;
-  }
+	@include respond(tab-land) {
+		font-size: 8.7px;
+	}
 
-  @include respond(tab-land-small) {
-    font-size: 8.5px;
-  }
+	@include respond(tab-land-small) {
+		font-size: 8.5px;
+	}
 
-  @include respond(tab-port) {
-    font-size: 8px;
-  }
+	@include respond(tab-port) {
+		font-size: 8px;
+	}
 
-  @include respond(tab-port-to-small) {
-    font-size: 7.5px;
-  }
-  @include respond(large-phone) {
-    font-size: 7.36px;
-  }
-  @include respond(medium-phone) {
-    font-size: 6.88px;
-  }
-  @include respond(average-phone) {
-    font-size: 6.4px;
-  }
-  @include respond(small-phone) {
-    font-size: 5.92px;
-  }
+	@include respond(tab-port-to-small) {
+		font-size: 7.5px;
+	}
+	@include respond(large-phone) {
+		font-size: 7.36px;
+	}
+	@include respond(medium-phone) {
+		font-size: 6.88px;
+	}
+	@include respond(average-phone) {
+		font-size: 6.4px;
+	}
+	@include respond(small-phone) {
+		font-size: 5.92px;
+	}
 }
 
 main {
-  min-height: 100vh;
-  height: auto;
-  width: 100vw;
-  max-width: 100%;
-  background-color: $color-grey;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content auto;
+	min-height: 100vh;
+	height: auto;
+	width: 100vw;
+	max-width: 100%;
+	background-color: $color-grey;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: min-content auto;
+
+	@include respond(normal-desktop) {
+		min-height: auto;
+	}
 }
 
 body {
-  margin: 0 !important;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: none;
+	margin: 0 !important;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: none;
 }
 
 a,
 button,
 input {
-  outline: none;
+	outline: none;
 }
 
 a,
 button {
-  cursor: pointer;
+	cursor: pointer;
 }

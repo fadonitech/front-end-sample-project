@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState, Suspense, useRef } from 'react';
 import axios from 'axios';
 import { gaCompletedSignUp } from '../../../lib/ga/events';
 
 import Form from './Form';
 import { LoadingAnimation } from '../../Loading/Loading';
-
 
 export const SubmitBtn = ({ onClick }) => (
   <div >
@@ -89,20 +88,10 @@ export const GetInvitedSection = ({ handleAlert }) => {
 
   return (
     <div className="getinvited">
-      <div className="getinvited__header">
-        <h2 className="source-sans-semibold">
-          GET
-        </h2>
-        <h2 className="source-sans-semibold">
-          INVITED
-        </h2>
-        <h2 className="source-sans-semibold">
-          NOW
-        </h2>
-      </div>
+      <div className="getinvited__header"></div>
       <div className="getinvited__container">
         {loading ? <LoadingAnimation /> :
-          <>
+          <div className="getinvited__container--block">
             <div className="getinvited__container--header">
               <h2 className="open-sans">
                 Get Access For FREE!
@@ -126,9 +115,10 @@ export const GetInvitedSection = ({ handleAlert }) => {
             <div className="getinvited__container--button">
               <SubmitBtn onClick={onSubmit} />
             </div>
-          </>
+          </div>
+
         }
       </div>
-    </div>
+    </div >
   )
 }

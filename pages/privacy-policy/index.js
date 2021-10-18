@@ -236,7 +236,8 @@ const PrivacyPolicy = () => {
             Cookies (not the type you eat!) and web analytics
           </h3>
           <p>
-            17.	For more information about how we use cookies, web beacons and similar technologies see our cookie policy here and for more general information on cookies, see http://www.allaboutcookies.org.
+            17.	For more information about how we use cookies, web beacons and similar technologies
+            see our cookie policy <Link href="/cookie-policy">here</Link> and for more general information on cookies, see <Link href="http://www.allaboutcookies.org">http://www.allaboutcookies.org</Link>.
           </p>
           <p>
             18.	When you visit our Sites, there’s certain information that’s recorded which is generally anonymous information and does not reveal your identity. If you’re logged into your account some of this information could be associated with your account. We’re talking about the following kinds of details:
@@ -275,7 +276,7 @@ const PrivacyPolicy = () => {
             k.	the technical capabilities of your web browser.
           </p>
           <p>
-            19.	Occasionally, we will use third party advertising companies to serve ads based on prior visits to our Sites. For example, if you visit our Sites, you may later see an add for our products and services when you visit a different Site. Read more about your options in our cookie policy.
+            19.	Occasionally, we will use third party advertising companies to serve ads based on prior visits to our Sites. For example, if you visit our Sites, you may later see an add for our products and services when you visit a different Site. Read more about your options in our <Link href="/cookie-policy">cookie policy</Link>.
           </p>
           <h3>
             Information about children
@@ -308,7 +309,7 @@ const PrivacyPolicy = () => {
             How you can contact us
           </h3>
           <p>
-            25.	If you have any questions about our privacy practices or the way in which we have been managing your personal information, please contact our privacy champion in writing at Street Coronel Herculano Cobra 234 – Pouso Alegre/MG Brazil or support@fadonitech.com.
+            25.	If you have any questions about our privacy practices or the way in which we have been managing your personal information, please contact our privacy champion in writing at Street Coronel Herculano Cobra 234 – Pouso Alegre/MG Brazil or <a href="mailto:support@fadonitech.com">support@fadonitech.com</a>.
           </p>
           <p>
             26.	We’re really glad you made it to the end of the privacy policy, because knowing this stuff is the best way to understand how your personal information is used and how to best manage it!
