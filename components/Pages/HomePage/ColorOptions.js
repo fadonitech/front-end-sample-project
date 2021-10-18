@@ -35,6 +35,73 @@ const ColorOptions = ({ handleColorChange, selectedPart }) => (
 			}}
 			onClick={() => handleColorChange(selectedPart, '#C5BE26')}
 		/>
+		{/* Texture pickers */}
+
+		{/* 
+			legs, back, support, base: wood
+			cushion: denim, floral, artwork
+		*/}
+
+		{
+			selectedPart === 'cushions' ? (
+				<>
+					<div
+						className='texture-picker'
+						onClick={() =>
+							handleColorChange(selectedPart, {
+								texture: './image/textures/denim.jpg',
+								size: [3, 3, 3],
+								shininess: 0,
+								name: 'denim',
+							})
+						}
+					>
+						<img src='./image/textures/denim.jpg' />
+					</div>
+
+					<div
+						className='texture-picker'
+						onClick={() =>
+							handleColorChange(selectedPart, {
+								texture: './image/textures/vintage_floral.jpg',
+								size: [2, 2, 2],
+								shininess: 60,
+								name: 'vintage_floral',
+							})
+						}
+					>
+						<img src='./image/textures/vintage_floral.jpg' />
+					</div>
+					<div
+						className='texture-picker'
+						onClick={() =>
+							handleColorChange(selectedPart, {
+								texture: './image/textures/vintage_artwork.jpg',
+								size: [2, 2, 2],
+								shininess: 60,
+								name: 'vintage_artwork',
+							})
+						}
+					>
+						<img src='./image/textures/vintage_artwork.jpg' />
+					</div>
+				</>
+			) : (
+				<div
+					className='texture-picker'
+					onClick={() =>
+						handleColorChange(selectedPart, {
+							texture: './image/textures/wood.jpg',
+							size: [2, 2, 2],
+							shininess: 60,
+							name: 'wood',
+						})
+					}
+				>
+					<img src='./image/textures/wood.jpg' />
+				</div>
+			)
+		}
 	</div>
 );
 

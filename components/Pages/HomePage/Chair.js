@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useGLTF } from '@react-three/drei';
+import { useGLTF, useTexture } from '@react-three/drei';
 
 export default function Chair(props) {
 	// This reference will give us direct access to the mesh
@@ -11,6 +11,22 @@ export default function Chair(props) {
 	const group = useRef();
 
 	const { nodes, materials } = useGLTF('/chair.glb');
+
+	const denimMap = useTexture({
+		map: './image/textures/denim.jpg',
+	});
+
+	const woodMap = useTexture({
+		map: './image/textures/wood.jpg',
+	});
+
+	const vintageFloralMap = useTexture({
+		map: './image/textures/vintage_floral.jpg',
+	});
+
+	const vintageArtworkMap = useTexture({
+		map: './image/textures/vintage_artwork.jpg',
+	});
 
 	return (
 		<group ref={group} ref={mesh} dispose={null}>
@@ -25,7 +41,15 @@ export default function Chair(props) {
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'legs' }}
 				>
-					<meshStandardMaterial color={props.legsColor} />
+					{typeof props.legsColor !== 'string' ? (
+						props.legsColor.name === 'wood' ? (
+							<meshPhongMaterial {...woodMap} />
+						) : (
+							<meshPhongMaterial />
+						)
+					) : (
+						<meshStandardMaterial color={props.legsColor} />
+					)}
 				</mesh>
 				<mesh
 					name='cushions'
@@ -37,7 +61,19 @@ export default function Chair(props) {
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'cushions' }}
 				>
-					<meshStandardMaterial color={props.cushionsColor} />
+					{typeof props.cushionsColor !== 'string' ? (
+						props.cushionsColor.name === 'denim' ? (
+							<meshPhongMaterial {...denimMap} />
+						) : props.cushionsColor.name === 'vintage_floral' ? (
+							<meshPhongMaterial {...vintageFloralMap} />
+						) : props.cushionsColor.name === 'vintage_artwork' ? (
+							<meshPhongMaterial {...vintageArtworkMap} />
+						) : (
+							<meshPhongMaterial />
+						)
+					) : (
+						<meshStandardMaterial color={props.cushionsColor} />
+					)}
 				</mesh>
 				<mesh
 					name='back'
@@ -49,7 +85,17 @@ export default function Chair(props) {
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'back' }}
 				>
-					<meshStandardMaterial color={props.backColor} />
+
+					{typeof props.backColor !== 'string' ? (
+						props.backColor.name === 'wood' ? (
+							<meshPhongMaterial {...woodMap} />
+						) : (
+							<meshPhongMaterial />
+						)
+					) : (
+						<meshStandardMaterial color={props.backColor} />
+					)}
+
 				</mesh>
 				<mesh
 					name='supports'
@@ -61,7 +107,15 @@ export default function Chair(props) {
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'supports' }}
 				>
-					<meshStandardMaterial color={props.supportsColor} />
+					{typeof props.supportsColor !== 'string' ? (
+						props.supportsColor.name === 'wood' ? (
+							<meshPhongMaterial {...woodMap} />
+						) : (
+							<meshPhongMaterial />
+						)
+					) : (
+						<meshStandardMaterial color={props.supportsColor} />
+					)}
 				</mesh>
 				<mesh
 					name='base'
@@ -73,7 +127,15 @@ export default function Chair(props) {
 					scale={[0.2, 0.2, 0.2]}
 					userData={{ name: 'base' }}
 				>
-					<meshStandardMaterial color={props.baseColor} />
+					{typeof props.baseColor !== 'string' ? (
+						props.baseColor.name === 'wood' ? (
+							<meshPhongMaterial {...woodMap} />
+						) : (
+							<meshPhongMaterial />
+						)
+					) : (
+						<meshStandardMaterial color={props.baseColor} />
+					)}
 				</mesh>
 			</group>
 		</group>
