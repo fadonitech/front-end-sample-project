@@ -66,17 +66,17 @@
 // FONT STYLE
 
 .bold {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .italic {
-  font-style: italic;
+	font-style: italic;
 }
 
 .blue-span {
-  span {
-    color: $color-blue;
-  }
+	span {
+		color: $color-blue;
+	}
 }
 
 // STANDARD TEXT
@@ -149,11 +149,7 @@
 }
 
 .title-2 {
-<<<<<<< HEAD
 	font-size: 2rem;
-=======
-  font-size: 2.5rem;
->>>>>>> 12d82b14181f76a4d7e226c2737ab24026cdd506
 
 	@include respond(small-phone) {
 		font-size: 2.5rem;
@@ -214,7 +210,6 @@
 		font-size: 1.8rem;
 	}
 }
-<<<<<<< HEAD
 
 .bold {
 	font-weight: 600;
@@ -229,5 +224,3 @@
 		color: $color-blue;
 	}
 }
-=======
->>>>>>> 12d82b14181f76a4d7e226c2737ab24026cdd506
