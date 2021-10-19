@@ -1,3 +1,4 @@
+// FONT TYPES
 .open-sans {
 	font-family: 'Open Sans Regular', sans-serif;
 	font-weight: normal;
@@ -62,6 +63,24 @@
 	line-height: normal;
 }
 
+// FONT STYLE
+
+.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.blue-span {
+  span {
+    color: $color-blue;
+  }
+}
+
+// STANDARD TEXT
+
 .title-8 {
 	font-size: 8.5rem;
 	text-transform: capitalize;
@@ -86,9 +105,10 @@
 		font-size: 8rem;
 	}
 
-	@include respond(medium-phone) {
-		font-size: 6.75rem;
-	}
+  @include respond(small-phone) {
+    font-size: 4rem;
+    margin-right: 2rem;
+  }
 }
 
 .title-4 {
