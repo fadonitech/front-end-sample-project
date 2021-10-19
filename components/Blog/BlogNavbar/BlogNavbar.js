@@ -25,11 +25,11 @@ const BlogWebNavbar = () => (
             About Us
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link href="/blog">
             Blog
           </Link>
-        </li> */}
+        </li>
       </ul>
 
       <Link href="/get-invited">
