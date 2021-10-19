@@ -78,7 +78,7 @@
 }
 
 .title-6 {
-	font-size: 6rem;
+	font-size: 4rem;
 	text-transform: capitalize;
 	display: inline-block;
 
@@ -130,11 +130,7 @@
 }
 
 .title-2 {
-<<<<<<< HEAD
-  font-size: 2.5rem;
-=======
 	font-size: 2rem;
->>>>>>> 0e7d89d0e7876ddb12445a27083f324eaec435cf
 
 	@include respond(small-phone) {
 		font-size: 2.5rem;
