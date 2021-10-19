@@ -6,6 +6,7 @@ import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import Header from '../../components/Pages/HomePage/Header';
 import WhoWeAre from '../../components/Pages/HomePage/WhoWeAre';
 import WhyUs from '../../components/Pages/HomePage/WhyUs';
+import OurStory from '../../components/Pages/HomePage/OurStory';
 import Footer from '../../components/Footer/Footer';
 
 import { gaAboutUs } from '../../lib/ga/events';
@@ -13,9 +14,10 @@ import { gaAboutUs } from '../../lib/ga/events';
 export const SubsPlanSelected = createContext({});
 
 const AboutUs = () => (
-	<div className='homepage'>
+	<div className='aboutus'>
 		<WhyUs />
 		<WhoWeAre />
+		<OurStory />
 	</div>
 );
 
@@ -89,7 +91,7 @@ const AboutUsPage = () => {
 				<Navbar />
 				<AboutUs />
 			</main>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 };

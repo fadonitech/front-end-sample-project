@@ -1,28 +1,37 @@
 .button {
-  &__default {
-    border: none;
-    background-color: $color-blue;
-    border-radius: 5rem;
-    padding: 2rem 8rem;
-    font-family: "Source Sans Light";
-    font-size: 2.2rem;
-    color: $color-white;
-    transition: 200ms ease-out;
+	&__default {
+		border: none;
+		background-color: $color-blue;
+		border-radius: 5rem;
+		padding: 2rem 8rem;
+		font-family: 'Source Sans Light';
+		font-size: 2.2rem;
+		color: $color-white;
+		transition: 200ms ease-out;
 
-    &:hover {
-      background-color: darken($color-blue, 20%);
-    }
+		&:hover {
+			background-color: darken($color-blue, 20%);
+		}
 
-    @include respond(large-phone) {
-      font-size: 2.5rem;
-      width: max-content;
-      &:hover { background-color: $color-blue; }
-    }
+		@include respond(large-phone) {
+			font-size: 2.5rem;
+			width: max-content;
+			&:hover {
+				background-color: $color-blue;
+			}
+		}
 
-    @include respond(average-phone) {
-      font-size: 3rem;
-      width: max-content;
-      &:hover { background-color: $color-blue; }
-    }
-  }
+		@include respond(average-phone) {
+			font-size: 3rem;
+			width: max-content;
+			&:hover {
+				background-color: $color-blue;
+			}
+		}
+
+		@include respond(medium-phone) {
+			width: 57rem;
+			height: 9rem;
+		}
+	}
 }
