@@ -1,7 +1,7 @@
 const WhoWeAre = () => (
 	<div className='about-us--section about-us__who-we-are'>
-		<div className='about-us__what--title'>
-			<h1 className='source-sans-bold title-6'>Who We Are?</h1>
+		<div className='about-us__who-we-are--title'>
+			<h1 className='source-sans-bold'>Who We Are?</h1>
 			<h3 className='open-sans-light title-26'>
 				We are a team of passionated people aimed to improve the ways we do
 				business online
