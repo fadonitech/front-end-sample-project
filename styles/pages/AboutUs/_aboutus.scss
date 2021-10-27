@@ -387,7 +387,7 @@
 	}
 
 	&__our-story {
-		padding: 5rem 0;
+		padding: 5rem 0 7rem 0;
 		background-color: $color-blue;
 		color: $color-white;
 
@@ -409,7 +409,8 @@
 			h3 {
 				width: 78rem;
 				text-align: justify;
-				font-size: 2rem;
+				font-size: 2.5rem;
+
 				@include respond(medium-phone) {
 					width: 100%;
 					padding: 0 6rem;
