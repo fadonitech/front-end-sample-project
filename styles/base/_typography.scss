@@ -97,9 +97,14 @@
 }
 
 .title-6 {
-	font-size: 6rem;
+	width: 68.5rem;
+	font-size: 5rem;
 	text-transform: capitalize;
 	display: inline-block;
+
+	@include respond(tab-port) {
+		width: auto;
+	}
 
 	@include respond(tab-port-to-small) {
 		font-size: 8rem;
