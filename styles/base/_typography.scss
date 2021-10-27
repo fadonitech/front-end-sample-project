@@ -87,11 +87,15 @@
 	display: inline-block;
 
 	@include respond(large-phone) {
-		font-size: 12rem;
+		font-size: 11rem;
+	}
+
+	@include respond(medium-phone) {
+		font-size: 10rem;
 	}
 
 	@include respond(small-phone) {
-		font-size: 10rem;
+		font-size: 8rem;
 		margin-right: 2rem;
 	}
 }
@@ -107,11 +111,25 @@
 	}
 
 	@include respond(tab-port-to-small) {
-		font-size: 8rem;
+		font-size: 5rem;
+		width: 68rem;
 	}
 
 	@include respond(medium-phone) {
-		font-size: 6.75rem;
+		width: 100vw;
+		font-size: 5.75rem;
+		padding: 0 5rem;
+	}
+
+	@include respond(average-phone) {
+		width: 100vw;
+		font-size: 5rem;
+		padding: 0 2rem;
+	}
+
+	@include respond(small-phone) {
+		font-size: 4.5rem;
+		padding: 0 3rem;
 	}
 }
 
