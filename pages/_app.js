@@ -1,8 +1,38 @@
 import '../styles/main.scss'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-
 import * as ga from '../lib/ga'
+
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  HttpLink,
+  from
+} from '@apollo/client';
+import { createUploadLink } from "apollo-upload-client";
+import { onError } from '@apollo/client/link/error';
+
+const errorLink = onError(({
+  graphQLErrors,
+  networkError
+}) => {
+  if (graphQLErrors) {
+    graphQLErrors.map(({ message, locations, path }) => {
+      alert(`Graphql error ${message}`)
+    })
+  }
+})
+
+const link = createUploadLink({
+  errorLink,
+  uri: "http://localhost:4000/graphql"
+});
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: link,
+})
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -22,7 +52,11 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <ApolloProvider client={client}>
+      <Component {...pageProps} />
+    </ApolloProvider>
+  )
 }
 
 export default MyApp
