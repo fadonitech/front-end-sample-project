@@ -14,7 +14,7 @@ const Article = ({ title, metaDescription,date, imgSrc, content }) => {
     <div>
       <Head>
         <title>FadoniTech | {title}</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         <meta name="robots" content="index, follow" />
         <meta name="description" content={metaDescription} />
