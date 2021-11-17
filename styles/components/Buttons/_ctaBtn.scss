@@ -1,86 +1,92 @@
 .cta-btn {
-  height: 6.5rem;
-  width: 35rem;
-  border: none;
-  border-radius: 5rem;
-  background-color: $color-blue;
-  color: $color-white;
-  font-size: 2rem;
-  font-family: "Source Sans Light", sans-serif;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  text-align: center;
+	height: 6.5rem;
+	width: 35rem;
+	border: none;
+	border-radius: 5rem;
+	background-color: $color-blue;
+	color: $color-white;
+	font-size: 2rem;
+	font-family: 'Source Sans Light', sans-serif;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	text-align: center;
 
-  transition: all 200ms ease-out;
-  -webkit-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+	-webkit-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
 
-  &:hover {
-    background-color: darken($color-blue, 20%);
-  }
+	&:hover {
+		background-color: darken($color-blue, 20%);
+	}
 }
 
 .navbar--cta {
-  height: 4rem;
-  border: none;
-  border-radius: 5rem;
-  background-color: $color-blue;
-  color: $color-white;
-  font-size: 1.8rem;
-  font-family: "Source Sans Light", sans-serif;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  text-align: center;
-  margin-left: 2rem;
-  padding: 0 5rem;
-  padding-bottom: 0.2rem;
+	height: 4rem;
+	border: none;
+	border-radius: 5rem;
+	background-color: $color-blue;
+	color: $color-white;
+	font-size: 1.6rem;
+	font-family: 'Open Sans Light', sans-serif;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	text-align: center;
+	margin-left: 2rem;
+	padding: 0 5rem;
+	padding-bottom: 0.2rem;
 
-  transition: all 200ms ease-out;
-  -webkit-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+	-webkit-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
 
-  &:hover {
-    background-color: darken($color-blue, 20%);
-  }
+	&:hover {
+		background-color: darken($color-blue, 20%);
+	}
 
-  @include respond(large-phone) {
-    font-size: 2rem;
-    margin-right: 2rem;
-    width: max-content;
-    height: 5rem;
+	@include respond(tab-port-to-small) {
+		font-size: 2.2rem;
+	}
 
-    &:hover { background-color: $color-blue; }
-  }
+	@include respond(large-phone) {
+		font-size: 2rem;
+		margin-right: 2rem;
+		width: max-content;
+		height: 5rem;
 
-  @include respond(small-phone) {
-    margin-right: 0;
-  }
+		&:hover {
+			background-color: $color-blue;
+		}
+	}
+
+	@include respond(small-phone) {
+		margin-right: 0;
+	}
 }
 
 #card-btn {
-  height: 4rem;
-  width: 23rem;
-  border: none;
-  border-radius: 5rem;
-  background-color: $color-blue;
-  color: $color-white;
-  font-size: 1.5rem;
-  font-family: "Adam", sans-serif;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  text-align: center;
+	height: 4rem;
+	width: 23rem;
+	border: none;
+	border-radius: 5rem;
+	background-color: $color-blue;
+	color: $color-white;
+	font-size: 1.5rem;
+	font-family: 'Adam', sans-serif;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	text-align: center;
 
-  transition: all 200ms ease-out;
-  -webkit-transition: all 200ms ease-out;
-  -o-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+	-webkit-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
 
-  &:hover {
-    background-color: darken($color-blue, 20%);
-  }
+	&:hover {
+		background-color: darken($color-blue, 20%);
+	}
 }

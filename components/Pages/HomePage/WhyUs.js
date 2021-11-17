@@ -4,8 +4,8 @@ import { stringWhyUs } from '../../../copywrite';
 
 const WhyUsCard = ({ title, paragraph }) => {
 	return (
-		<dir className='aboutus__why--content-cards'>
-			<div className='aboutus__why--content-cards--header'>
+		<dir className='about-us__why--content-cards'>
+			<div className='about-us__why--content-cards--header'>
 				<h4 className='source-sans-bold'>{title}</h4>
 			</div>
 			<p className='open-sans-light'>{paragraph}</p>
@@ -14,20 +14,22 @@ const WhyUsCard = ({ title, paragraph }) => {
 };
 
 const WhyUs = () => {
-	const renderCards = stringWhyUs.cards.map((card) => (
-		<WhyUsCard title={card.title} paragraph={card.paragraph} />
+	const renderCards = stringWhyUs.cards.map((card, index) => (
+		<WhyUsCard key={index} title={card.title} paragraph={card.paragraph} />
 	));
 
 	return (
-		<div className='aboutus__why'>
-			<div className='aboutus__why--title margin-bottom-2'>
+		<div className='about-us--section about-us__why'>
+			<div className='about-us__why--title margin-bottom-2'>
 				<h1 className='source-sans-bold title-9'>{stringWhyUs.title}</h1>
 				<h3 className='open-sans-light title-2'>{stringWhyUs.text}</h3>
 			</div>
-			<div className='aboutus__why--content'>
-				<div className='aboutus__why--content-list'>{renderCards}</div>
+			<div className='about-us__why--content'>
+				<div className='about-us__why--content-list'>{renderCards}</div>
 			</div>
-			<DefaultBtn content='GET YOUR INVITATION' />
+			<div className='about-us__why-invite-btn'>
+				<DefaultBtn content='GET YOUR INVITATION' />
+			</div>
 		</div>
 	);
 };

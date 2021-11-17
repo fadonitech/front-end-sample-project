@@ -66,17 +66,17 @@
 // FONT STYLE
 
 .bold {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .italic {
-  font-style: italic;
+	font-style: italic;
 }
 
 .blue-span {
-  span {
-    color: $color-blue;
-  }
+	span {
+		color: $color-blue;
+	}
 }
 
 // STANDARD TEXT
@@ -97,18 +97,22 @@
 }
 
 .title-6 {
-	font-size: 4rem;
+	width: 68.5rem;
+	font-size: 5rem;
 	text-transform: capitalize;
 	display: inline-block;
+
+	@include respond(tab-port) {
+		width: auto;
+	}
 
 	@include respond(tab-port-to-small) {
 		font-size: 8rem;
 	}
 
-  @include respond(small-phone) {
-    font-size: 4rem;
-    margin-right: 2rem;
-  }
+	@include respond(medium-phone) {
+		font-size: 6.75rem;
+	}
 }
 
 .title-4 {
