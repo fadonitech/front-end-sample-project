@@ -87,6 +87,13 @@ const BlogMobilebNavbar = () => {
             </Link>
           </li>
         </ul>
+        <ul>
+          <li className="open-sans-light">
+            <Link href="/blog" onClick={onClick}>
+              Blog
+            </Link>
+          </li>
+        </ul>
         <Link href="/get-invited" onClick={onClick}>
           <button className="navbar--cta">
             GET YOUR INVITATION
