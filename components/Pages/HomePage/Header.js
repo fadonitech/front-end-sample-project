@@ -17,7 +17,7 @@ const Header = () => {
 						</h1>
 					</div>
 					<div className='homepage__container--btn'>
-						<DefaultBtn content='GET YOUR INVITATION' />
+						<DefaultBtn content='SUBSCRIBE NOW' />
 					</div>
 				</div>
 			</div>

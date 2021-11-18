@@ -27,7 +27,7 @@ const HowItWorks = () => (
         </li>
       </ul>
     </div>
-    <DefaultBtn content="GET YOUR INVITATION" />
+    <DefaultBtn content="SUBSCRIBE NOW" />
   </div>
 )
 
