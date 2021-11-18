@@ -15,3 +15,23 @@ export const LIST_BLOG_POSTS = gql`
     }
   }
 `;
+
+export const FIND_BLOG_POST = gql`
+  query findBlogPost(
+    $id: ID!
+  ) {
+    findBlogPost (
+      id: $id
+    ) { 
+      id
+      isPublished
+      title
+      description
+      author
+      time
+      date
+      content
+      image
+    }
+  } 
+`

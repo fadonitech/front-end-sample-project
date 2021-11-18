@@ -1,12 +1,16 @@
-import { useContext } from 'react';
 import Link from 'next/link';
 
-import { ArticlesContext } from '../../pages/blog/index';
-
-const BlogArticle = ({ id, imgSrc, date, title }) => (
-  <Link href={`/blog/${id}`}>
+const BlogArticle = ({
+  id,
+  title,
+  description,
+  image,
+  date,
+  time,
+}) => (
+  <Link href={`/blog/${title.split(' ').join('-')}`}>
     <div className="blogArticle">
-      <img src={imgSrc} alt="Software Development" />
+      <img src={image} alt="Software Development" />
       <div>
         <h3 className="open-sans">
           {date}
@@ -19,16 +23,18 @@ const BlogArticle = ({ id, imgSrc, date, title }) => (
   </Link>
 );
 
-const BlogContent = () => {
-  const articles = useContext(ArticlesContext);
-
-  const renderArticles = articles.map(article => articles[0].id !== article.id && (
+const BlogContent = ({
+  articles
+}) => {
+  const renderArticles = articles && articles.map(article => articles[0].id !== article.id && (
     <BlogArticle
       key={article.id}
       id={article.id}
-      imgSrc={article.imgSrc}
-      date={article.date}
       title={article.title}
+      description={article.description}
+      image={article.image}
+      date={article.date}
+      time={article.time}
     />
   ));
 
