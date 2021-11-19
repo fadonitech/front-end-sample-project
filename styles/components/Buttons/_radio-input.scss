@@ -26,18 +26,22 @@
   left: -.6rem;
   height: 1.8rem;
   width: 1.8rem;
-  background-color: #eee;
+  background-color: transparent;
   border-radius: 50%;
+  border: 2px solid darken(#eee, 10);
+  transition: all 100ms ease-out;
 }
 
 /* On mouse-over, add a grey background color */
 .radio-container:hover input ~ .radio-checkmark {
-  background-color: #ccc;
+  // background-color: #ccc;
+  border: 2px solid $color-blue;
 }
 
 /* When the radio button is checked, add a blue background */
 .radio-container input:checked ~ .radio-checkmark {
   background-color: $color-blue;
+  border: 2px solid $color-blue;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -50,10 +54,58 @@
 /* Show the indicator (dot/circle) when checked */
 .radio-container input:checked ~ .radio-checkmark:after {
   display: block;
+
 }
 
 /* Style the indicator (dot/circle) */
 .radio-container .radio-checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: checked;
+}
+
+//---------------------------------------------
+
+.radio-checkmark-error {
+  position: absolute;
+  top: 0;
+  left: -.6rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 2px solid $color-red;
+  transition: all 100ms ease-out;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radio-checkmark-error {
+  // background-color: #ccc;
+  border: 2px solid $color-blue;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radio-checkmark-error {
+  background-color: $color-blue;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark-error:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark-error:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark-error:after {
  	top: 9px;
 	left: 9px;
 	width: 8px;

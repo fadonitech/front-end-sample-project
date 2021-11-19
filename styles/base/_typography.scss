@@ -211,8 +211,14 @@
 	font-style: normal;
 	line-height: normal;
 	font-size: 1.5rem;
+	
+	@include respond(tab-port) {
+		font-size: 2rem;
+	}
+
 	@include respond(tab-port-to-small) {
-		font-size: 1.8rem;
+		font-size: 2.5rem;
+		width: 80%;
 	}
 }
 
