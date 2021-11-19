@@ -571,7 +571,10 @@
 }
 
 .colorpicker-container {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+	grid-row-gap: 1rem;
 
 	@include respond(normal-desktop) {
 		margin-bottom: 2rem;
