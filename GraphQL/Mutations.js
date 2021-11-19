@@ -5,11 +5,13 @@ export const CREATE_CONTACT = gql`
     $firstName: String!
     $lastName: String!
     $email: String!
+    $plan: String!
   ) {
     createContact (
       firstName: $firstName
       lastName: $lastName
       email: $email
+      plan: $plan
     ) {
       error
       title
