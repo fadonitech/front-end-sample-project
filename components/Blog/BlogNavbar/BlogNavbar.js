@@ -27,7 +27,7 @@ const BlogWebNavbar = () => (
         </li>
 			</ul>
 
-			<Link href='/get-invited'>
+			<Link href='/subscribe'>
 				<button className='navbar--cta'>SUBSCRIBE NOW</button>
 			</Link>
 		</div>
@@ -84,7 +84,7 @@ const BlogMobilebNavbar = () => {
 						</Link>
 					</li>
 				</ul>
-				<Link href='/get-invited' onClick={onClick}>
+				<Link href='/subscribe' onClick={onClick}>
 					<button className='navbar--cta'>SUBSCRIBE NOW</button>
 				</Link>
 			</div>
