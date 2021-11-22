@@ -42,12 +42,22 @@
 
   img {
     width: 100%;
-    height: auto;
+    height: 20rem;
     cursor: pointer;
     border-radius: 0.5rem;
+    
+    @include respond(tab-port-small) {
+      max-height: 28rem;
+      height: auto;
+    }
+
+    @include respond(large-phone) {
+      height: 24rem;
+    }
 
     @include respond(average-phone) {
-      width: 50%;
+      height: 24rem;
+      width: 30rem;
       margin-right: 2rem;
     }
   }
