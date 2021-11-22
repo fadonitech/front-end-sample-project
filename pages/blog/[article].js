@@ -55,7 +55,7 @@ const Article = ({
 );
 
 export async function getServerSideProps({ params }) {
-  const [title, id] = params.article.split('-');
+  const id = params.article.split('-').reverse()[0];
 
   const { data } = await client.query(
     {
@@ -66,7 +66,7 @@ export async function getServerSideProps({ params }) {
 
   return {
     props: {
-      post: data.findBlogPost[0]
+      post: data.findBlogPost
     }
   }
 }

@@ -11,7 +11,7 @@ const BlogContent = () => {
 
   useEffect(() => {
     if (data) {
-      setArticles(data.blogPosts)
+      setArticles([...data.blogPosts].reverse())
     }
   }, [data])
 

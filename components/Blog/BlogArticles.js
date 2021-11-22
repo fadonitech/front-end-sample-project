@@ -8,7 +8,7 @@ const BlogArticle = ({
   date,
   time,
 }) => (
-  <Link href={`/blog/${title.split(' ').join('-')}`}>
+  <Link href={`/blog/${title.split(' ').join('-')}-${id}`}>
     <div className="blogArticle">
       <img src={image} alt="Software Development" />
       <div>
