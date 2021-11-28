@@ -1,6 +1,6 @@
 // FONT TYPES
 .open-sans {
-	font-family: 'Open Sans Regular', sans-serif;
+	font-family: "Open Sans Regular", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -8,7 +8,7 @@
 }
 
 .open-sans-light {
-	font-family: 'Open Sans Light', sans-serif;
+	font-family: "Open Sans Light", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -16,7 +16,7 @@
 }
 
 .open-sans-semibold {
-	font-family: 'Open Sans Semibold', sans-serif;
+	font-family: "Open Sans Semibold", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -24,7 +24,7 @@
 }
 
 .open-sans-bold {
-	font-family: 'Open Sans Bold', sans-serif;
+	font-family: "Open Sans Bold", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -32,7 +32,7 @@
 }
 
 .source-sans-semibold {
-	font-family: 'Source Sans SemiBold', sans-serif;
+	font-family: "Source Sans SemiBold", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -40,7 +40,7 @@
 }
 
 .source-sans {
-	font-family: 'Source Sans Regular', sans-serif;
+	font-family: "Source Sans Regular", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -48,7 +48,7 @@
 }
 
 .source-sans-bold {
-	font-family: 'Source Sans Bold', sans-serif;
+	font-family: "Source Sans Bold", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -56,7 +56,7 @@
 }
 
 .source-sans-light {
-	font-family: 'Source Sans Light', sans-serif;
+	font-family: "Source Sans Light", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -86,32 +86,53 @@
 	text-transform: capitalize;
 	display: inline-block;
 
-	@include respond(large-phone) {
-		font-size: 12rem;
-	}
-
-	@include respond(small-phone) {
-		font-size: 10rem;
-		margin-right: 2rem;
-	}
-}
-
-.title-6 {
-	width: 68.5rem;
-	font-size: 5rem;
-	text-transform: capitalize;
-	display: inline-block;
-
-	@include respond(tab-port) {
-		width: auto;
+	@include respond(tab-land) {
+		font-size: 7rem;
 	}
 
 	@include respond(tab-port-to-small) {
 		font-size: 8rem;
 	}
 
+	@include respond(tab-port-small) {
+		font-size: 7rem;
+	}
+
+	@include respond(small-phone) {
+		font-size: 8rem;
+		margin-right: 2rem;
+	}
+}
+
+.title-6 {
+	width: 60.5rem;
+	font-size: 5rem;
+	text-transform: capitalize;
+	display: inline-block;
+
+	@include respond(tab-land) {
+		width: 68.5rem;
+		font-size: 3rem;
+	}
+
+	@include respond(tab-port) {
+		width: auto;
+	}
+
+	@include respond(tab-port-to-small) {
+		font-size: 4rem;
+	}
+
+	@include respond(tab-port-small) {
+		font-size: 3.5rem;
+	}
+
 	@include respond(medium-phone) {
-		font-size: 6.75rem;
+		font-size: 4rem;
+	}
+
+	@include respond(small-phone) {
+		font-size: 4rem;
 	}
 }
 
@@ -195,7 +216,7 @@
 }
 
 .paragraph {
-	font-family: 'Open Sans Light', sans-serif;
+	font-family: "Open Sans Light", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
@@ -205,13 +226,13 @@
 
 .paragraph-small {
 	width: 70%;
-	font-family: 'Open Sans Light', sans-serif;
+	font-family: "Open Sans Light", sans-serif;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
 	line-height: normal;
 	font-size: 1.5rem;
-	
+
 	@include respond(tab-port) {
 		font-size: 2rem;
 	}
