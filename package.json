@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start"
+    "build": "next build && next export --ignore-engines",
+    "start": "next start --ignore-engines"
   },
   "dependencies": {
     "@apollo/client": "^3.4.17",
