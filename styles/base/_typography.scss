@@ -177,12 +177,16 @@
 .title-2 {
 	font-size: 2rem;
 
-	@include respond(small-phone) {
-		font-size: 2.5rem;
+	@include respond(tab-land) {
+		font-size: 2.2rem;
 	}
 
 	@include respond(medium-phone) {
 		font-size: 3rem;
+	}
+	
+	@include respond(small-phone) {
+		font-size: 2.5rem;
 	}
 }
 
