@@ -26,7 +26,7 @@ const errorLink = onError(({
 
 const link = createUploadLink({
   errorLink,
-  uri: "http://localhost:4000/graphql"
+  uri: process.env.REACT_APP_FADONITECH_API
 });
 
 export const client = new ApolloClient({
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      // ga.pageview(url)
+      ga.pageview(url)
     }
     //When the component is mounted, subscribe to router changes
     //and log those page views
