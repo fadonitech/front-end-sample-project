@@ -64,9 +64,18 @@ export async function getServerSideProps({ params }) {
     }
   )
 
-  return {
-    props: {
-      post: data.findBlogPost
+  if (data) {
+    return {
+      props: {
+        post: data.findBlogPost
+      }
+    }
+  } else {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      }
     }
   }
 }
