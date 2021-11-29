@@ -1,3 +1,12 @@
+@keyframes displaypost {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .blogContent {
   height: min-content;
   width: 70vw;
@@ -30,11 +39,13 @@
 }
 
 .blogArticle {
+  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  animation: 200ms displaypost ease-out forwards;
   
   @include respond(average-phone) {
     flex-direction: row;
@@ -120,3 +131,4 @@
     }
   }
 }
+
