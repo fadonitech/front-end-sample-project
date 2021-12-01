@@ -9,6 +9,7 @@ import { LoadingAnimation } from '../../components/Loading/Loading';
 const BlogContent = () => {
   const [articles, setArticles] = useState();
   const { error, loading, data } = useQuery(LIST_BLOG_POSTS)
+  
   let renderComp = (
     <div>
       <h1 id="blog-title" className="open-sans">The Blog</h1>

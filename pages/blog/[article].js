@@ -54,7 +54,24 @@ const Article = ({
   </div>
 );
 
-export async function getServerSideProps({ params }) {
+export async function getStaticPaths() {
+  const { data } = await client.query(
+    {
+      query: LIST_BLOG_POSTS
+    }
+  )
+
+  const paths = data.blogPosts.map(post => ({
+    params: { article: `${post.title.split(' ').join('-')}-${post.id}` },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
   const id = params.article.split('-').reverse()[0];
 
   const { data } = await client.query(

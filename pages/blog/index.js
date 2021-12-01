@@ -38,15 +38,4 @@ const Home = ({ articles }) => {
   )
 }
 
-// export async function getStaticProps() {
-//   const req = await fetch("http://localhost:3000/data/articles.json");
-//   const data = await req.json();
-
-//   return {
-//     props: {
-//       ...data
-//     }
-//   }
-// }
-
 export default Home;
