@@ -49,7 +49,16 @@ const Form = ({
 
   return (
     <div className="getinvited__form">
-      {error && (<h3 className="getinvited__error-message open-sans-bold">{errorMsg}</h3>)}
+      {warning.plan && (
+        <h3 className="getinvited__error-message open-sans-bold">
+          Please, select a plan
+        </h3>
+      )}
+      {error && (
+        <h3 className="getinvited__error-message open-sans-bold">
+          {errorMsg}
+        </h3>
+      )}
       <form className="getinvited__form-subs">
         <input
           onChange={onChange}
@@ -77,7 +86,7 @@ const Form = ({
         />
         <div className="getinvited__form--legal">
           <p className="paragraph-small text-align-center">
-          By signing up, you agree to our <Link className="open-sans-bold" href="/terms-of-use">Terms of Use</Link > and <Link className="open-sans-bold" href="/privacy-policy">Privacy Policy</Link >.
+            By signing up, you agree to our <Link className="open-sans-bold" href="/terms-of-use">Terms of Use</Link > and <Link className="open-sans-bold" href="/privacy-policy">Privacy Policy</Link >.
           </p>
         </div>
         {/* <div className="select-input">

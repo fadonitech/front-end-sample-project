@@ -14,20 +14,20 @@ const HowItWorks = () => (
     <div className="homepage__how-it-works--list">
       <ul>
         <li className="source-sans-light title-25 blue-span">
-          1. Find A <span>Template</span>!
+          1. Find A <span>3D Template</span>
         </li>
         <li className="source-sans-light title-25 blue-span">
-          2. <span>Customize</span> Your Model!
+          2. <span>Customize</span> Your Model
         </li>
         <li className="source-sans-light title-25 blue-span">
-          3. <span>Download</span> Your Template!
+          3. <span>Download</span> It
         </li>
         <li className="source-sans-light title-25 blue-span">
-          4. <span>Upload</span> it to your website!
+          4. <span>Upload</span> it to Your Store
         </li>
       </ul>
     </div>
-    <DefaultBtn content="GET YOUR INVITATION" />
+    <DefaultBtn content="SUBSCRIBE NOW" />
   </div>
 )
 

@@ -1,7 +1,7 @@
-@import './blogNavbar';
-@import './blogHeader';
-@import './blogContent';
-@import './blogArticle';
+@import "./blogNavbar";
+@import "./blogHeader";
+@import "./blogContent";
+@import "./blogArticle";
 
 .blog-page {
   min-height: 100vh;
@@ -12,6 +12,18 @@
   display: flex;
   justify-content: center;
   padding: 15rem 0 5rem 0;
+
+  &--loading {
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    background-color: $color-grey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 5rem 0;
+  }
 }
 
 #blog-title {

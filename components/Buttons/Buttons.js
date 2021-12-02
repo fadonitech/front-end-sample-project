@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const DefaultBtn = ({ content, onClick = null }) => {
   if (!onClick) {
     return (
-      <Link href="/get-invited">
+      <Link href="/subscribe">
         <button
           className="button__default"
         >

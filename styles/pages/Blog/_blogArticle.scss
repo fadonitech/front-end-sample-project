@@ -49,6 +49,13 @@
       font-weight: 600;
     }
 
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-align: justify;
+    }
+
     p {
       font-family: 'Open Sans', sans-serif;
       font-size: 2rem;
@@ -61,6 +68,14 @@
 
       &:last-child {
         margin-top: 2rem;
+      }
+    }
+
+    ul {
+      font-family: 'Open Sans', sans-serif;
+      margin-left: 5rem;
+      li {
+        font-size: 2rem;
       }
     }
   }

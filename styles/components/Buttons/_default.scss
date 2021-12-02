@@ -21,13 +21,20 @@
 			}
 		}
 
+		@include respond(medium-phone) {
+			width: 48rem;
+			height: 9rem;
+			font-size: 3.5rem;
+		}
+
 		@include respond(average-phone) {
 			font-size: 3rem;
-			width: max-content;
+
 			&:hover {
 				background-color: $color-blue;
 			}
 		}
+<<<<<<< HEAD
 
 		@include respond(medium-phone) {
 			width: 57rem;
@@ -39,5 +46,7 @@
 			height: 9rem;
 			font-size: 2.5rem;
 		}
+=======
+>>>>>>> development
 	}
 }

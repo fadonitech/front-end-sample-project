@@ -44,7 +44,6 @@ const Home = () => {
 					key='ogimage'
 				/>
 				<meta property='og:site_name' content='FadoniTech' key='ogsitename' />
-
 				{/* <meta http-equiv="refresh" content={`5;url="https://www.fadonitech.com/`} /> */}
 				<link rel='shortcut icon' href='/favicon.ico' />
 				<link
@@ -68,6 +67,7 @@ const Home = () => {
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
               page_path: window.location.pathname,
             });
+						gtag('event', 'conversion', {'send_to': '${process.env.NEXT_PUBLIC_GOOGLE_ADS_SEND_TO}'});
           `,
 					}}
 				/>
