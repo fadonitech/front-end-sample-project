@@ -1,5 +1,6 @@
 module.exports = {
   webpack(config) {
+    distDir: 'out',
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"]
