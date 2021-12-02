@@ -1,6 +1,7 @@
+import { useState, useEffect } from 'react';
+import { useQuery, gpl } from '@apollo/client';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
 import { client } from '../../pages/_app';
 
 import { FIND_BLOG_POST, LIST_BLOG_POSTS } from '../../GraphQL/Queries';
@@ -11,6 +12,14 @@ import Footer from '../../components/Footer/Footer';
 
 const Article = () => {
   const route = useRouter();
+  console.log(route.asPath.split('-').reverse()[0])
+
+  const { error, loading, data } = useQuery(FIND_BLOG_POST, {
+    variables: {
+      id: route.asPath.split('-').reverse()[0]
+    }
+  })
+
   const [articles, setArticles] = useState({
     id: '',
     title: '',
@@ -32,22 +41,12 @@ const Article = () => {
     image,
   } = articles;
 
-  const fetchData = async () => {
-    const newId = route.pathname.split('-').reverse()[0];
-
-    const { data } = await client.query(
-      {
-        query: FIND_BLOG_POST,
-        variables: { newId }
-      }
-    )
-
-    setArticles(data.findBlogPost);
-  }
-
   useEffect(() => {
-    fetchData();
-  }, [articles]);
+    console.log(data)
+    if (data) {
+      setArticles(data.findBlogPost);
+    }
+  }, [data]);
 
   return (
     <div>
@@ -58,7 +57,7 @@ const Article = () => {
         <meta name="robots" content="index, follow" />
         <meta name="description" content={description} />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       </Head>
       <main>
         <Navbar />
