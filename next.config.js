@@ -1,6 +1,6 @@
 module.exports = {
+  distDir: 'build',
   webpack(config) {
-    distDir: 'build',
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"]
