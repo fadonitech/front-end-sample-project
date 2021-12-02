@@ -40,39 +40,39 @@ export const Modal = ({ showModal, handleModal, handleAlert }) => {
       if (validateEmail(email)) {
         setLoading(true)
 
-        const { data } = await axios.post(process.env.REACT_APP_API_URL, {
-          firstName,
-          lastName,
-          email,
-          subsPlan: plan
-        });
+        const { data } = await createContact({
+          variables: {
+            firstName,
+            lastName,
+            email,
+            plan
+          }
+        })
 
-        const { error, title, message } = JSON.parse(data.body);
+        // setLoading(false);
 
-        setLoading(false);
+        // if (!error) {
+        //   setErrorForm(false)
+        //   setErrorMsg('')
+        //   handleModal();
+        //   handleAlert({ title, message });
 
-        if (!error) {
-          setErrorForm(false)
-          setErrorMsg('')
-          handleModal();
-          handleAlert({ title, message });
+        //   await setTimeout(() => { 
+        //     setFirstName(null);
+        //     setLastName(null);
+        //     setEmail(null);
+        //     setPlan(null);
+        //   }, 50);
 
-          await setTimeout(() => { 
-            setFirstName(null);
-            setLastName(null);
-            setEmail(null);
-            setPlan(null);
-          }, 50);
-
-          gaCompletedSignUp();
-        } else {
-          setWarning({
-            ...warning,
-            email: true
-          });
-          setErrorMsg(message)
-          setErrorForm(true);
-        }
+        //   gaCompletedSignUp();
+        // } else {
+        //   setWarning({
+        //     ...warning,
+        //     email: true
+        //   });
+        //   setErrorMsg(message)
+        //   setErrorForm(true);
+        // }
       } else {
         setWarning({
           ...warning,

@@ -8,7 +8,6 @@ module.exports = {
     return config;
   },
   env: {
-    REACT_APP_API_URL: 'https://a3euwetft5.execute-api.us-east-1.amazonaws.com/test1/',
     REACT_APP_FADONITECH_API: 'http://graphql.fadonitech.com:4000/graphql',
     NEXT_PUBLIC_GOOGLE_ANALYTICSA: 'UA-125816177-2',
     NEXT_PUBLIC_GOOGLE_ADS: 'AW-10797204558',
