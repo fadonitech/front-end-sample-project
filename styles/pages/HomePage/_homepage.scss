@@ -575,25 +575,11 @@
 		min-height: 80vh;
 		padding: 0 10rem;
 	}
-<<<<<<< HEAD
-	@include respond(medium-phone) {
-		padding: 0;
-		.homepage__title {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			h1 {
-				text-align: center;
-			}
-		}
-	}
-=======
 
 	@include respond(medium-phone) {
 		margin-top: 13rem;
 	}
 
->>>>>>> development
 	@include respond(average-phone) {
 		padding: 0;
 		min-height: 85vh;

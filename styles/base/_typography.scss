@@ -86,16 +86,6 @@
 	text-transform: capitalize;
 	display: inline-block;
 
-<<<<<<< HEAD
-	@include respond(large-phone) {
-		font-size: 11rem;
-	}
-
-	@include respond(medium-phone) {
-		font-size: 10rem;
-	}
-
-=======
 	@include respond(tab-land) {
 		font-size: 7rem;
 	}
@@ -108,7 +98,6 @@
 		font-size: 7rem;
 	}
 
->>>>>>> development
 	@include respond(small-phone) {
 		font-size: 8rem;
 		margin-right: 2rem;
@@ -131,27 +120,6 @@
 	}
 
 	@include respond(tab-port-to-small) {
-<<<<<<< HEAD
-		font-size: 5rem;
-		width: 68rem;
-	}
-
-	@include respond(medium-phone) {
-		width: 100vw;
-		font-size: 5.75rem;
-		padding: 0 5rem;
-	}
-
-	@include respond(average-phone) {
-		width: 100vw;
-		font-size: 5rem;
-		padding: 0 2rem;
-	}
-
-	@include respond(small-phone) {
-		font-size: 4.5rem;
-		padding: 0 3rem;
-=======
 		font-size: 4rem;
 	}
 
@@ -165,7 +133,6 @@
 
 	@include respond(small-phone) {
 		font-size: 4rem;
->>>>>>> development
 	}
 }
 
