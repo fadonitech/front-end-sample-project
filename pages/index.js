@@ -44,7 +44,7 @@ const Home = () => {
 					key='ogimage'
 				/>
 				<meta property='og:site_name' content='FadoniTech' key='ogsitename' />
-
+				<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 				{/* <meta http-equiv="refresh" content={`5;url="https://www.fadonitech.com/`} /> */}
 				<link rel='shortcut icon' href='/favicon.ico' />
 				<link
