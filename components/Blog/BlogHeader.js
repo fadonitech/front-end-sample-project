@@ -3,7 +3,7 @@ import Link from 'next/link';
 const BlogHeader = ({
   article
 }) => (
-  <Link href={`/blog/${article.title.split(' ').join('-')}-${article.id}`}>
+  <Link href={`/blog/404`}>
     <div className="blog-header">
       <img src={article.image} alt="Software Development" />
       <div>
