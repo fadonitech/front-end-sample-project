@@ -1,8 +1,6 @@
 import { createContext } from 'react';
 import Head from 'next/head'
 
-import data from '../../data/data';
-
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import BlogNavbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import BlogContent from '../../components/Blog/Blog';
@@ -17,11 +15,11 @@ const Blog = () => (
   </>
 )
 
-const Home = ({ articles }) => {
+const BlogPage = () => {
   return (
     <div>
       <Head>
-        <title>FadoniTech | Blog</title>
+        <title>FadoniTech | Page</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         {/* <meta name="robots" content="index, follow" /> */}
@@ -29,13 +27,11 @@ const Home = ({ articles }) => {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <main>
-        <ArticlesContext.Provider value={data.articles}>
-          <Blog />
-        </ArticlesContext.Provider>
+        <Blog />
       </main>
       <Footer />
     </div>
   )
 }
 
-export default Home;
+export default BlogPage;

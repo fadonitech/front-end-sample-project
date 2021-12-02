@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { client } from '../../pages/_app';
 
 import { FIND_BLOG_POST, LIST_BLOG_POSTS } from '../../GraphQL/Queries';
-import data from '../../data/data';
 
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import Footer from '../../components/Footer/Footer';
@@ -12,14 +11,14 @@ import Footer from '../../components/Footer/Footer';
 
 const Article = ({
   post: {
-    id,
-    title,
-    description,
-    author,
-    time,
-    date,
-    content,
-    image,
+    id = '',
+    title = '',
+    description = '',
+    author = '',
+    time = 0,
+    date = '',
+    content = '',
+    image = '',
   }
 }) => (
   <div>
