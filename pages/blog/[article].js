@@ -29,6 +29,7 @@ const Article = ({
       <meta name="robots" content="index, follow" />
       <meta name="description" content={description} />
       <link rel="shortcut icon" href="/favicon.ico" />
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     </Head>
     <main>
       <Navbar />
