@@ -32,7 +32,7 @@ const Home = () => {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"></link>
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"></link>
-        <script
+        {/* <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
@@ -47,7 +47,7 @@ const Home = () => {
             });
           `,
           }}
-        />
+        /> */}
       </Head>
       <main>
         <Navbar />

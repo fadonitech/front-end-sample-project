@@ -54,11 +54,11 @@ const Home = () => {
 					rel='stylesheet'
 					href='https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css'
 				></link>
-				<script
+				{/* <script
 					async
 					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-				/>
-				<script
+				/> */}
+				{/* <script
 					dangerouslySetInnerHTML={{
 						__html: `
             window.dataLayer = window.dataLayer || [];
@@ -70,7 +70,7 @@ const Home = () => {
 						gtag('event', 'conversion', {'send_to': '${process.env.NEXT_PUBLIC_GOOGLE_ADS_SEND_TO}'});
           `,
 					}}
-				/>
+				/> */}
 			</Head>
 			<main>
 				<Navbar />

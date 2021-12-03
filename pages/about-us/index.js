@@ -70,7 +70,7 @@ const AboutUsPage = () => {
 					rel='stylesheet'
 					href='https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css'
 				></link>
-				<script
+				{/* <script
 					async
 					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
 				/>
@@ -86,7 +86,7 @@ const AboutUsPage = () => {
             });
           `,
 					}}
-				/>
+				/> */}
 			</Head>
 			<main>
 				<Navbar />
