@@ -8,7 +8,7 @@ module.exports = {
     return config;
   },
   env: {
-    REACT_APP_FADONITECH_API: 'http://3.93.91.213:4000/graphql',
+    REACT_APP_FADONITECH_API: 'new-balancer-1186176005.us-east-1.elb.amazonaws.com/graphql',
     NEXT_PUBLIC_GOOGLE_ANALYTICSA: 'UA-125816177-2',
     NEXT_PUBLIC_GOOGLE_ADS: 'AW-10797204558',
     NEXT_PUBLIC_GOOGLE_ADS_SEND_TO: 'AW-10797204558/EzlrCNnZ2f8CEM6IwZwo',
