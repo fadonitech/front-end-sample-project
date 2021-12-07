@@ -7,15 +7,12 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  HttpLink,
-  from
 } from '@apollo/client';
 import { createUploadLink } from "apollo-upload-client";
 import { onError } from '@apollo/client/link/error';
 
 const errorLink = onError(({
   graphQLErrors,
-  networkError
 }) => {
   if (graphQLErrors) {
     graphQLErrors.map(({ message, locations, path }) => {
@@ -26,7 +23,7 @@ const errorLink = onError(({
 
 const link = createUploadLink({
   errorLink,
-  uri: process.env.REACT_APP_FADONITECH_API
+  uri: 'http://new-balancer-1186176005.us-east-1.elb.amazonaws.com/graphql'
 });
 
 export const client = new ApolloClient({
