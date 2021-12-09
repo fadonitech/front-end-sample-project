@@ -23,7 +23,7 @@ const errorLink = onError(({
 
 const link = createUploadLink({
   errorLink,
-  uri: 'http://new-balancer-1186176005.us-east-1.elb.amazonaws.com/graphql'
+  uri: 'https://new-balancer-1186176005.us-east-1.elb.amazonaws.com/graphql'
 });
 
 export const client = new ApolloClient({
