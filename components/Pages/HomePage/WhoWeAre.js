@@ -15,13 +15,13 @@ const WhoWeAre = () => (
 					<h3 className='open-sans-light title-2'>CEO / Founder</h3>
 				</div>
 			</div>
-			<div className='about-us__who-we-are--image'>
+			{/* <div className='about-us__who-we-are--image'>
 				<img src='./image/aqib-hussain.jpg' />
 				<div className='about-us__who-we-are--image--text'>
 					<h3 className='open-sans-light title-2'>Aqib Hussain</h3>
 					<h3 className='open-sans-light title-2'>Software Developer</h3>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	</div>
 );
