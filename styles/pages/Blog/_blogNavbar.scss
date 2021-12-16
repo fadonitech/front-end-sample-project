@@ -13,15 +13,27 @@
 	}
 
 	&--logo {
+		height: 7rem;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		cursor: pointer;
 
-		img {
-			height: auto;
-			width: 5.6rem;
+		div {
+			height: 5rem;
+			width: 5rem;
+			border-radius: 100%;
+			background-color: $color-black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			margin-right: 1rem;
+		}
+
+		img {
+			height: 3rem;
+			width: 3rem;
+			object-fit: contain;
 
 			@include respond(tab-port-to-small) {
 				width: 6rem;
@@ -53,7 +65,7 @@
 					color: $color-black;
 					text-decoration: none;
 					font-size: 1.6rem;
-					font-family: 'Open Sans Light', sans-serif;
+					font-family: "Open Sans Light", sans-serif;
 
 					@include respond(tab-port-to-small) {
 						font-size: 2.2rem;

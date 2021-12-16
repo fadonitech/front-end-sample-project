@@ -5,12 +5,12 @@ const BlogWebNavbar = () => (
 	<div className='blogNavbar'>
 		<Link href='/'>
 			<div className='blogNavbar--logo'>
-				<img
-					src='/logo-black.png'
-					height={45.6}
-					width={40}
-					alt='Software Development'
-				/>
+				<div>
+					<img
+						src='/logo-white.png'
+						alt='Augmented Reality'
+					/>
+				</div>
 				<h3 className='open-sans-light'>FadoniTech</h3>
 			</div>
 		</Link>
@@ -71,7 +71,7 @@ const BlogMobilebNavbar = () => {
 				className={`navbar-mobile__links-${btnActive ? 'show' : 'hide'} adam`}
 			>
 				<Link href='/'>
-					<img src='/logo-white.png' alt='Tech Partnership' />
+					<img src='/logo-white.png' alt='E-commerce' />
 				</Link>
 				<ul>
 					<li className='open-sans-light'>
