@@ -6,7 +6,7 @@ import { ArticlesContext } from '../../pages/blog/index';
 const BlogArticle = ({ id, imgSrc, date, title }) => (
   <Link href={`/blog/${id}`}>
     <div className="blogArticle">
-      <img src={imgSrc} alt="Software Development" />
+      <img src={imgSrc} alt="Augmented Reality for E-commerces" />
       <div>
         <h3 className="open-sans">
           {date}

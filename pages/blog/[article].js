@@ -43,7 +43,7 @@ const Article = ({
             </h2>
           </div>
           <div className="blogArticlePage__text">
-            <img src={image} alt="Software Development" />
+            <img src={image} alt="Fadonitech" />
             <div dangerouslySetInnerHTML={{ __html: content }}></div>
           </div>
         </div>

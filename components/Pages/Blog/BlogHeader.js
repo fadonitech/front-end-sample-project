@@ -9,7 +9,7 @@ const BlogHeader = () => {
   return (
     <Link href={`/blog/${articles[0].id}`}>
       <div className="blog-header">
-        <img src={articles[0].imgSrc} alt="Software Development" />
+        <img src={articles[0].imgSrc} alt="Fadonitech E-commerce" />
         <div>
           <h3 className="open-sans">
             {articles[0].date}

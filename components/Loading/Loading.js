@@ -5,7 +5,7 @@ export const LoadingAnimation = () => (
       <img
         className="loading-animation__logo"
         src="/logo-black.png"
-        alt="Software Development"
+        alt="Augmented Reality"
       />
   </div>
 )

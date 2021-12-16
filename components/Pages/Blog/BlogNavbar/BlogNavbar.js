@@ -11,7 +11,7 @@ const BlogWebNavbar = () => (
           src="/logo-black.png"
           height={45.6}
           width={40}
-          alt="Software Development"
+          alt="E-commerce"
         />
         <h3 className="adam">
           FadoniTech

@@ -10,7 +10,7 @@ const BlogArticle = ({
 }) => (
   <Link href={`/blog/${title.split(' ').join('-')}-${id}`}>
     <div className="blogArticle">
-      <img src={image} alt="Software Development" />
+      <img src={image} alt="FadoniTech e-commerce" />
       <div>
         <h3 className="open-sans">
           {date}

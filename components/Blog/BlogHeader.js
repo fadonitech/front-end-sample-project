@@ -5,7 +5,7 @@ const BlogHeader = ({
 }) => (
   <Link href={`/blog/${article.title.split(' ').join('-')}-${article.id}`}>
     <div className="blog-header">
-      <img src={article.image} alt="Software Development" />
+      <img src={article.image} alt="Augmented Reality" />
       <div>
         <h3 className="open-sans">
           {article.date}

@@ -7,7 +7,7 @@ const Footer = () => (
         src="/logo-white.png"
         height={91.2}
         width={80}
-        alt="Software Development"
+        alt="E-commerce"
       />
     </Link>
     <h1 className="open-sans-light">
