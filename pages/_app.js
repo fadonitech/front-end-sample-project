@@ -23,7 +23,7 @@ const errorLink = onError(({
 
 const link = createUploadLink({
   errorLink,
-  uri: 'https://graphql-fadonitech.xyz/graphql'
+  uri: process.env.NEXT_PUBLIC_API_URL
 });
 
 export const client = new ApolloClient({
