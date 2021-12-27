@@ -38,8 +38,8 @@
 		align-content: flex-start;
 
 		@include respond(normal-desktop) {
-				height: auto;
-				margin-top: 25vh;
+			height: auto;
+			margin-top: 25vh;
 		}
 
 		@include respond(tab-land) {
@@ -598,6 +598,16 @@
 	@include respond(tab-land) {
 		padding-top: 5rem;
 		background-color: $color-blue;
+
+		& .button__default {
+			background-color: $color-white;
+			color: $color-blue;
+			margin-bottom: 2rem;
+		}
+
+		& .button__default:hover {
+			background-color: darken($color-white, 5%);
+		}
 	}
 }
 
@@ -625,6 +635,7 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: auto;
 	grid-row-gap: 1rem;
+	margin-bottom: 2rem;
 
 	@include respond(normal-desktop) {
 		margin-bottom: 2rem;

@@ -1,6 +1,7 @@
 import React, { useState, Suspense, useRef, useEffect } from 'react';
 import { OrbitControls, Stage, Html } from '@react-three/drei';
 import { Canvas, useThree, useFrame } from '@react-three/fiber';
+import { DefaultBtn } from '../../Buttons/Buttons';
 
 import { LoadingAnimation } from '../../Loading/Loading';
 
@@ -130,7 +131,10 @@ const Prototype = () => {
 				selectedPart={selectedPart}
 				handleColorChange={handleColorChange}
 			/>
-			{/* <DragInfo /> */}
+			<DefaultBtn
+				className="container__right--btn"
+				content="DOWNLOAD"
+			/>
 		</div>
 	);
 };
