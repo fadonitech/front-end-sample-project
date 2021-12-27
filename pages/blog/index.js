@@ -26,10 +26,12 @@ const BlogPage = () => {
         {/* <meta name="robots" content="index, follow" /> */}
         <meta name="description" content="Weekly content about technology and innovation for businesses in different industries!" />
         <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
+      <main>
         <Script
-					strategy="afterInteractive"
-					dangerouslySetInnerHTML={{
-						__html: `
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
 							(function(h,o,t,j,a,r){
 								h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
 								h._hjSettings={hjid:2761813,hjsv:6};
@@ -39,10 +41,8 @@ const BlogPage = () => {
 								a.appendChild(r);
 							})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 						`,
-					}}
-				/>
-      </Head>
-      <main>
+          }}
+        />
         <Blog />
       </main>
       <Footer />

@@ -82,23 +82,9 @@ const GetInvited = () => {
 					rel='stylesheet'
 					href='https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css'
 				></link>
-				{/* <script
-					async
-					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-				/>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `,
-					}}
-				/> */}
-					<Script
+			</Head>
+			<main>
+				<Script
 					strategy="afterInteractive"
 					dangerouslySetInnerHTML={{
 						__html: `
@@ -113,8 +99,6 @@ const GetInvited = () => {
 						`,
 					}}
 				/>
-			</Head>
-			<main>
 				{alert.isOpen && <Alert />}
 				<Navbar />
 				<GetInvitedSection handleAlert={handleAlert} />
