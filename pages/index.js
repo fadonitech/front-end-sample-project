@@ -59,6 +59,30 @@ const Home = () => {
 			<main>
 				<Script
 					strategy="afterInteractive"
+					src="https://www.googletagmanager.com/gtag/js?id=AW-10797204558"
+				/>
+				<Script
+					strategy="afterInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+		
+							gtag('config', 'AW-10797204558');
+						`
+					}}
+				/>
+				<Script
+					strategy="afterInteractive"
+					dangerouslySetInnerHTML={{
+						__html: `
+							gtag('event', 'conversion', {'send_to': 'AW-10797204558/EzlrCNnZ2f8CEM6IwZwo'});
+						`
+					}}
+				/>
+				<Script
+					strategy="afterInteractive"
 					dangerouslySetInnerHTML={{
 						__html: `
 						(function(h,o,t,j,a,r){
