@@ -21,6 +21,9 @@ const BlogWebNavbar = () => (
 					<Link href='/about-us'>About Us</Link>
 				</li>
 				<li>
+					<Link href='/subscribe'>Library</Link>
+				</li>
+				<li>
 					<Link href="/blog">
 						Blog
 					</Link>
@@ -85,6 +88,11 @@ const BlogMobilebNavbar = () => {
 						</Link>
 					</li>
 					<li className='open-sans-light'>
+						<Link href='/subscribe' onClick={onClick}>
+							Library
+						</Link>
+					</li>
+					<li className='open-sans-light'>
 						<Link href='/blog' onClick={onClick}>
 							Blog
 						</Link>
@@ -99,7 +107,7 @@ const BlogMobilebNavbar = () => {
 };
 
 const BlogNavbar = () => {
-	const resolution = 600;
+	const resolution = 630;
 	const [isPhone, setIsPhone] = useState(false);
 
 	const validateScreen = () => {
