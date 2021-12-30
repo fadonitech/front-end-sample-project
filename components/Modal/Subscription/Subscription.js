@@ -73,13 +73,6 @@ const ModalSubsForm = ({
           placeholder="E-mail"
           required
         />
-        {/* <div className="select-input">
-          <select name="purpose" id="purpose" required>
-            <option value="" disabled selected>Purpose</option>
-            <option value="business">Business</option>
-            <option value="personal">Personal</option>
-          </select>
-        </div> */}
       </form>
     </div>
   )
