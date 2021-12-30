@@ -18,7 +18,7 @@ const ModalPlans = ({ plan, setPlan, warning, setWarning }) => {
         title="Annual"
         discount={true}
         subtext="Billed yearly at $479.88"
-        price={39}
+        price={14}
         warning={warning.plan}
       />
       <ModalPlan
@@ -27,7 +27,7 @@ const ModalPlans = ({ plan, setPlan, warning, setWarning }) => {
         onClick={onClick}
         title="Monthly"
         subtext="Cancel at anytime"
-        price={49}
+        price={19}
         warning={warning.plan}
       />
       <ModalPlan
