@@ -30,7 +30,7 @@ const ModalPlans = ({ plan, setPlan, warning, setWarning }) => {
         price={19}
         warning={warning.plan}
       />
-      <ModalPlan
+      {/* <ModalPlan
         id="trial"
         plan={plan}
         onClick={onClick}
@@ -38,7 +38,7 @@ const ModalPlans = ({ plan, setPlan, warning, setWarning }) => {
         price="FREE"
         last={true}
         warning={warning.plan}
-      />
+      /> */}
     </div>
   )
 }

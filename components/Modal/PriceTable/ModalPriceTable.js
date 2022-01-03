@@ -11,12 +11,12 @@ const ModalPriceTable = () => (
       <TableCell title="Credit Creator" />
     </th>
     <th className="modal__table--collumn">
-      <tr className="modal__table--collumn-header source-sans-bold">14 DAY TRIAL</tr>
-      <TableCell val1={true} />
+      <tr className="modal__table--collumn-header source-sans-bold"></tr>
+      {/* <TableCell val1={false} />
       <TableCell val1={false} />
       <TableCell val1={false} />
       <TableCell val1={false} />
-      <TableCell val1={true} />
+      <TableCell val1={false} /> */}
     </th>
     <th className="modal__table--collumn">
       <tr className="modal__table--collumn-header source-sans-bold">MONTHLY</tr>
