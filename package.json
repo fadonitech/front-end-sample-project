@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6.0.0",
-    "axios": "^0.21.1",
     "next-transpile-modules": "^8.0.0"
   }
 }
