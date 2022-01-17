@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useQuery, gpl } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { LIST_BLOG_POSTS } from '../../GraphQL/Queries';
 
 import BlogHeader from './BlogHeader';

@@ -40,7 +40,11 @@ const TableCell = ({ title = null, val1 = null, val2 = null }) => {
               strokeLinejoin="round"
             >
               <polyline points="20 6 9 17 4 12"></polyline></svg>)
-          : (<h3 className="source-sans-bold">-</h3>)
+          : (
+            <h3 className="source-sans-bold">
+              -
+            </h3>
+          )
       }
       </tr>
     )
