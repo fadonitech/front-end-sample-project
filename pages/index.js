@@ -58,9 +58,10 @@ const Home = () => {
 				></link>
 			</Head>
 			<main>
-				<Script
+
+				{/* <Script
 					strategy="afterInteractive"
-					src="https://www.googletagmanager.com/gtag/js?id=AW-10797204558"
+					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.SECRET_API_KEY_GOOGLE_ADS}`}
 				/>
 				<Script
 					strategy="afterInteractive"
@@ -70,7 +71,7 @@ const Home = () => {
 							function gtag(){dataLayer.push(arguments);}
 							gtag('js', new Date());
 		
-							gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ADS);
+							gtag('config', process.env.SECRET_API_KEY_GOOGLE_ADS);
 						`
 					}}
 				/>
@@ -78,10 +79,11 @@ const Home = () => {
 					strategy="afterInteractive"
 					dangerouslySetInnerHTML={{
 						__html: `
-							gtag('event', 'conversion', {'send_to': process.env.NEXT_PUBLIC_GOOGLE_ADS_SEND_TO});
+							gtag('event', 'conversion', {'send_to': process.env.SECRET_API_KEY_GOOGLE_ADS_SEND_TO});
 						`
 					}}
-				/>
+				/> */}
+
 				<Script
 					strategy="afterInteractive"
 					dangerouslySetInnerHTML={{

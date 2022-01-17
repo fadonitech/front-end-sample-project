@@ -8,10 +8,15 @@ module.exports = {
     return config;
   },
   env: {
-    NEXT_PUBLIC_API_URL: 'https://graphql-fadonitech.xyz/graphql',
-    NEXT_PUBLIC_GOOGLE_ANALYTICSA: 'UA-125816177-2',
-    NEXT_PUBLIC_GOOGLE_ADS: 'AW-10797204558',
-    NEXT_PUBLIC_GOOGLE_ADS_SEND_TO: 'AW-10797204558/EzlrCNnZ2f8CEM6IwZwo',
+    SECRET_API_KEY_API_URL: 'https://graphql-fadonitech.xyz/graphql',
+    SECRET_API_KEY_GOOGLE_ANALYTICS: '',
+    SECRET_API_KEY_GOOGLE_ADS: '',
+    SECRET_API_KEY_GOOGLE_ADS_SEND_TO: '',
   },
   withTM: require('next-transpile-modules')(['three'])
 };
+
+/* 
+  Change the Enviroment Variables Here To Reflect The Local Back-End Application
+  You have Downloaded. Google APIs were removed for security sake.
+*/

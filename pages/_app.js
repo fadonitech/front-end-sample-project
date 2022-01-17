@@ -23,7 +23,7 @@ const errorLink = onError(({
 
 const link = createUploadLink({
   errorLink,
-  uri: process.env.NEXT_PUBLIC_API_URL
+  uri: process.env.SECRET_API_KEY_API_URL
 });
 
 export const client = new ApolloClient({
