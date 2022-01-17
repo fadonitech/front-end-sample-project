@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { gaCompletedSignUp } from '../../lib/ga/events';
 
 import { LoadingAnimation } from '../Loading/Loading';
