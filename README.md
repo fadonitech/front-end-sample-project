@@ -47,3 +47,10 @@ technologies in the industry, it's composed of:
 ### Outcome
 
 On a product management stand point, this project was a complete success, we had several users signing up for the beta and a couple of investors interested in the main application. Also, an invitation to participate in an Accelerator program in New York was received. I had meetings, feedbacks, and even pitch decks. However, I failed to create traction, users were more interested in testing for trials than actually for paying a monthly subscription. Additionally, there was a few limitation on the technology I was using. For instance, users were unable to add/resize/manipulate photos into the 3D models and WebGL could only do so much. Thus, because of that and many other reasons, I had to close this application out. 
+
+<hr/>
+
+## How To Install
+
+First, you need to clone the repository. After that, you might install the dependencies with `yarn install` or simply `yarn`. Then, finally, you can run the project with `yarn dev`.
+``
