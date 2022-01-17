@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 3D CUSTOMIZABLE MOCKUPS FOR E-COMMERCES
 
-## Getting Started
+This project is live and you can access [right here](https://fadonitech.com/).
 
-First, run the development server:
+### Description & Goals
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This project was created with the purpose of becoming a product to e-commerce owners. Essentially, the main goal of this project was to
+validate a potential market segment. **This application depends on two other projects, one of them is the back-end and the other is the dashboard**. The former can be found [right here](https://github.com/). And, the latter, the Business Intelligence software used to analyze the data, is unfortunately not available to the public inasmuch as it contains sensitive data of our previous users.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+So, you might expect the following features from the website:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Display a 3D element on the screen.
+- Make the 3D element editable.
+- Collect E-mails.
+- Record user experience.
+- Generate a heat map.
+- Collect feedback from users.
+- Write/Delete/Edit Blog Posts.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### What did Henry do?
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+As the owner of the project, I was responsible for:
 
-## Learn More
+- Create the Design - ( Mockups, Wireframes, User Interface, and Analyze User Experience).
+- Develop this entire application and the other 2 supporting apps ( Backend and Dashboard ).
+- Create/Analyze/Coordinate Pipelines, Goals, and Scrum/Kanban.
+- Recruit/Coordinate Copywrites to create blog posts.
+- Create the Script and recruit/manage an animator to create the video ad.
+- Create/Analyze/Coodinate marketing campaigns in Google Ads and Adwords.
 
-To learn more about Next.js, take a look at the following resources:
+### Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This web app had many versions each one separated in a specific branch. So, this project is built with the latest 
+technologies in the industry, it's composed of:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- NextJS
+- Javascript ES8+
+- CSS / SASS
+- GraphQL
+- Apollo
+- ThreeJS
+- AWS EC2, S3, Amplify, Lambda
+- Google Analytics
+- Google Pixel
+- Heatmap
 
-## Deploy on Vercel
+### Outcome
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+On a product management stand point, this project was a complete success, we had several users signing up for the beta and a couple of investors interested in the main application. Also, an invitation to participate in an Accelerator program in New York was received. I had meetings, feedbacks, and even pitch decks. However, I failed to create traction, users were more interested in testing for trials than actually for paying a monthly subscription. Additionally, there was a few limitation on the technology I was using. For instance, users were unable to add/resize/manipulate photos into the 3D models and WebGL could only do so much. Thus, because of that and many other reasons, I had to close this application out. 
