@@ -22,3 +22,11 @@ export const DefaultBtn = ({ content, onClick = null }) => {
     )
   }
 }
+
+export const SubmitBtn = ({ onClick }) => (
+  <div >
+    <button className="getinvited__submit-btn" onClick={onClick} type={"submit"}>
+      SIGN UP
+    </button>
+  </div>
+)
