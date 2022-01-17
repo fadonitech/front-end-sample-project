@@ -1,7 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useQuery, gpl } from '@apollo/client';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { client } from '../../pages/_app';
 
 import { FIND_BLOG_POST, LIST_BLOG_POSTS } from '../../GraphQL/Queries';

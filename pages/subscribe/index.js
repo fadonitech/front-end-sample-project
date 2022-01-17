@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Script from 'next/script'
-import { createContext } from 'react';
 import { useEffect, useState } from 'react';
 
 import { GetInvitedSection } from '../../components/Pages/Page';
@@ -59,7 +58,6 @@ const GetInvited = () => {
 					content='Making Augmented Reality Easy For E-Commerces With Read-To-Use Templates'
 					key='ogdesc'
 				/>
-
 				<meta
 					property='og:url'
 					content='https://www.fadonitech.com/'
@@ -71,8 +69,6 @@ const GetInvited = () => {
 					key='ogimage'
 				/>
 				<meta property='og:site_name' content='FadoniTech' key='ogsitename' />
-
-				{/* <meta http-equiv="refresh" content={`5;url="https://www.fadonitech.com/`} /> */}
 				<link rel='shortcut icon' href='/favicon.ico' />
 				<link
 					rel='stylesheet'

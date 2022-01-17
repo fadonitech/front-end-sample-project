@@ -23,17 +23,18 @@ const Home = () => {
 					key='viewport'
 				/>
 				<meta name='robots' content='index, follow' />
+				{/* Description */}
 				<meta
 					name='description'
 					content='Making Augmented Reality Easy For E-Commerces With Read-To-Use Templates'
 				/>
+				{/* OG */}
 				<meta property='og:title' content='FadoniTech' key='ogtitle' />
 				<meta
 					property='og:description'
 					content='Making Augmented Reality Easy For E-Commerces With Read-To-Use Templates'
 					key='ogdesc'
 				/>
-
 				<meta
 					property='og:url'
 					content='https://www.fadonitech.com/'
@@ -45,7 +46,7 @@ const Home = () => {
 					key='ogimage'
 				/>
 				<meta property='og:site_name' content='FadoniTech' key='ogsitename' />
-				{/* <meta http-equiv="refresh" content={`5;url="https://www.fadonitech.com/`} /> */}
+				{/* Font Awesome */}
 				<link rel='shortcut icon' href='/favicon.ico' />
 				<link
 					rel='stylesheet'
@@ -69,7 +70,7 @@ const Home = () => {
 							function gtag(){dataLayer.push(arguments);}
 							gtag('js', new Date());
 		
-							gtag('config', 'AW-10797204558');
+							gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ADS);
 						`
 					}}
 				/>
@@ -77,7 +78,7 @@ const Home = () => {
 					strategy="afterInteractive"
 					dangerouslySetInnerHTML={{
 						__html: `
-							gtag('event', 'conversion', {'send_to': 'AW-10797204558/EzlrCNnZ2f8CEM6IwZwo'});
+							gtag('event', 'conversion', {'send_to': process.env.NEXT_PUBLIC_GOOGLE_ADS_SEND_TO});
 						`
 					}}
 				/>
