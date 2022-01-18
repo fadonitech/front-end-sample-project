@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Script from 'next/script'
 import { useEffect, useState } from 'react';
 
+import InfoBanner from '../../components/Alert/InfoBanner';
 import { GetInvitedSection } from '../../components/Pages/Page';
 import Alert from '../../components/Alert/AlertSuccess';
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
@@ -96,6 +97,7 @@ const GetInvited = () => {
 					}}
 				/>
 				{alert.isOpen && <Alert />}
+				<InfoBanner />
 				<Navbar />
 				<GetInvitedSection handleAlert={handleAlert} />
 			</main>

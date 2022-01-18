@@ -1,12 +1,12 @@
 .blogNavbar {
-	height: 7rem;
+	height: auto;
 	width: 100%;
 	background-color: $color-grey;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 2rem;
+	padding: 3rem 2rem 0 2rem;
 
 	@include respond(tab-port-to-small) {
 		height: 10rem;

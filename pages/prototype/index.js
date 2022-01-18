@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { createContext } from 'react';
 import { useEffect, useState } from 'react';
 
+import InfoBanner from '../../components/Alert/InfoBanner';
 import { PrototypeSection } from '../../components/Pages/Page';
 import Alert from '../../components/Alert/AlertSuccess';
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
@@ -81,6 +82,7 @@ const Prototype = () => {
 			</Head>
 			<main>
 				{alert.isOpen && <Alert />}
+				<InfoBanner />
 				<Navbar />
 				<PrototypeSection handleAlert={handleAlert} />
 			</main>

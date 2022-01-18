@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import { useEffect } from 'react';
 
+import InfoBanner from '../../components/Alert/InfoBanner';
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import Footer from '../../components/Footer/Footer';
 import { gaFontAttribution } from '../../lib/ga/events';
@@ -31,6 +32,7 @@ const FontAttribution = () => {
       </Head>
       <main>
         <Navbar />
+				<InfoBanner />
         <div className="license">
           <h2>FADONITECH FONT ATTRIBUTION</h2>
           <p>

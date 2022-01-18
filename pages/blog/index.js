@@ -2,6 +2,7 @@ import { createContext } from 'react';
 import Script from 'next/script'
 import Head from 'next/head'
 
+import InfoBanner from '../../components/Alert/InfoBanner';
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import BlogContent from '../../components/Blog/Blog';
 import Footer from '../../components/Footer/Footer';
@@ -41,6 +42,7 @@ const BlogPage = () => {
 						`,
           }}
         />
+				<InfoBanner />
         <Blog />
       </main>
       <Footer />

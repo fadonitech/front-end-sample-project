@@ -2,6 +2,7 @@ import { createContext } from 'react';
 import Head from 'next/head';
 import { useEffect } from 'react';
 
+import InfoBanner from '../../components/Alert/InfoBanner';
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import WhoWeAre from '../../components/Pages/HomePage/WhoWeAre';
 import WhyUs from '../../components/Pages/HomePage/WhyUs';
@@ -68,6 +69,7 @@ const AboutUsPage = () => {
 				></link>
 			</Head>
 			<main>
+				<InfoBanner />
 				<Navbar />
 				<AboutUs />
 			</main>

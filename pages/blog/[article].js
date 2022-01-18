@@ -3,6 +3,7 @@ import { client } from '../../pages/_app';
 
 import { FIND_BLOG_POST, LIST_BLOG_POSTS } from '../../GraphQL/Queries';
 
+import InfoBanner from '../../components/Alert/InfoBanner';
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import Footer from '../../components/Footer/Footer';
 
@@ -28,6 +29,7 @@ const Article = ({
       <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     </Head>
     <main>
+      <InfoBanner />
       <Navbar />
       <div className="blogArticlePage">
         <div className="blogArticlePage__content">

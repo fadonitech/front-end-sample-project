@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import InfoBanner from '../../components/Alert/InfoBanner';
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import Footer from '../../components/Footer/Footer';
 
@@ -14,6 +15,7 @@ const Unavailable = () => {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <main>
+				<InfoBanner />
         <Navbar />
         <div className='blog-page--loading'>
           <h2 className='source-sans-light title-6'>

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Script from 'next/script'
 import { useEffect } from 'react';
 
+import InfoBanner from '../components/Alert/InfoBanner';
 import Navbar from '../components/Blog/BlogNavbar/BlogNavbar';
 import { HomePage } from '../components/Pages/Page';
 import Footer from '../components/Footer/Footer';
@@ -99,6 +100,7 @@ const Home = () => {
 						`,
 					}}
 				/>
+				<InfoBanner />
 				<Navbar />
 				<HomePage />
 			</main>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { useEffect } from 'react';
 
+import InfoBanner from '../../components/Alert/InfoBanner';
 import Navbar from '../../components/Blog/BlogNavbar/BlogNavbar';
 import Footer from '../../components/Footer/Footer';
 import { gaPrivatePolicy } from '../../lib/ga/events';
@@ -31,6 +32,7 @@ const PrivacyPolicy = () => {
         <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css"></link>
       </Head>
       <main>
+				<InfoBanner />
         <Navbar />
         <div className="license">
           <h2>
