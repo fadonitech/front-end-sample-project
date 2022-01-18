@@ -9,7 +9,7 @@ First, you need to clone the repository. After that, you might install the depen
 ## Description & Goals
 
 This project was created with the purpose of becoming a product to e-commerce owners. Essentially, the main goal of this project was to
-validate a potential market segment. **This application depends on two other projects, one of them is the back-end and the other is the dashboard**. The former can be found [right here](https://github.com/). And, the latter, the Business Intelligence software used to analyze the data, is unfortunately not available to the public inasmuch as it contains sensitive data of our previous users.
+validate a potential market segment. **This application depends on two other projects, one of them is the back-end and the other is the dashboard**. The former can be found [right here](https://github.com/fadonitech/back-end-sample-project). And, the latter, the Business Intelligence software used to analyze the data, is unfortunately not available to the public inasmuch as it contains sensitive data of our previous users.
 
 So, you might expect the following features from the website:
 
